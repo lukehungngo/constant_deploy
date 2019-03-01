@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: Deploy bootnode 
+      command: "docker run -p 9330:9330 -e PORT='9330' -e Listen={{listenAddress}}--name Constant_Bootnode -d dungvanautonomous/constant /run_bootnode.sh"
