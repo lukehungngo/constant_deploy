@@ -1,0 +1,52 @@
+---
+- hosts: all
+  gather_facts: no
+
+  pre_tasks:
+    - name: 'install python2'
+      raw: apt-get -y install python
+
+  tasks:
+    - name: Update apt
+      shell: |
+        apt update
+
+    - name: Install deps
+      shell: |
+        apt install -y curl git
+
+    - name: Install golang
+      shell: |
+        mkdir work -p
+        if [ ! -d "/usr/local/go" ]; then
+          curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz && \
+          tar -xvf go1.11.2.linux-amd64.tar.gz && \
+          mv go /usr/local 
+        fi
+
+    - lineinfile:
+        dest: /root/.profile
+        regexp: '^export GOROOT'
+        line: 'GOROOT=/usr/local/go'
+        state: present
+
+    - lineinfile:
+        dest: /root/.profile
+        regexp: '^export GOPATH'
+        line: 'GOPATH=/root/work'
+        state: present
+
+    - lineinfile:
+        dest: /root/.profile
+        regexp: '^export PATH'
+        line: 'PATH=$PATH:$GOROOT/bin:$GOPATH/bin:'
+        state: present
+    
+    - name: Pull constant
+      shell: |
+        if [ ! -d "/root/work/src/github.com/ninjadotorg/constant" ]; then 
+          mkdir -p /root/work/src/github.com/ninjadotorg && \
+          cd /root/work/src/github.com/ninjadotorg && git clone https://github.com/ninjadotorg/constant ;
+        fi ;
+        cd /root/work/src/github.com/ninjadotorg/constant && GOPATH=/root/work /usr/local/go/bin/go get 
+        

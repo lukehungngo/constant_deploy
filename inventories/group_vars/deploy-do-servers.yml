@@ -1,0 +1,3 @@
+ansible_ssh_private_key_file: '/home/david/constant_key'
+ansible_ssh_user: 'root'
+BOOTNODE: '35.198.235.226'

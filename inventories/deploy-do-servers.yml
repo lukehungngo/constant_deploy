@@ -1,0 +1,4 @@
+[deploy-do-servers]
+do-server-1 ansible_ssh_host=142.93.194.140
+do-server-2 ansible_ssh_host=68.183.108.86
+do-server-3 ansible_ssh_host=206.189.189.59
