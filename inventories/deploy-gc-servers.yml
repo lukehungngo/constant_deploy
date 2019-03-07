@@ -1,3 +1,0 @@
-[deploy-gc-servers]
-gc-server-1a ansible_ssh_host=35.198.235.226
-gc-server-1b ansible_ssh_host=35.198.235.226 

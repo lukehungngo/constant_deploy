@@ -1,0 +1,17 @@
+[beacon]
+beacon0 ansible_ssh_host={{beacon0_ip}} spendingkey={{beacon0}} node_port=9430 rpc_port=9334
+beacon1 ansible_ssh_host={{beacon1_ip}} spendingkey={{beacon1}}  node_port=9430 rpc_port=9334
+beacon2 ansible_ssh_host={{beacon2_ip}} spendingkey={{beacon2}} node_port=9430 rpc_port=9334
+
+[shard0]
+shard0-0 ansible_ssh_host={{shard0_0_ip}} spendingkey={{shard0_0}} node_port=9430 rpc_port=9334
+shard0-1 ansible_ssh_host={{shard0_1_ip}} spendingkey={{shard0_1}} node_port=9430 rpc_port=9334
+shard0-2 ansible_ssh_host={{shard0_2_ip}} spendingkey={{shard0_2}} node_port=9430 rpc_port=9334
+
+[shard1]
+shard1-0 ansible_ssh_host={{shard1_0_ip}} spendingkey={{shard1_0}} node_port=9430 rpc_port=9334
+shard1-1 ansible_ssh_host={{shard1_1_ip}} spendingkey={{shard1_1}} node_port=9430 rpc_port=9334
+shard1-2 ansible_ssh_host={{shard1_2_ip}} spendingkey={{shard1_2}} node_port=9430 rpc_port=9334
+
+[test]
+# shard0 ansible_ssh_host=104.248.77.111 spendingkey={{shard0}} node_port=9430 rpc_port=9334
