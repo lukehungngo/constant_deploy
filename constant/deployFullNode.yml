@@ -1,5 +1,0 @@
----
-- hosts: all
-  tasks:
-    - name: Deploy full node
-      command: "docker run --net host -e DISCOVERPEERSADDRESS='{{BOOTNODE}}:9330' -v /data/node1:/data -e SPENDINGKEY='{{spendingkey}}' -e EXTERNALADDRESS='127.0.0.1'  -e PORT='9331' -d constant /run_constant.sh"

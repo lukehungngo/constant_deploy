@@ -17,7 +17,10 @@ var activity = {
 async function list () {
   console.log('============ List DO servers ============')
   let doServer = (await DOClient.listAllDroplet()).droplets
-  doServer = doServer.map(x => {console.log(x.name, "\t",x.networks.v4[0].ip_address, "\t", x.id)})
+  doServer.sort((a,b)=>{
+    return a.name > b.name ? 1 : -1
+  })
+  doServer = doServer.map(x => {console.log(x.name, "\t", x.region.slug, "\t",x.networks.v4[0].ip_address, "\t", x.id)})
 }
 
 async function deploy () {
