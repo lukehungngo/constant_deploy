@@ -8,25 +8,27 @@ let result = { beacon: {}, shard: {} }
 
 for (const [i, v] of Object.entries(beacon)) {
   setInterval(async () => {
-    let beacon = await backend.GetBeaconBestState({ host: v, port: 9334 })
-    beacon.Endpoint = `${v}:9334`
+    let beacon = await backend.GetBeaconBestState({ host: v, port: 9334 }) || {}
+    let info = await backend.GetNetworkInfo({ host: v, port: 9334 }) || {}
+    beacon.Endpoint = `${v}:9334(${info.commit.substr(5,3)})`
     result.beacon[i] = filterBeaconData(beacon)
-    
-  }, 1000)
+  }, 500)
 }
 
 for (let sid in config.IP.shard) {
   for (const [i, v] of Object.entries(config.IP.shard[sid])) {
     setInterval(async () => {   
       
-      let shard = await backend.GetShardBestState({ host: v, port: 9334 }, Number(sid))
+      let shard = await backend.GetShardBestState({ host: v, port: 9334 }, Number(sid)) || {}
       if (!result.shard[sid]) {result.shard[sid] = {}; result.shard[sid][i] = {} }
-      shard.Endpoint = `${v}:9334`
-      result.shard[sid][i] = filterShardData(shard || {})
-      
-    }, 1000)
+      let info = await backend.GetNetworkInfo({ host: v, port: 9334 }) || {}
+      shard.Endpoint = `${v}:9334(${info.commit.substr(5,3)})`
+      result.shard[sid][i] = filterShardData(shard)
+
+    }, 500)
   }
 }
+
 //best shard height, proposer id, epoch
 function filterBeaconData ({ Endpoint, BeaconHeight, BestShardHeight, BeaconProposerIdx, Epoch } = {}) {
   return { Endpoint, BeaconHeight, Epoch, BeaconProposerIdx , BestShardHeight: JSON.stringify(BestShardHeight)}

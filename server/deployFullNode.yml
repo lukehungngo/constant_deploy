@@ -3,14 +3,14 @@
   serial: 10
   tasks:
     
-    # - name: Clean data
-    #   shell: |
-    #     docker rm -f {{inventory_hostname}} && rm -rf /data 
-
-    # - name: Deploy full node
-    #   shell: |
-    #      docker run --net host -e DISCOVERPEERSADDRESS='{{IP.bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e SPENDINGKEY='{{spendingkey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} dungvanautonomous/constant /run_constant.sh
-
-    - name: restart
+    - name: Clean data
       shell: |
-        docker restart {{inventory_hostname}} 
+        docker rm -f {{inventory_hostname}} && rm -rf /data 
+
+    - name: Deploy full node
+      shell: |
+         docker run --net host -e DISCOVERPEERSADDRESS='{{IP.bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e SPENDINGKEY='{{spendingkey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} dungvanautonomous/constant /run_constant.sh
+
+    # - name: restart
+    #   shell: |
+    #     docker restart {{inventory_hostname}} 

@@ -20,6 +20,16 @@ backend.GetShardBestState = async function (endpoint, shardID) {
   }
 }
 
+backend.GetNetworkInfo = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'getnetworkinfo')
+    // console.log(res)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
 function rpc ({ host, port } = ({} = endpoint), method, ...params) {
   return new Promise((resolve, reject) => {
     var client = jayson.client.http({
