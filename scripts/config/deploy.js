@@ -2,9 +2,25 @@ const node = require('./node')
 var deploy = module.exports
 
 var region = function () {
-    var regions = ["nyc1","nyc3","sfo2", "tor1", "tor1", "ams3","ams3", "sgp1", "sgp1", "lon1", "fra1","lon1", "fra1", "blr1", "blr1"]
-    var random = Math.floor(Math.random()*regions.length)
-    return regions[random]
+  var regions = [
+    'nyc1',
+    'nyc3',
+    'sfo2',
+    'tor1',
+    'tor1',
+    'ams3',
+    'ams3',
+    'sgp1',
+    'sgp1',
+    'lon1',
+    'fra1',
+    'lon1',
+    'fra1',
+    'blr1',
+    'blr1'
+  ]
+  var random = Math.floor(Math.random() * regions.length)
+  return regions[random]
 }
 
 deploy.DO = [

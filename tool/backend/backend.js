@@ -2,11 +2,15 @@ var jayson = require('jayson')
 var backend = exports
 const exec = require("child_process").exec
 
-backend.RetrieveLogs = async function (endpoint, name) {
+backend.RetrieveLogs = async function (endpoint, name, key) {
   try {
     return new Promise(resolve => {
-      exec(`ssh -i ~/constant_key root@${endpoint} 'docker  logs --tail 20 ${name}'`, (err, stdout) => {
-        if (err)  return resolve("Cannot connect ${endpoint}")
+      // console.log(`ssh -i ${key} root@${endpoint} 'docker  logs --tail 500 ${name}'`)
+      exec(`ssh -i ${key} root@${endpoint} 'docker  logs --tail 500 ${name}'`, (err, stdout) => {
+        if (err)  {
+          console.log(err)
+          return resolve(`Cannot connect ${endpoint}`)
+        }
         resolve(stdout)
       })
     })
@@ -23,6 +27,43 @@ backend.GetBeaconBestState = async function (endpoint) {
     return null
   }
 }
+
+backend.GetShardToBeaconPoolState = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'getshardtobeaconpoolstate')
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
+backend.GetShardPoolState = async function (endpoint, shardID) {
+  try {
+    let res = await rpc(endpoint, 'getshardpoolstate',shardID )
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
+backend.GetCrossShardShardPoolState = async function (endpoint, shardID) {
+  try {
+    let res = await rpc(endpoint, 'getcrossshardpoolstate', shardID)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
+backend.GetBeaconPoolState = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'getbeaconpoolstate')
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
 
 backend.GetShardBestState = async function (endpoint, shardID) {
   try {

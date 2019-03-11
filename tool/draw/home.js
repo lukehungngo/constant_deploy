@@ -1,107 +1,127 @@
 var beaconData = require('../data/beacon')
 var shardData = require('../data/shard')
 var contrib = require('blessed-contrib')
-var backendData = require("../backend/aggregator")
-var backend = require("../backend/backend")
+var backendData = require('../backend/aggregator')
+var backend = require('../backend/backend')
+var { spawn } = require('child_process')
 
 class HomeScreen {
-    constructor(screen) {
-        this.screen = screen
-        this.isDisplay = false
-        this.beaconTable
-        this.shardTable
-        this.elFocus = ""
-        var self = this
-        this.screen.key(['C-right'], function (ch, key) {
-            if (!self.isDisplay) return
-            self.screen.focusNext();
-            self.screen.render();
-        })
+  constructor (screen) {
+    this.screen = screen
+    this.isDisplay = false
+    this.beaconTable
+    this.shardTable
+    this.elFocus = ''
 
-        this.screen.key(['C-left'], function (ch, key) {
-            if (!self.isDisplay) return
-            self.screen.focusPrevious()
-        })
+    var self = this
+    this.screen.key(['C-right'], function (ch, key) {
+      if (!self.isDisplay) return
+      self.screen.focusNext()
+      self.screen.render()
+    })
 
-    }
+    this.screen.key(['C-left'], function (ch, key) {
+      if (!self.isDisplay) return
+      self.screen.focusPrevious()
+    })
 
-    remove() {
-        this.isDisplay = false
-        this.beaconTable && this.screen.remove(this.beaconTable)
-        this.shardTable && this.screen.remove(this.shardTable)
-        this.screen.render()
-    }
+    this.screen.key(['3'], function (ch, key) {
+      if (!self.isDisplay) return
+      if (self.elFocus == 'shard') {
+        self.screen.switchScreen('crossshard', "shard", self.shardTable.rows.selected)
+      }
+    })
 
-    display() {
-        var self = this
-        this.isDisplay = true
-        this.screen.title = 'Constant Monitor Backend'
+    this.screen.key(['C-l'], async (ch, key) => {
+      if (!this.isDisplay) return
+      if (this.elFocus == 'beacon') {
+        let logs = await backend.RetrieveLogs(
+          backendData['beacon'][this.beaconTable.rows.selected].IP,
+          'beacon' + this.beaconTable.rows.selected,
+          backendData.key
+        )
+        require('fs').writeFileSync(
+          'logs/beacon' + this.beaconTable.rows.selected,
+          logs
+        )
+      } else {
+        let shardInfo = backendData['shard'][this.shardTable.rows.selected]
+        let logs = await backend.RetrieveLogs(
+          shardInfo.IP,
+          shardInfo.name,
+          backendData.key
+        )
+        require('fs').writeFileSync('logs/' + shardInfo.name, logs)
+      }
+    })
+  }
 
-        var grid = new contrib.grid({ rows: 12, cols: 12, screen: this.screen })
+  remove () {
+    this.isDisplay = false
+    this.beaconTable && this.screen.remove(this.beaconTable)
+    this.shardTable && this.screen.remove(this.shardTable)
+    this.screen.render()
+  }
 
-        // grid.set(row, col, rowSpan, colSpan, obj, opts)
-        this.beaconTable = grid.set(0, 0, 3, 12, contrib.table, {
-            pad: 4,
-            keys: true,
-            interactive: true,
-            selectedBg: 'none',
-            columnWidth: [25, 8, 8, 8, 20]
-        })
+  display () {
+    var self = this
+    this.isDisplay = true
+    this.screen.title = 'Constant Monitor Backend'
 
-        this.shardTable = grid.set(3, 0, 9, 12, contrib.table, {
-            pad: 4,
-            keys: true,
-            interactive: true,
-            selectedBg: 'none',
-            columnWidth: [25, 8, 8, 8, 14, 8, 14]
-        })
+    var grid = new contrib.grid({ rows: 12, cols: 12, screen: this.screen })
 
+    // grid.set(row, col, rowSpan, colSpan, obj, opts)
+    this.beaconTable = grid.set(0, 0, 3, 12, contrib.table, {
+      pad: 4,
+      keys: true,
+      interactive: true,
+      selectedBg: 'none',
+      columnWidth: [25, 8, 8, 8, 15, 20]
+    })
 
-        this.beaconTable.rows.on('focus', function (data) {
-            this.style.selected.fg = "white"
-            self.shardTable.rows.style.selected.fg = "green"
+    this.shardTable = grid.set(3, 0, 9, 12, contrib.table, {
+      pad: 4,
+      keys: true,
+      interactive: true,
+      selectedBg: 'none',
+      columnWidth: [25, 8, 8, 8, 14, 8, 14, 8, 14]
+    })
 
-        });
+    this.beaconTable.rows.on('focus', data => {
+      this.beaconTable.rows.style.selected.fg = 'white'
+      this.shardTable.rows.style.selected.fg = 'green'
+      this.elFocus = 'beacon'
+    })
 
-        this.shardTable.rows.on('focus', function (data) {
-            this.style.selected.fg = "white"
-            self.beaconTable.rows.style.selected.fg = "green"
-        });
+    this.shardTable.rows.on('focus', data => {
+      this.shardTable.rows.style.selected.fg = 'white'
+      this.beaconTable.rows.style.selected.fg = 'green'
+      this.elFocus = 'shard'
+    })
 
-        this.beaconTable.rows.on('select', function (a,b) {
-            self.showLogs("beacon", b)
-        });
+    this.beaconTable.rows.on('select', function (a, b) {})
 
-        this.shardTable.rows.on('select', function (a,b) {
-            console.log(b)
-        });
+    this.shardTable.rows.on('select', function (a, b) {})
 
-        this.screen.append(this.beaconTable)
-        this.screen.append(this.shardTable)
-        this.beaconTable.focus()
-        this.screen.render()
+    this.screen.append(this.beaconTable)
+    this.screen.append(this.shardTable)
+    this.shardTable.focus()
+    this.screen.render()
 
-        let loop = setInterval(() => {
-            if (!this.isDisplay) {
-                return clearInterval(loop)
-            }
-            this.screen.render()
-        }, 500)
+    let loop = setInterval(() => {
+      if (!this.isDisplay) {
+        return clearInterval(loop)
+      }
+      this.screen.render()
+    }, 500)
 
-        setInterval(() => {
-            this.shardTable.setData(shardData.getData())
-            this.beaconTable.setData(beaconData.getData())
-        }, 1000)
+    setInterval(() => {
+      this.shardTable.setData(shardData.getData())
+      this.beaconTable.setData(beaconData.getData())
+    }, 1000)
+  }
 
-    }
-
-    async showLogs(nodeType, index) {
-        if (nodeType == "beacon") {
-            let ip = backendData["beacon"][index].IP
-            let logs = await backend.RetrieveLogs(ip, "beacon"+index)
-            console.log(logs)
-        }
-    }
+  async showLogs (nodeType, index) {}
 }
 
 module.exports = HomeScreen

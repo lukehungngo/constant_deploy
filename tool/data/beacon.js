@@ -22,7 +22,7 @@ module.exports = {
   getData: function () {
     return {
         //Endpoint, BeaconHeight, Epoch, BeaconProposerIdx , BestShardHeight
-      headers: ['Beacon Node', 'Height', 'Epoch', 'LeaderID', 'ShardHeight'],
+      headers: ['Beacon Node', 'Height', 'Epoch', 'LeaderID', 'B/S2B Pool', 'ShardHeight'],
       data: data
     }
   }

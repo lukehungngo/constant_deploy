@@ -4,7 +4,7 @@ const deploy_config = require('./config/deploy')
 var DOTemplate = {
   name: 'test',
   region: 'nyc1',
-  size: 's-1vcpu-1gb',
+  size: 's-2vcpu-4gb',
   image: 'ubuntu-18-04-x64',
   tags: ['constant_chain']
 }

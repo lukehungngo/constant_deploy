@@ -1,0 +1,500 @@
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420a61680)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420a61680)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420a61680)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 10284 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420ab4660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420ab4660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420ab4660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 4879 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc4209b93e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc4209b93e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc4209b93e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 24575 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc42007aa20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc42007aa20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc42007aa20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 13631 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a5a5a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a5a5a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a5a5a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 27300 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc420a61740)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc420a61740)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc420a61740)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 17023 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420536ea0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420536ea0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420536ea0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25309 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a5b440)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a5b440)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a5b440)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 13635 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a5a2a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a5a2a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a5a2a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25244 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc420a91320)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc420a91320)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc420a91320)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 27858 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc4216ce360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc4216ce360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc4216ce360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20830 [select]:
+github.com/patrickmn/go-cache.(*janitor).Run(0xc4201de6d0, 0xc420c1ba80)
+	/home/david/go/src/github.com/patrickmn/go-cache/cache.go:1079 +0x106
+created by github.com/patrickmn/go-cache.runJanitor
+	/home/david/go/src/github.com/patrickmn/go-cache/cache.go:1099 +0xb3
+
+goroutine 18179 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc4209b8900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc4209b8900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc4209b8900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 21032 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc4209b8780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc4209b8780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc4209b8780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 24065 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420ab4000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420ab4000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420ab4000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25060 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420a5a900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420a5a900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420a5a900)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 16035 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420996660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420996660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420996660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22988 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420aded20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420aded20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420aded20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 18167 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc4200c6f00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc4200c6f00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc4200c6f00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 13743 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a9e840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a9e840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a9e840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22986 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc4216ce000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc4216ce000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc4216ce000)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20850 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f4c943413a0, 0x72, 0xc4209d3ab8)
+	/usr/local/src/go10/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc42045e898, 0x72, 0xffffffffffffff00, 0x10dab80, 0x158e6e0)
+	/usr/local/src/go10/src/internal/poll/fd_poll_runtime.go:85 +0x9b
+internal/poll.(*pollDesc).waitRead(0xc42045e898, 0xc420a31000, 0x1000, 0x1000)
+	/usr/local/src/go10/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc42045e880, 0xc420a31000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/src/go10/src/internal/poll/fd_unix.go:157 +0x17d
+net.(*netFD).Read(0xc42045e880, 0xc420a31000, 0x1000, 0x1000, 0x0, 0xc4210d8380, 0xc420205480)
+	/usr/local/src/go10/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc42009ee68, 0xc420a31000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/src/go10/src/net/net.go:176 +0x6a
+bufio.(*Reader).Read(0xc420a600c0, 0xc42023a000, 0x1, 0x9, 0xc420040500, 0xc420c19dd8, 0x410e7e)
+	/usr/local/src/go10/src/bufio/bufio.go:216 +0x238
+io.ReadAtLeast(0x10d8500, 0xc420a600c0, 0xc42023a000, 0x1, 0x9, 0x1, 0x4125d6, 0xc420151b28, 0xc4202528c0)
+	/usr/local/src/go10/src/io/io.go:309 +0x86
+io.ReadFull(0x10d8500, 0xc420a600c0, 0xc42023a000, 0x1, 0x9, 0x13, 0x14, 0xc4209d3d88)
+	/usr/local/src/go10/src/io/io.go:327 +0x58
+encoding/gob.decodeUintReader(0x10d8500, 0xc420a600c0, 0xc42023a000, 0x9, 0x9, 0x13, 0x14, 0xc4209d3db8, 0x428129)
+	/usr/local/src/go10/src/encoding/gob/decode.go:120 +0x63
+encoding/gob.(*Decoder).recvMessage(0xc42045e400, 0x14)
+	/usr/local/src/go10/src/encoding/gob/decoder.go:80 +0x57
+encoding/gob.(*Decoder).decodeTypeSequence(0xc42045e400, 0x1063c00, 0xc42045e400)
+	/usr/local/src/go10/src/encoding/gob/decoder.go:142 +0x136
+encoding/gob.(*Decoder).DecodeValue(0xc42045e400, 0xcfe420, 0xc42092a030, 0x16, 0x0, 0x0)
+	/usr/local/src/go10/src/encoding/gob/decoder.go:210 +0xdc
+encoding/gob.(*Decoder).Decode(0xc42045e400, 0xcfe420, 0xc42092a030, 0x30, 0x30)
+	/usr/local/src/go10/src/encoding/gob/decoder.go:187 +0x14f
+net/rpc.(*gobClientCodec).ReadResponseHeader(0xc420a54900, 0xc42092a030, 0xc4202140a0, 0x0)
+	/usr/local/src/go10/src/net/rpc/client.go:223 +0x45
+net/rpc.(*Client).input(0xc420a60480)
+	/usr/local/src/go10/src/net/rpc/client.go:109 +0xa7
+created by net/rpc.NewClientWithCodec
+	/usr/local/src/go10/src/net/rpc/client.go:201 +0x92
+
+goroutine 13741 [chan send, 2 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420a9e720)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420a9e720)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420a9e720)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 27344 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420ab4360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420ab4360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420ab4360)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 27861 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc42095fbc0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc42095fbc0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc42095fbc0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22498 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc420ab4780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc420ab4780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc420ab4780)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 23006 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a5b4a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a5b4a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a5b4a0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20340 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420960840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420960840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420960840)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22034 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a5a120)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a5a120)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a5a120)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25015 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a90ba0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a90ba0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a90ba0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 28326 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a5bb60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a5bb60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a5bb60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20351 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420536c60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420536c60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420536c60)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 26878 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420a9fd40)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420a9fd40)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420a9fd40)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22991 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc42007bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc42007bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc42007bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 19253 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a912c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a912c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a912c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20329 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc4209603c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc4209603c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc4209603c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 24560 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a3a660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a3a660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a3a660)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22589 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420ab4a80)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420ab4a80)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420ab4a80)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 28277 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc4209b8c00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc4209b8c00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc4209b8c00)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25014 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc42007b920)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc42007b920)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc42007b920)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 17054 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc420a9fec0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc420a9fec0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc420a9fec0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 22032 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3e40, 0xc420a9e060)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3e40, 0xc420a9e060)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07980, 0xc420a9e060)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:98 +0x1b3
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 17113 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a5bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a5bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a5bc20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 20347 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420536ae0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420536ae0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420536ae0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25314 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420a60a20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420a60a20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420a60a20)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 25842 [chan send]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f60, 0xc420a9e0c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f60, 0xc420a9e0c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07c20, 0xc420a9e0c0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:102 +0x503
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 19264 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3ea0, 0xc420b63020)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3ea0, 0xc420b63020)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07a60, 0xc420b63020)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:94 +0x492
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a
+
+goroutine 21506 [chan send, 1 minutes]:
+github.com/constant-money/constant-chain/consensus/constantbft.(*Engine).OnBFTMsg(0xc42045e200, 0x10e3f00, 0xc420a913e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/consensus/constantbft/message.go:17 +0x5f
+github.com/constant-money/constant-chain/netsync.(*NetSync).HandleMessageBFTMsg(0xc42013bd40, 0x10e3f00, 0xc420a913e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:263 +0x171
+github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler.func1(0xc42013bd40, 0xe07b40, 0xc420a913e0)
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:90 +0x36e
+created by github.com/constant-money/constant-chain/netsync.(*NetSync).messageHandler
+	/usr/local/src/go10/src/github.com/constant-money/constant-chain/netsync/netsync.go:82 +0x6a

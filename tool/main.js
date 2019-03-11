@@ -1,37 +1,40 @@
 var blessed = require('blessed')
 
-
 var screen = blessed.screen({
   smartCSR: true
 })
 
-const Home = require("./draw/home")
+const Home = require('./draw/home')
+const Text = require('./draw/text')
+const Crossshard = require('./draw/crossshard')
+
 const home = new Home(screen)
-
-
+const text = new Text(screen)
+const crossshard = new Crossshard(screen)
 
 screen.key(['C-c'], function (ch, key) {
   return process.exit(0)
 })
-var mapscreen = [
-  [['C-`'], "home"],
-  [['C','1'], "blank"],
-]
+var mapscreen = [[['escape'], 'home'], [['1'], 'blank']]
 
 mapscreen.forEach(x => {
   screen.key(x[0], function (ch, key) {
-    switchScreen(x[1])
+    screen.switchScreen(x[1])
   })
 })
 
-function switchScreen(screenName) {
-  removeAllScreen()
+screen.switchScreen = function (screenName, nodeType, id) {
+  screen.removeAllScreen()
 
   switch (screenName) {
-    case "home":
+    case 'home':
       home.display()
       break
-    case "blank":
+    case 'crossshard':
+      console.log('show cross shard', id)
+      crossshard.display(id)
+      break
+    case 'blank':
       // home.display()
       break
     default:
@@ -39,8 +42,8 @@ function switchScreen(screenName) {
   }
 }
 
-function removeAllScreen(){
+screen.removeAllScreen = function () {
   home.remove()
 }
 
-switchScreen("home")
+screen.switchScreen('home')
