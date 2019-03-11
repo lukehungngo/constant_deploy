@@ -1,29 +1,35 @@
 const YAML = require('yamljs')
 const backend = require('./backend')
 // Load yaml file using YAML.load
-var config = YAML.load('../inventories/group_vars/all.yml')
+var config = YAML.load(__dirname + '/../../inventories/group_vars/all.yml')
+// console.log(JSON.stringify(config, null, 2))
+let result = { beacon: [], shard: [] }
+result.key = config.ansible_ssh_private_key_file
 
-let beacon = config.IP.beacon
-let result = { beacon: {}, shard: {} }
-
-for (const [i, v] of Object.entries(beacon)) {
+for (const [i, v] of Object.entries(config.beacon)) {
   setInterval(async () => {
-    let beacon = await backend.GetBeaconBestState({ host: v, port: 9334 }) || {}
-    let info = await backend.GetNetworkInfo({ host: v, port: 9334 }) || {}
-    beacon.Endpoint = `${v}:9334(${info.commit.substr(5,3)})`
-    result.beacon[i] = filterBeaconData(beacon)
+    let beacon = await backend.GetBeaconBestState({ host: v.IP, port: 9334 }) || {}
+    let info = await backend.GetNetworkInfo({ host: v.IP, port: 9334 }) || {commit: ""}
+    beacon.Endpoint = `${v.IP}:9334(${info.commit.substr(5,3)})`
+    if (!result.beacon[i]) result.beacon[i] = {}
+
+    result.beacon[i].data = filterBeaconData(beacon)
+    result.beacon[i].IP = v.IP
   }, 500)
 }
 
-for (let sid in config.IP.shard) {
-  for (const [i, v] of Object.entries(config.IP.shard[sid])) {
+for (let sid in config.shard) {
+  for (const [i, v] of Object.entries(config.shard[sid])) {
     setInterval(async () => {   
       
-      let shard = await backend.GetShardBestState({ host: v, port: 9334 }, Number(sid)) || {}
+      let shard = await backend.GetShardBestState({ host: v.IP, port: 9334 }, Number(sid)) || {}
       if (!result.shard[sid]) {result.shard[sid] = {}; result.shard[sid][i] = {} }
-      let info = await backend.GetNetworkInfo({ host: v, port: 9334 }) || {}
-      shard.Endpoint = `${v}:9334(${info.commit.substr(5,3)})`
-      result.shard[sid][i] = filterShardData(shard)
+      let info = await backend.GetNetworkInfo({ host: v.IP, port: 9334 }) || {commit: ""}
+      shard.Endpoint = `${v.IP}:9334(${info.commit.substr(5,3)})`
+
+      if (!result.shard[sid][i]) result.shard[sid][i] = {}
+      result.shard[sid][i].data = filterShardData(shard)
+      result.shard[sid][i].IP = v.IP
 
     }, 500)
   }

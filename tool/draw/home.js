@@ -1,7 +1,8 @@
 var beaconData = require('../data/beacon')
 var shardData = require('../data/shard')
 var contrib = require('blessed-contrib')
-
+var backendData = require("../backend/aggregator")
+var backend = require("../backend/backend")
 
 class HomeScreen {
     constructor(screen) {
@@ -9,6 +10,7 @@ class HomeScreen {
         this.isDisplay = false
         this.beaconTable
         this.shardTable
+        this.elFocus = ""
         var self = this
         this.screen.key(['C-right'], function (ch, key) {
             if (!self.isDisplay) return
@@ -31,6 +33,7 @@ class HomeScreen {
     }
 
     display() {
+        var self = this
         this.isDisplay = true
         this.screen.title = 'Constant Monitor Backend'
 
@@ -52,9 +55,26 @@ class HomeScreen {
             selectedBg: 'none',
             columnWidth: [25, 8, 8, 8, 14, 8, 14]
         })
-        
-        
-        
+
+
+        this.beaconTable.rows.on('focus', function (data) {
+            this.style.selected.fg = "white"
+            self.shardTable.rows.style.selected.fg = "green"
+
+        });
+
+        this.shardTable.rows.on('focus', function (data) {
+            this.style.selected.fg = "white"
+            self.beaconTable.rows.style.selected.fg = "green"
+        });
+
+        this.beaconTable.rows.on('select', function (a,b) {
+            self.showLogs("beacon", b)
+        });
+
+        this.shardTable.rows.on('select', function (a,b) {
+            console.log(b)
+        });
 
         this.screen.append(this.beaconTable)
         this.screen.append(this.shardTable)
@@ -73,6 +93,14 @@ class HomeScreen {
             this.beaconTable.setData(beaconData.getData())
         }, 1000)
 
+    }
+
+    async showLogs(nodeType, index) {
+        if (nodeType == "beacon") {
+            let ip = backendData["beacon"][index].IP
+            let logs = await backend.RetrieveLogs(ip, "beacon"+index)
+            console.log(logs)
+        }
     }
 }
 

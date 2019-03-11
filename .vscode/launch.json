@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/scripts/digitalocean.js"
+            "program": "${workspaceFolder}/tool/main.js"
         }
     ]
 }

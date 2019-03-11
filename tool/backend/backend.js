@@ -1,5 +1,19 @@
 var jayson = require('jayson')
 var backend = exports
+const exec = require("child_process").exec
+
+backend.RetrieveLogs = async function (endpoint, name) {
+  try {
+    return new Promise(resolve => {
+      exec(`ssh -i ~/constant_key root@${endpoint} 'docker  logs --tail 20 ${name}'`, (err, stdout) => {
+        if (err)  return resolve("Cannot connect ${endpoint}")
+        resolve(stdout)
+      })
+    })
+  } catch (err) {
+    return null
+  }
+}
 
 backend.GetBeaconBestState = async function (endpoint) {
   try {
@@ -30,7 +44,7 @@ backend.GetNetworkInfo = async function (endpoint) {
   }
 }
 
-function rpc ({ host, port } = ({} = endpoint), method, ...params) {
+function rpc({ host, port } = ({} = endpoint), method, ...params) {
   return new Promise((resolve, reject) => {
     var client = jayson.client.http({
       host: host,
@@ -41,7 +55,7 @@ function rpc ({ host, port } = ({} = endpoint), method, ...params) {
         // console.log(err)
         return reject(err)
       }
-      
+
       resolve(response)
     })
   })

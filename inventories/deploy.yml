@@ -4,19 +4,19 @@ shard0
 shard1 
 
 [beacon]
-beacon0 ansible_ssh_host={{IP.beacon.0}} spendingkey={{KEY.beacon.0}} node_port=9430 rpc_port=9334
-beacon1 ansible_ssh_host={{IP.beacon.1}} spendingkey={{KEY.beacon.1}}  node_port=9430 rpc_port=9334
-beacon2 ansible_ssh_host={{IP.beacon.2}} spendingkey={{KEY.beacon.2}} node_port=9430 rpc_port=9334
+beacon0 ansible_ssh_host={{beacon.0.IP}} spendingkey={{KEY.beacon.0}} node_port=9430 rpc_port=9334
+beacon1 ansible_ssh_host={{beacon.1.IP}} spendingkey={{KEY.beacon.1}}  node_port=9430 rpc_port=9334
+beacon2 ansible_ssh_host={{beacon.2.IP}} spendingkey={{KEY.beacon.2}} node_port=9430 rpc_port=9334
 
 [shard0]
-shard0-0 ansible_ssh_host={{IP.shard.0.0}} spendingkey={{KEY.shard.0.0}} node_port=9430 rpc_port=9334
-shard0-1 ansible_ssh_host={{IP.shard.0.1}} spendingkey={{KEY.shard.0.1}} node_port=9430 rpc_port=9334
-shard0-2 ansible_ssh_host={{IP.shard.0.2}} spendingkey={{KEY.shard.0.2}} node_port=9430 rpc_port=9334
+shard0-0 ansible_ssh_host={{shard.0.0.IP}} spendingkey={{KEY.shard.0.0}} node_port=9430 rpc_port=9334
+shard0-1 ansible_ssh_host={{shard.0.1.IP}} spendingkey={{KEY.shard.0.1}} node_port=9430 rpc_port=9334
+shard0-2 ansible_ssh_host={{shard.0.2.IP}} spendingkey={{KEY.shard.0.2}} node_port=9430 rpc_port=9334
 
 [shard1]
-shard1-0 ansible_ssh_host={{IP.shard.1.0}} spendingkey={{KEY.shard.1.0}} node_port=9430 rpc_port=9334
-shard1-1 ansible_ssh_host={{IP.shard.1.1}} spendingkey={{KEY.shard.1.1}} node_port=9430 rpc_port=9334
-shard1-2 ansible_ssh_host={{IP.shard.1.2}} spendingkey={{KEY.shard.1.2}} node_port=9430 rpc_port=9334
+shard1-0 ansible_ssh_host={{shard.1.0.IP}} spendingkey={{KEY.shard.1.0}} node_port=9430 rpc_port=9334
+shard1-1 ansible_ssh_host={{shard.1.1.IP}} spendingkey={{KEY.shard.1.1}} node_port=9430 rpc_port=9334
+shard1-2 ansible_ssh_host={{shard.1.2.IP}} spendingkey={{KEY.shard.1.2}} node_port=9430 rpc_port=9334
 
 [test]
 # shard0 ansible_ssh_host=104.248.77.111 spendingkey={{shard0}} node_port=9430 rpc_port=9334
