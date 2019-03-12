@@ -75,6 +75,15 @@ backend.GetShardBestState = async function (endpoint, shardID) {
   }
 }
 
+backend.GetBlocks = async function (endpoint, numblock, shardID) {
+  try {
+    let res = await rpc(endpoint, 'getblocks', numblock, shardID)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
 backend.GetNetworkInfo = async function (endpoint) {
   try {
     let res = await rpc(endpoint, 'getnetworkinfo')
@@ -102,4 +111,4 @@ function rpc({ host, port } = ({} = endpoint), method, ...params) {
   })
 }
 
-// backend.GetShardBestState({ host: '134.209.40.131', port: 9334 }, 0)
+// backend.GetBlocks({ host: '178.128.233.64', port: 9334 }, 10, 0)

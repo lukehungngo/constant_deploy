@@ -1,39 +1,44 @@
-ansible_ssh_private_key_file: '/home/david/constant_key'
-ansible_ssh_user: 'root'
-
-
-bootnode: "104.248.85.49"
+bootnode: "127.0.0.1"
 beacon:
   0: 
-    IP: "104.248.85.49"
-    PORT: 9334
+    IP: "127.0.0.1"
+    NODE_PORT: 9000
+    RPC_PORT: 9334
   1: 
-    IP: "178.128.84.208"
-    PORT: 9334
+    IP: "127.0.0.1"
+    NODE_PORT: 9001
+    RPC_PORT: 9335
   2: 
-    IP: "104.248.55.45"
-    PORT: 9334
+    IP: "127.0.0.1"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
 shard:
   0:
     0: 
-      IP: "178.128.233.64"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9003
+      RPC_PORT: 9337
     1: 
-      IP: "178.128.55.163"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9004
+      RPC_PORT: 9338
     2: 
-      IP: "178.128.95.147"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9005
+      RPC_PORT: 9339
   1:
     0: 
-      IP: "142.93.82.199"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9006
+      RPC_PORT: 9340
     1: 
-      IP: "139.59.40.51"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9007
+      RPC_PORT: 9341
     2: 
-      IP: "68.183.76.35"
-      PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9008
+      RPC_PORT: 9342
 
 
 KEY:

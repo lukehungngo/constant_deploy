@@ -21,7 +21,7 @@ class Crossshard {
         this.text = blessed.text({
             keys: true,
             vi: true,
-            content: shard[id].cspool,
+            content: "",
             alwaysScroll:true,
             scrollable: true,
             scrollbar: {
@@ -30,7 +30,7 @@ class Crossshard {
               }
             }
         });
-
+        this.text.setContent(shard[id].cspool)
         // Append our box to the screen.
         this.screen.append(this.text);
         this.screen.render()

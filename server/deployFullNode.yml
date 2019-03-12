@@ -5,7 +5,7 @@
     
     - name: Clean data
       shell: |
-        docker rm -f {{inventory_hostname}} && rm -rf /data 
+        docker rm -f {{inventory_hostname}} && rm -rf /data ; echo 1
 
     - name: Deploy full node
       shell: |

@@ -7,10 +7,12 @@ var screen = blessed.screen({
 const Home = require('./draw/home')
 const Text = require('./draw/text')
 const Crossshard = require('./draw/crossshard')
+const ShardBlock = require('./draw/shardBlock')
 
 const home = new Home(screen)
 const text = new Text(screen)
 const crossshard = new Crossshard(screen)
+const shardBlock = new ShardBlock(screen)
 
 screen.key(['C-c'], function (ch, key) {
   return process.exit(0)
@@ -31,8 +33,10 @@ screen.switchScreen = function (screenName, nodeType, id) {
       home.display()
       break
     case 'crossshard':
-      console.log('show cross shard', id)
       crossshard.display(id)
+      break
+    case 'shardBlock':
+      shardBlock.display(id)
       break
     case 'blank':
       // home.display()
@@ -44,6 +48,8 @@ screen.switchScreen = function (screenName, nodeType, id) {
 
 screen.removeAllScreen = function () {
   home.remove()
+  crossshard.remove()
+  shardBlock.remove()
 }
 
 screen.switchScreen('home')

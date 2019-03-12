@@ -32,6 +32,13 @@ class HomeScreen {
       }
     })
 
+    this.screen.key(['b'], function (ch, key) {
+      if (!self.isDisplay) return
+      if (self.elFocus == 'shard') {
+        self.screen.switchScreen('shardBlock', "shard", self.shardTable.rows.selected)
+      }
+    })
+
     this.screen.key(['C-l'], async (ch, key) => {
       if (!this.isDisplay) return
       if (this.elFocus == 'beacon') {
@@ -116,8 +123,8 @@ class HomeScreen {
     }, 500)
 
     setInterval(() => {
-      this.shardTable.setData(shardData.getData())
-      this.beaconTable.setData(beaconData.getData())
+      this.shardTable.setData(shardData.getShardTableData())
+      this.beaconTable.setData(beaconData.getBeaconTableData())
     }, 1000)
   }
 

@@ -1,11 +1,14 @@
 let beaconData = require('../backend/aggregator').beacon
 
-var data = []
+var beaconTableData = []
+function filterBeaconTableData ({ Endpoint, BeaconHeight, BestShardHeight, BeaconProposerIdx, Epoch,Pool  } = {}) {
+  return { Endpoint, BeaconHeight, Epoch, BeaconProposerIdx , Pool, BestShardHeight: JSON.stringify(BestShardHeight) }
+}
 setInterval(() => {
-  // console.log(beaconData)
   tmp = []
-  for (const [k, v] of Object.entries(beaconData)) {
-    let item = Object.entries(v.data)
+  for (let data of beaconData) {
+    let v = filterBeaconTableData(data)
+    let item = Object.entries(v)
     item = item.map((x) => {
         if (typeof x[1] == "undefined") {
             x[1] = "N/A"
@@ -14,16 +17,16 @@ setInterval(() => {
     })
     tmp.push(item)
   }
-  data = tmp
+  beaconTableData = tmp
   // console.log(tmp)
 }, 1000)
 
 module.exports = {
-  getData: function () {
+  getBeaconTableData: function () {
     return {
         //Endpoint, BeaconHeight, Epoch, BeaconProposerIdx , BestShardHeight
       headers: ['Beacon Node', 'Height', 'Epoch', 'LeaderID', 'B/S2B Pool', 'ShardHeight'],
-      data: data
+      data: beaconTableData
     }
   }
 }

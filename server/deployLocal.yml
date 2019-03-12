@@ -1,0 +1,26 @@
+---
+- hosts: local
+  gather_facts: no
+  serial: 10
+  
+
+  vars_prompt:
+    - name: "clear"
+      prompt: "Clear all data data? [Y/n]"
+      
+
+  tasks:
+    - name: Deploy bootnode 
+      shell: |
+        docker run -p 9330:9330 -e PORT='9330' --name bootnode -d constant /run_bootnode.sh; echo 1
+      when: inventory_hostname == "local-bootnode" 
+
+    - name: Stop 
+      shell: |
+        docker rm -f {{inventory_hostname}} ; echo 1
+      when: inventory_hostname != "local-bootnode"
+
+    - name: Deploy full node
+      shell: |
+        docker run --net host -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e SPENDINGKEY='{{spendingkey}}' -e EXTERNALADDRESS='127.0.0.1'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} constant /run_constant.sh {{clear}}
+      when: inventory_hostname != "local-bootnode"
