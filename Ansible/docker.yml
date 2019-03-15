@@ -1,0 +1,25 @@
+---
+- hosts: all
+  gather_facts: no
+  serial: 10
+  
+  tasks:
+    # - name: Install docker
+    #   shell: |
+    #     docker -v || bash -c "wget -qO- https://get.docker.com/ | sh"
+
+    - name: Pull constant image
+      shell: |
+        docker pull dungvanautonomous/constant
+
+    # - name: Check pull history
+    #   shell: |
+    #     docker images | grep constant | grep latest
+    #   register: out
+    # - debug: var=out.stdout_lines
+    
+
+
+
+    
+        

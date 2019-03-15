@@ -1,0 +1,60 @@
+ansible_ssh_private_key_file: '/home/david/constant_key'
+ansible_ssh_user: 'root'
+
+bootnode: "104.248.85.49"
+beacon:
+  0: 
+    IP: "104.248.85.49"
+    RPC_PORT: 9334
+    NODE_PORT: 9430
+  1: 
+    IP: "178.128.84.208"
+    RPC_PORT: 9334
+    NODE_PORT: 9430
+  2: 
+    IP: "104.248.55.45"
+    RPC_PORT: 9334
+    NODE_PORT: 9430
+shard:
+  0:
+    0: 
+      IP: "178.128.233.64"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+    1: 
+      IP: "178.128.55.163"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+    2: 
+      IP: "178.128.95.147"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+  1:
+    0: 
+      IP: "142.93.82.199"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+    1: 
+      IP: "139.59.40.51"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+    2: 
+      IP: "68.183.76.35"
+      RPC_PORT: 9334
+      NODE_PORT: 9430
+
+
+KEY:
+  beacon:
+    0: '112t8rxTdWfGCtgWvAMHnnEw9vN3R1D7YgD1SSHjAnVGL82HCrMq9yyXrHv3kB4gr84cejnMZRQ973RyHhq2G3MksoTWejNKdSWoQYDFf4gQ'
+    1: '112t8rnXDNYL1RyTuT85JXeX7mJg1Sc6tCby5akSM7pfEGApgAx83X8C46EDu6dFAK6MVcWfQv2sfTk5nV9HqU3jrkrWdhrmi9z34jEhgHak'
+    2: '112t8rnXmEeG5zsS7rExURJfqaRZhm6r4Pypkeag2gprdhtgDpen3LwV68x1nDPRYz2zhyhJTJCGvq1tUx4P1dvrdxF9W9DH7ME7PeGN2ohZ'
+  shard:
+    0:
+      0: '112t8rqGc71CqjrDCuReGkphJ4uWHJmiaV7rVczqNhc33pzChmJRvikZNc3Dt5V7quhdzjWW9Z4BrB2BxdK5VtHzsG9JZdZ5M7yYYGidKKZV'
+      1: '112t8s2UkZEwS7JtqLHFruRrh4Drj53UzH4A6DrairctKutxVb8Vw2DMzxCReYsAZkXi9ycaSNRHEcB7TJaTwPhyPvqRzu5NnUgTMN9AEKwo'
+      2: '112t8rnYY8UbXGVJ3PsrWxssjr1JXaTPNCPDrneXcQgVQs2MFYwgCzPmTsgqPPbeq8c4QxkrjpHYRaG39ZjtwCmHMJBNh2MxaQvKWw5eUGTM'
+    1:
+      0: '112t8rnYoj4LesSwRsseGCCYi4J2Py5QxytKKF2WixwEYP4opKUNL2Av9bR2zjfLewf3PQeKcNnuRTTPKgZSJaZH8dfoqY2rmHNekmGMBNDX'
+      1: '112t8rnZ5aGQqJw9bg6fR8AiGe9NFRtSmn73Scd4oNJcE5BNY4Rbju2amkTRW5PUaFpETkKAdSJUMqptjFYb3B8PVAcQhrqooieNFXe5jzTj'
+      2: '112t8rnZUKcW5CBDojVmMD6PmDJzR3VtfqFGWG6HRT9PocB6aewekjebWMm9aQnSncgwDV2GMqAWzspzFYL2vs3C3KnZB9H5YSE4s1SdotHb'

@@ -1,0 +1,26 @@
+
+[local:children]
+local-simple
+local-multi
+
+[local-simple]
+local-bootnode ansible_connection=local 
+local-beacon0 ansible_connection=local  spendingkey={{KEY.beacon.0}} node_port={{beacon.0.NODE_PORT}} rpc_port={{beacon.0.RPC_PORT}}
+local-shard0-0 ansible_connection=local  spendingkey={{KEY.shard.0.0}} node_port={{shard.0.0.NODE_PORT}} rpc_port={{shard.0.0.RPC_PORT}}
+local-shard1-0 ansible_connection=local  spendingkey={{KEY.shard.1.0}} node_port={{shard.1.0.NODE_PORT}} rpc_port={{shard.1.0.RPC_PORT}}
+
+[local-multi]
+local-bootnode ansible_connection=local 
+
+local-beacon0 ansible_connection=local  spendingkey={{KEY.beacon.0}} node_port={{beacon.0.NODE_PORT}} rpc_port={{beacon.0.RPC_PORT}}
+local-beacon1 ansible_connection=local  spendingkey={{KEY.beacon.1}} node_port={{beacon.1.NODE_PORT}} rpc_port={{beacon.1.RPC_PORT}}
+local-beacon2 ansible_connection=local  spendingkey={{KEY.beacon.2}} node_port={{beacon.2.NODE_PORT}} rpc_port={{beacon.2.RPC_PORT}}
+
+local-shard0-0 ansible_connection=local  spendingkey={{KEY.shard.0.0}} node_port={{shard.0.0.NODE_PORT}} rpc_port={{shard.0.0.RPC_PORT}}
+local-shard0-1 ansible_connection=local  spendingkey={{KEY.shard.0.1}} node_port={{shard.0.1.NODE_PORT}} rpc_port={{shard.0.1.RPC_PORT}}
+local-shard0-2 ansible_connection=local  spendingkey={{KEY.shard.0.2}} node_port={{shard.0.2.NODE_PORT}} rpc_port={{shard.0.2.RPC_PORT}}
+
+local-shard1-0 ansible_connection=local  spendingkey={{KEY.shard.1.0}} node_port={{shard.1.0.NODE_PORT}} rpc_port={{shard.1.0.RPC_PORT}}
+local-shard1-1 ansible_connection=local  spendingkey={{KEY.shard.1.1}} node_port={{shard.1.1.NODE_PORT}} rpc_port={{shard.1.1.RPC_PORT}}
+local-shard1-2 ansible_connection=local  spendingkey={{KEY.shard.1.2}} node_port={{shard.1.2.NODE_PORT}} rpc_port={{shard.1.2.RPC_PORT}}
+

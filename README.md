@@ -1,14 +1,8 @@
+## Structure
 
-## Install docker on servers
+### Integration: create container and automation test
+### Ansible: create container
+### Server: auto deploy server on Cloud Provider
+### Monitor: monitor system
 
-```
-ansible-playbook server/init.yml -i inventories/ --limit deploy
-
-ansible-playbook server/docker.yml -i inventories/ --limit deploy
-
-ansible-playbook server/deployBootNode.yml -i inventories/
-
-ansible-playbook server/deployFullNode.yml -i inventories/ --limit deploy
-
-```
 

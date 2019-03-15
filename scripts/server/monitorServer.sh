@@ -1,0 +1,1 @@
+cd ../../Monitor && node main.js server

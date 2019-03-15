@@ -1,0 +1,15 @@
+---
+- hosts: local
+  gather_facts: no
+  serial: 10
+  
+  tasks:
+    - name: Remove bootnode 
+      shell: |
+        docker rm -f {{inventory_hostname}}; echo 1
+      when: inventory_hostname == "local-bootnode" 
+
+    - name: Remove nodes
+      shell: |
+        docker rm -f {{inventory_hostname}} ; echo 1
+      when: inventory_hostname != "local-bootnode"

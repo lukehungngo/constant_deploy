@@ -1,0 +1,63 @@
+---
+- hosts: all
+  gather_facts: no
+  serial: 10
+  
+  pre_tasks:
+    # - name: 'install python2'
+    #   raw: apt-get -y install python
+
+  tasks:
+    # - name: Update apt
+    #   shell: |
+    #     apt update
+
+    # - name: Install deps
+    #   shell: |
+    #     apt install -y curl git
+
+    # - name: Install golang
+    #   shell: |
+    #     mkdir work -p
+    #     if [ ! -d "/usr/local/go" ]; then
+    #       curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz && \
+    #       tar -xvf go1.11.2.linux-amd64.tar.gz && \
+    #       mv go /usr/local 
+    #     fi
+
+    # - lineinfile:
+    #     dest: /root/.profile
+    #     regexp: '^export GOROOT'
+    #     line: 'export GOROOT=/usr/local/go'
+    #     state: present
+
+    # - lineinfile:
+    #     dest: /root/.profile
+    #     regexp: '^export GOPATH'
+    #     line: 'export GOPATH=/root/work'
+    #     state: present
+
+    # - lineinfile:
+    #     dest: /root/.profile
+    #     regexp: '^export PATH'
+    #     line: 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:'
+    #     state: present
+    
+    # - name: Pull constant
+    #   shell: |
+    #     if [ ! -d "/root/work/src/github.com/ninjadotorg/constant" ]; then 
+    #       mkdir -p /root/work/src/github.com/ninjadotorg && \
+    #       cd /root/work/src/github.com/ninjadotorg && git clone https://github.com/ninjadotorg/constant ;
+    #     fi ;
+    #     cd /root/work/src/github.com/ninjadotorg/constant && GOPATH=/root/work /usr/local/go/bin/go get 
+    
+    - name: Create running command master branch
+      shell: |
+        echo 'rm -rf /data/{{inventory_hostname}}' > delDB_{{inventory_hostname}}.sh && chmod +x /root/delDB_{{inventory_hostname}}.sh && \
+        echo 'cd /root/work/src/github.com/ninjadotorg/constant && git pull origin master && git checkout master && go run *.go --discoverpeers --discoverpeersaddress {{bootnode}}:9330 --spendingkey {{spendingkey}} --nodemode "auto" --datadir "/data/{{inventory_hostname}}" --listen "{{ansible_ssh_host}}:{{node_port}}" --externaladdress "{{ansible_ssh_host}}:9430" --rpclisten "0.0.0.0:{{rpc_port}}" --norpcauth --enablewallet --wallet "constant" --walletpassphrase "12345678" --walletautoinit' > /root/constant_{{inventory_hostname}}_single.sh && chmod +x /root/constant_{{inventory_hostname}}_single.sh && \
+        echo 'cd /root/work/src/github.com/ninjadotorg/constant/bootnode && sh build.sh && nohup /root/work/bin/constant-boot &' > bootnode.sh && chmod +x bootnode.sh
+
+    - name: Create running command real-consensus branch
+      shell: |
+        echo 'cd /root/work/src/github.com/ninjadotorg/constant && git pull origin real-consensus && git checkout real-consensus  && go run *.go --discoverpeers --discoverpeersaddress {{bootnode}} --spendingkey {{spendingkey}} --nodemode "auto" --datadir "/data/{{inventory_hostname}}" --listen "{{ansible_ssh_host}}:{{node_port}}" --externaladdress "{{ansible_ssh_host}}:9430" --rpclisten "0.0.0.0:{{rpc_port}}" --norpcauth --enablewallet --wallet "constant" --walletpassphrase "12345678" --walletautoinit' > /root/constant_{{inventory_hostname}}_multi.sh && chmod +x /root/constant_{{inventory_hostname}}_multi.sh 
+

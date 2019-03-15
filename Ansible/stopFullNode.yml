@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  serial: 10
+  tasks:
+    
+    - name: Clean data
+      shell: |
+        docker rm -f {{inventory_hostname}} && rm -rf /data ; echo 1

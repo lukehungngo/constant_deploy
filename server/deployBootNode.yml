@@ -1,8 +1,0 @@
----
-- hosts: beacon0
-  gather_facts: no
-  serial: 10
-  tasks:
-    - name: Deploy bootnode 
-      shell: |
-        docker rm -f Constant_Bootnode ; docker run -p 9330:9330 -e PORT='9330' --name Constant_Bootnode -d dungvanautonomous/constant /run_bootnode.sh
