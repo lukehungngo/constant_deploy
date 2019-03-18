@@ -1,2 +1,4 @@
-node_modules
-tool/node_modules
+Monitor/node_modules
+Monitor/logs/*
+Server/node_modules
+
