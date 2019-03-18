@@ -19,4 +19,12 @@ Go to scripts/local ->
     For stop: sh stopLocal.sh
 
 
+## Monitor system
+    Press: up/down to select shard node
+    Press: b to show block statistic of that node
+    Press: # to show cross shard pool of that node
+    Press: ESC to return to home page
+
+
+
 
