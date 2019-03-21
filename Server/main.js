@@ -1,6 +1,7 @@
 const DOClient = require('./digitalocean')
 const deploy_config = require('./config/deploy')
 
+
 var DOTemplate = {
   name: 'test',
   region: 'nyc1',

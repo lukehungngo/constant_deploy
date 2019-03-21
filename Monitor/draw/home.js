@@ -78,7 +78,7 @@ class HomeScreen {
     var grid = new contrib.grid({ rows: 12, cols: 12, screen: this.screen })
 
     // grid.set(row, col, rowSpan, colSpan, obj, opts)
-    this.beaconTable = grid.set(0, 0, 3, 12, contrib.table, {
+    this.beaconTable = grid.set(0, 0, 4, 12, contrib.table, {
       pad: 4,
       keys: true,
       interactive: true,
@@ -86,7 +86,7 @@ class HomeScreen {
       columnWidth: [25, 8, 8, 8, 15, 20]
     })
 
-    this.shardTable = grid.set(3, 0, 9, 12, contrib.table, {
+    this.shardTable = grid.set(4, 0, 8, 12, contrib.table, {
       pad: 4,
       keys: true,
       interactive: true,

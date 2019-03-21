@@ -112,4 +112,10 @@ function rpc({ host, port } = ({} = endpoint), method, ...params) {
   })
 }
 
-backend.GetBeaconPoolState({ host: '68.183.76.35', port: 9334 })
+
+// !async function(){
+//   var fs = require("fs")
+//   let res = await backend.GetBeaconPoolState({ host: '127.0.0.1', port: 9335 })
+//   console.log(res)
+// }()
+

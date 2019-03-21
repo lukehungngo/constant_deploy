@@ -1,60 +1,131 @@
 ansible_ssh_private_key_file: '/home/david/constant_key'
 ansible_ssh_user: 'root'
+host_key_checking: false
 
-bootnode: "104.248.85.49"
+bootnode: "165.227.110.210"
 beacon:
   0: 
-    IP: "104.248.85.49"
+    IP: "165.227.110.210"
+    NODE_PORT: 9000
     RPC_PORT: 9334
-    NODE_PORT: 9430
   1: 
-    IP: "178.128.84.208"
-    RPC_PORT: 9334
-    NODE_PORT: 9430
+    IP: "178.128.72.42"
+    NODE_PORT: 9001
+    RPC_PORT: 9335
   2: 
-    IP: "104.248.55.45"
+    IP: "142.93.146.221"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
+  3: 
+    IP: "188.166.50.183"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
+  4: 
+    IP: "206.189.31.140"
+    NODE_PORT: 9000
     RPC_PORT: 9334
-    NODE_PORT: 9430
+  5: 
+    IP: "138.197.133.94"
+    NODE_PORT: 9001
+    RPC_PORT: 9335
+  6: 
+    IP: "159.203.0.144"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
+  7: 
+    IP: "167.99.169.86"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
+  8: 
+    IP: "167.99.167.159"
+    NODE_PORT: 9000
+    RPC_PORT: 9334
+  9: 
+    IP: "159.203.0.157"
+    NODE_PORT: 9001
+    RPC_PORT: 9335
+  10: 
+    IP: "104.248.28.217"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
+  11: 
+    IP: "167.99.41.196"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
+  12: 
+    IP: "68.183.191.249"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
 shard:
-  0:
+  0: 
     0: 
-      IP: "178.128.233.64"
+      IP: "68.183.145.110"
+      NODE_PORT: 9000
       RPC_PORT: 9334
-      NODE_PORT: 9430
     1: 
-      IP: "178.128.55.163"
-      RPC_PORT: 9334
-      NODE_PORT: 9430
+      IP: "142.93.22.252"
+      NODE_PORT: 9001
+      RPC_PORT: 9335
     2: 
-      IP: "178.128.95.147"
-      RPC_PORT: 9334
-      NODE_PORT: 9430
+      IP: "142.93.154.40"
+      NODE_PORT: 9002
+      RPC_PORT: 9336
+    3: 
+      IP: "68.183.233.53"
+      NODE_PORT: 9003
+      RPC_PORT: 9337
   1:
     0: 
-      IP: "142.93.82.199"
+      IP: "142.93.44.147"
+      NODE_PORT: 9000
       RPC_PORT: 9334
-      NODE_PORT: 9430
     1: 
-      IP: "139.59.40.51"
-      RPC_PORT: 9334
-      NODE_PORT: 9430
+      IP: "134.209.152.137"
+      NODE_PORT: 9001
+      RPC_PORT: 9335
     2: 
-      IP: "68.183.76.35"
-      RPC_PORT: 9334
-      NODE_PORT: 9430
-
+      IP: "206.189.19.185"
+      NODE_PORT: 9002
+      RPC_PORT: 9336
+    3: 
+      IP: "134.209.152.139"
+      NODE_PORT: 9003
+      RPC_PORT: 9337
 
 KEY:
   beacon:
     0: '112t8rxTdWfGCtgWvAMHnnEw9vN3R1D7YgD1SSHjAnVGL82HCrMq9yyXrHv3kB4gr84cejnMZRQ973RyHhq2G3MksoTWejNKdSWoQYDFf4gQ'
     1: '112t8rnXDNYL1RyTuT85JXeX7mJg1Sc6tCby5akSM7pfEGApgAx83X8C46EDu6dFAK6MVcWfQv2sfTk5nV9HqU3jrkrWdhrmi9z34jEhgHak'
     2: '112t8rnXmEeG5zsS7rExURJfqaRZhm6r4Pypkeag2gprdhtgDpen3LwV68x1nDPRYz2zhyhJTJCGvq1tUx4P1dvrdxF9W9DH7ME7PeGN2ohZ'
+    3: "112t8rnXZD2GmbVAP3xBefJaorCgebytpoRK1oAzcgoNNSVtXzoRTu21KeSmnRbzvd7qMJd1mTcsqFS1CGZ8UpY4mFRZzBa69aVcFWpLXuRv"
+    4: "112t8rnXxR8GDWhm5Shn8GAaCHFNLXyFpz4Ln8wCcDCkmnJLNU4msYvCaXShxcp2mEoUxyVpGcyYtk2JzntZFZ4DNpwAc7QVif6r2oeLj2Qo"
+    5: "112t8rnYBW9trs5rzxrMzLU5AnzngQhbp6X4c3xyamFkWU7PwWRq6gprDkm6mf3ZjxaeYQmSpe3xorpWHo3JLLZFHCHSgqd8u19XkVuMGz1M"
+    6: "112t8rnXRwPSzrQFjCbDnciutb3K8MnbGVAxLzaYK8UhGjr8JKbR4CwGmiibz17CieTUxtgPEzqLiufsxG7kwfNEdh6PjWtqvcdULpkHsGVS"
+    7: "112t8rnYAR1CmGRPjhGSeSSDgQgzEB1M8asjUwhN63CAwh74uTisQRbSUvXG6dbf3hmS63gAkudevHc4JLVeTboNXMr6c5cVPAHXgqtekLcc"
+    8: "112t8rnYbn9vXZpmkn7gN71PY5qtF4i8vutwfKEJV4wdw9YBnJnooRumw9iucKY3XSeAuDNLwGK9xYKimUeHrogqu7rYyVTbqRsX3knnHeSJ"
+    9: "112t8rnZEM3qDq5eiFwmhznYdZiuEAxhEFNpvu3PqVua51vDhhEpwJ3WH14G5UazfXSpY2BD7i1dac74eChhyQDm38x5ZJCfs1F1wTr4eDNh"
+    10: "112t8rnZhsatLCpVW8E2PccMbQD64CHybdFxbiAMbiF7nSuQ9nY5gMxvueVi9JVmVgJTjm4CWFGSxbMN3ouMbKoaygkk1ru5inqsaRfWo6DQ"
+    11: "112t8rnaRzEQ4vingMe1ZSjuC83eKuXr2tPQhuvp7JsURJdHa5TEhFQRzY1zi8RraKqXzcWPxrSfVFxeeXUj1MFPUtCh7ji3PdCFzZvMe36Z"
+    12: "112t8rnayWyHLvZboXXz5SoJ7C8TqGxXJYBkbU8RDq12x6R7ck7q8STuCZpTbZ7ZdX3NqM2iu3sVAmbkG5RKUMvLTgUiMcTu6w9k2zDCSwLN"
+    13: "112t8rnbaTV3J9dbWcddPwc1vNacJckg3qpS3RUfybE1e5rEop7zRKaEKUUWA7aKgLjAPyMpNZ7h6zSGedMB7CAKp4wxVQJVd1vLQyJCB1b6"
+    14: "112t8rnbuoERjJSvDScFhJh6dPChenaYcGwnfXFGB9CpKxYavM4xHmuX3J9HRMMpnpLsABaWJuxyqi9ch7Cwf6y1sUTA4KCmECPZkj6BXzNp"
+    15: "112t8rncXpqe4cHE4yrwowipdYuGturFovzHWuWJWQPe6zqmDGmEAASnbDbeXvq9GhtRiH2zeyVDGGsxYZYpBiUV14jiGrZ5xiXCxgvtrhPe"
+    16: "112t8rndAXCuZ96NFFubQmHCytTBihK9gjasF3nrvawkgWTiNTRq6vvoVgRUhNPaxwswxtoPJ25EGNKo2Sr6dNeUYbvcuYdM1SoebND8qGNT"
+    17: "112t8rnduMvZ6GSsgWaBhBaF6gknBYqPT6gy1GGnjDwrFNFKhGqJ5gNzT7daYysV8a7WnCaknn24NUf7E69MNWm8WCN841ZGm33bC3y47pUq"
+    18: "112t8rneGa8Hwc8cw93xe14aoXrd5T1fhWe1nohhPXwe8SAvsxMijdpvvkNRd6rLU5KB65AfywpYa9tmu4ifcTyucXwJJcJ9yLSEp7KhYGT5"
+    19: "112t8rnesT45PaMb4FymSe18exVWfwJUJCV7fUZ86LV3vvADbbGCs7eiMrM1a7ifMGpCfoDcVEZKC7aPXrfPqRbnZWqaUhVP4gebfmSsqwKU"
+    20: "112t8rnfcTU5rdWyj8bFboJsVvRW8g7KPTGARsNmvs3nYn23XmJicvp4vyj17LpKs8MgjgXpqRQxAizTi2JCEfjVmYEXqZMUhQQaZVN111CS"
+    21: "112t8rngAy7uR1VvCKtVcLTCXYrY72FEn4z4H13QCWsvaFzoJt3DpZnyVLGcg7GXcTK7uV729yKe9Ayp6XYdvwExtMZGCCb5fSCgktmNMn1C"
+    22: "112t8rngZqsK5Tos41TuVvLNfLdx9bneACnPBphnzM6ueZZD4ExoYc1T6ajToRd6AKBhiF28m9crd4L6RTuLLzfC8GqwdKFGmrHVfqGFzEPX"
+    23: "112t8rnh7F9ByXV97LKsmBSqton4yqqYNfKi6Ty2e5mmnd86ovC4QdbpVgSWcz5ygE7xWX74XHcqRE4VnZTXMGrH2z1sPKfDKwhuB3L1zjr1"
   shard:
     0:
       0: '112t8rqGc71CqjrDCuReGkphJ4uWHJmiaV7rVczqNhc33pzChmJRvikZNc3Dt5V7quhdzjWW9Z4BrB2BxdK5VtHzsG9JZdZ5M7yYYGidKKZV'
       1: '112t8s2UkZEwS7JtqLHFruRrh4Drj53UzH4A6DrairctKutxVb8Vw2DMzxCReYsAZkXi9ycaSNRHEcB7TJaTwPhyPvqRzu5NnUgTMN9AEKwo'
       2: '112t8rnYY8UbXGVJ3PsrWxssjr1JXaTPNCPDrneXcQgVQs2MFYwgCzPmTsgqPPbeq8c4QxkrjpHYRaG39ZjtwCmHMJBNh2MxaQvKWw5eUGTM'
+      3: '112t8rniLPf1ten3xsPpFx2P6Ug7D4UVz4yYGKQfk8YpzY3RDEqmQ9FxTXd9G6r6dJXb9URqvNApfQzVQqqRqvmfarRnaR4tVUATrxbmcQD6'
     1:
       0: '112t8rnYoj4LesSwRsseGCCYi4J2Py5QxytKKF2WixwEYP4opKUNL2Av9bR2zjfLewf3PQeKcNnuRTTPKgZSJaZH8dfoqY2rmHNekmGMBNDX'
       1: '112t8rnZ5aGQqJw9bg6fR8AiGe9NFRtSmn73Scd4oNJcE5BNY4Rbju2amkTRW5PUaFpETkKAdSJUMqptjFYb3B8PVAcQhrqooieNFXe5jzTj'
       2: '112t8rnZUKcW5CBDojVmMD6PmDJzR3VtfqFGWG6HRT9PocB6aewekjebWMm9aQnSncgwDV2GMqAWzspzFYL2vs3C3KnZB9H5YSE4s1SdotHb'
+      3: "112t8rnhvfmkbNz6bmrtBM74pHiUFgML4yhuSZ431teYD3S1sEUVPKpB6gGFjgrPu8e9uc7eqfnmqqtj9kTxYXTRbYkvyrsv3ydxVPmRM8fX"

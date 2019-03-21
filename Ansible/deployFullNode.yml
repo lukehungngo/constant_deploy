@@ -1,7 +1,7 @@
 ---
 - hosts: all
   gather_facts: no
-  serial: 10
+  serial: 30
   vars_prompt:
     - name: "clear"
       prompt: "Clear all data data? [Y/n]"
