@@ -12,7 +12,7 @@
   tasks:
     - name: Deploy bootnode 
       shell: |
-        docker run -p 9330:9330 -e PORT='9330' --name {{inventory_hostname}} -d constant /run_bootnode.sh; echo 1
+        docker rm -f local-bootnode ; docker run -p 9330:9330 -e PORT='9330' --name {{inventory_hostname}} -d constant /run_bootnode.sh; echo 1
       when: inventory_hostname == "local-bootnode" 
 
     - name: Stop 

@@ -16,6 +16,9 @@
       shell: |
         apt install -y curl git
 
+    - name: Install docker
+      shell: |
+        docker -v || bash -c "wget -qO- https://get.docker.com/ | sh"
     # - name: Install golang
     #   shell: |
     #     mkdir work -p

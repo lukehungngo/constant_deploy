@@ -1,1 +1,1 @@
-cd ../../Monitor && node main.js server
+cd ../../Monitor && node main.js $1

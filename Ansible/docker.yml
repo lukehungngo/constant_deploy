@@ -4,10 +4,6 @@
   serial: 20
   
   tasks:
-    # - name: Install docker
-    #   shell: |
-    #     docker -v || bash -c "wget -qO- https://get.docker.com/ | sh"
-
     - name: Pull constant image
       shell: |
         docker pull dungvanautonomous/constant

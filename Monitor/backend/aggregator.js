@@ -1,10 +1,10 @@
 const YAML = require('yamljs')
 const backend = require('./backend')
 // Load yaml file using YAML.load
-if (process.argv[2]=="server")
-  var config = YAML.load(__dirname + '/../../Ansible/inventories/group_vars/deploy.yml')
+if (!process.argv[2])
+  var config = YAML.load(__dirname + `/../../Ansible/inventories/local/group_vars/deploy.yml`)
 else
-  var config = YAML.load(__dirname + '/../../Ansible/inventories/group_vars/local.yml')
+  var config = YAML.load(__dirname + `/../../Ansible/inventories/${process.argv[2]}/group_vars/${process.argv[2]}.yml`)
 
 // console.log(JSON.stringify(config, null, 2))
 let result = { key: "", beacon: [], shard: [] }

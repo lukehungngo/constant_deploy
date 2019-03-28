@@ -36,8 +36,8 @@ function getBlockData(){
         i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
  }
-  function filterShardBlockData( { Height, Time, TxHashes, Size}= {}){
-    return { Time, Height, Size : formatBytes(Size), Latency: 0, NumTx: (TxHashes || []).length}
+  function filterShardBlockData( { Height, Time, TxHashes, Size, Round}= {}){
+    return { Time, Height, Size : formatBytes(Size), Latency: 0, NumTx: (TxHashes || []).length, Round}
   }
   for (let i in shardData) {
     let data = shardData[i]
@@ -97,6 +97,7 @@ module.exports = {
         "Size",
         "Latency",
         "NumTx",
+        "Round"
       ],
       data: blockData[nid] || []
     }
