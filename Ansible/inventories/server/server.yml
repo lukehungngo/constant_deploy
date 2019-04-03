@@ -1,4 +1,4 @@
-[deploy:children]
+[server:children]
 beacon
 shard0
 shard1
@@ -13,15 +13,15 @@ beacon1 ansible_ssh_host={{beacon.1.IP}} spendingkey={{KEY.beacon.1}} node_port=
 beacon2 ansible_ssh_host={{beacon.2.IP}} spendingkey={{KEY.beacon.2}} node_port={{beacon.2.NODE_PORT}} rpc_port={{beacon.2.RPC_PORT}}
 beacon3 ansible_ssh_host={{beacon.3.IP}} spendingkey={{KEY.beacon.3}} node_port={{beacon.3.NODE_PORT}} rpc_port={{beacon.3.RPC_PORT}}
 
-beacon4 ansible_ssh_host={{beacon.4.IP}} spendingkey={{KEY.beacon.4}} node_port={{beacon.4.NODE_PORT}} rpc_port={{beacon.4.RPC_PORT}}
-beacon5 ansible_ssh_host={{beacon.5.IP}} spendingkey={{KEY.beacon.5}} node_port={{beacon.5.NODE_PORT}} rpc_port={{beacon.5.RPC_PORT}}
-beacon6 ansible_ssh_host={{beacon.6.IP}} spendingkey={{KEY.beacon.6}} node_port={{beacon.6.NODE_PORT}} rpc_port={{beacon.6.RPC_PORT}}
-beacon7 ansible_ssh_host={{beacon.7.IP}} spendingkey={{KEY.beacon.7}} node_port={{beacon.7.NODE_PORT}} rpc_port={{beacon.7.RPC_PORT}}
-beacon8 ansible_ssh_host={{beacon.8.IP}} spendingkey={{KEY.beacon.8}} node_port={{beacon.8.NODE_PORT}} rpc_port={{beacon.8.RPC_PORT}}
-beacon9 ansible_ssh_host={{beacon.9.IP}} spendingkey={{KEY.beacon.9}} node_port={{beacon.9.NODE_PORT}} rpc_port={{beacon.9.RPC_PORT}}
-beacon10 ansible_ssh_host={{beacon.10.IP}} spendingkey={{KEY.beacon.10}} node_port={{beacon.10.NODE_PORT}} rpc_port={{beacon.10.RPC_PORT}}
-beacon11 ansible_ssh_host={{beacon.11.IP}} spendingkey={{KEY.beacon.11}} node_port={{beacon.11.NODE_PORT}} rpc_port={{beacon.11.RPC_PORT}}
-beacon12 ansible_ssh_host={{beacon.12.IP}} spendingkey={{KEY.beacon.12}} node_port={{beacon.12.NODE_PORT}} rpc_port={{beacon.12.RPC_PORT}}
+# beacon4 ansible_ssh_host={{beacon.4.IP}} spendingkey={{KEY.beacon.4}} node_port={{beacon.4.NODE_PORT}} rpc_port={{beacon.4.RPC_PORT}}
+# beacon5 ansible_ssh_host={{beacon.5.IP}} spendingkey={{KEY.beacon.5}} node_port={{beacon.5.NODE_PORT}} rpc_port={{beacon.5.RPC_PORT}}
+# beacon6 ansible_ssh_host={{beacon.6.IP}} spendingkey={{KEY.beacon.6}} node_port={{beacon.6.NODE_PORT}} rpc_port={{beacon.6.RPC_PORT}}
+# beacon7 ansible_ssh_host={{beacon.7.IP}} spendingkey={{KEY.beacon.7}} node_port={{beacon.7.NODE_PORT}} rpc_port={{beacon.7.RPC_PORT}}
+# beacon8 ansible_ssh_host={{beacon.8.IP}} spendingkey={{KEY.beacon.8}} node_port={{beacon.8.NODE_PORT}} rpc_port={{beacon.8.RPC_PORT}}
+# beacon9 ansible_ssh_host={{beacon.9.IP}} spendingkey={{KEY.beacon.9}} node_port={{beacon.9.NODE_PORT}} rpc_port={{beacon.9.RPC_PORT}}
+# beacon10 ansible_ssh_host={{beacon.10.IP}} spendingkey={{KEY.beacon.10}} node_port={{beacon.10.NODE_PORT}} rpc_port={{beacon.10.RPC_PORT}}
+# beacon11 ansible_ssh_host={{beacon.11.IP}} spendingkey={{KEY.beacon.11}} node_port={{beacon.11.NODE_PORT}} rpc_port={{beacon.11.RPC_PORT}}
+# beacon12 ansible_ssh_host={{beacon.12.IP}} spendingkey={{KEY.beacon.12}} node_port={{beacon.12.NODE_PORT}} rpc_port={{beacon.12.RPC_PORT}}
 
 [shard0]
 shard0-0 ansible_ssh_host={{shard.0.0.IP}} spendingkey={{KEY.shard.0.0}} node_port={{shard.0.0.NODE_PORT}} rpc_port={{shard.0.0.RPC_PORT}}

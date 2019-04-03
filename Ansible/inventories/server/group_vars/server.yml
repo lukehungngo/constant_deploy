@@ -1,109 +1,96 @@
-bootnode: "127.0.0.1"
+ansible_ssh_private_key_file: '/home/david/constant_key'
+ansible_ssh_user: 'root'
+host_key_checking: false
+
+bootnode: "172.104.39.6"
 beacon:
   0: 
-    IP: "127.0.0.1"
+    IP: "172.104.39.6"
     NODE_PORT: 9000
     RPC_PORT: 9334
   1: 
-    IP: "127.0.0.1"
+    IP: "72.14.186.233"
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
-    IP: "127.0.0.1"
+    IP: "178.79.176.185"
     NODE_PORT: 9002
     RPC_PORT: 9336
   3: 
-    IP: "127.0.0.1"
+    IP: "172.104.64.160"
     NODE_PORT: 9003
     RPC_PORT: 9337
   # 4: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9004
-  #   RPC_PORT: 9338
+  #   IP: "206.189.31.140"
+  #   NODE_PORT: 9000
+  #   RPC_PORT: 9334
   # 5: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9005
-  #   RPC_PORT: 9339
+  #   IP: "138.197.133.94"
+  #   NODE_PORT: 9001
+  #   RPC_PORT: 9335
   # 6: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9006
-  #   RPC_PORT: 9340
+  #   IP: "159.203.0.144"
+  #   NODE_PORT: 9002
+  #   RPC_PORT: 9336
   # 7: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9007
-  #   RPC_PORT: 9341
+  #   IP: "167.99.169.86"
+  #   NODE_PORT: 9003
+  #   RPC_PORT: 9337
   # 8: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9008
-  #   RPC_PORT: 9342
+  #   IP: "167.99.167.159"
+  #   NODE_PORT: 9000
+  #   RPC_PORT: 9334
   # 9: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9009
-  #   RPC_PORT: 9343
+  #   IP: "159.203.0.157"
+  #   NODE_PORT: 9001
+  #   RPC_PORT: 9335
   # 10: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9010
-  #   RPC_PORT: 9344
+  #   IP: "104.248.28.217"
+  #   NODE_PORT: 9002
+  #   RPC_PORT: 9336
   # 11: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9011
-  #   RPC_PORT: 9345
+  #   IP: "167.99.41.196"
+  #   NODE_PORT: 9003
+  #   RPC_PORT: 9337
   # 12: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9012
-  #   RPC_PORT: 9346
-  # 13: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9013
-  #   RPC_PORT: 9347
-  # 14: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9014
-  #   RPC_PORT: 9348
-  # 15: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9015
-  #   RPC_PORT: 9349
-  # 16: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9016
-  #   RPC_PORT: 9350
+  #   IP: "68.183.191.249"
+  #   NODE_PORT: 9003
+  #   RPC_PORT: 9337
 shard:
-  0:
+  0: 
     0: 
-      IP: "127.0.0.1"
-      NODE_PORT: 11003
-      RPC_PORT: 10337
+      IP: "172.104.39.6"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     1: 
-      IP: "127.0.0.1"
-      NODE_PORT: 11004
-      RPC_PORT: 10338
+      IP: "72.14.186.233"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
     2: 
-      IP: "127.0.0.1"
-      NODE_PORT: 11005
-      RPC_PORT: 10339
+      IP: "178.79.176.185"
+      NODE_PORT: 19006
+      RPC_PORT: 19336
     3: 
-      IP: "127.0.0.1"
-      NODE_PORT: 11006
-      RPC_PORT: 10340
+      IP: "172.104.64.160"
+      NODE_PORT: 19007
+      RPC_PORT: 19337
   1:
     0: 
-      IP: "127.0.0.1"
-      NODE_PORT: 12003
-      RPC_PORT: 11337
+      IP: "172.104.39.6"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
     1: 
-      IP: "127.0.0.1"
-      NODE_PORT: 12004
-      RPC_PORT: 11338
+      IP: "72.14.186.233"
+      NODE_PORT: 29001
+      RPC_PORT: 29335
     2: 
-      IP: "127.0.0.1"
-      NODE_PORT: 12005
-      RPC_PORT: 11339
+      IP: "178.79.176.185"
+      NODE_PORT: 29002
+      RPC_PORT: 29336
     3: 
-      IP: "127.0.0.1"
-      NODE_PORT: 12006
-      RPC_PORT: 11340
-      
+      IP: "172.104.64.160"
+      NODE_PORT: 29003
+      RPC_PORT: 29337
 
 KEY:
   beacon:
