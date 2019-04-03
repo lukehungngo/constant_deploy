@@ -1,15 +1,4 @@
-
-[local:children]
-local-simple
-local-multi
-
-[local-simple]
-local-bootnode ansible_connection=local 
-local-beacon0 ansible_connection=local  spendingkey={{KEY.beacon.0}} node_port={{beacon.0.NODE_PORT}} rpc_port={{beacon.0.RPC_PORT}}
-local-shard0-0 ansible_connection=local  spendingkey={{KEY.shard.0.0}} node_port={{shard.0.0.NODE_PORT}} rpc_port={{shard.0.0.RPC_PORT}}
-local-shard1-0 ansible_connection=local  spendingkey={{KEY.shard.1.0}} node_port={{shard.1.0.NODE_PORT}} rpc_port={{shard.1.0.RPC_PORT}}
-
-[local-multi]
+[local]
 local-bootnode ansible_connection=local 
 
 local-beacon0 ansible_connection=local  spendingkey={{KEY.beacon.0}} node_port={{beacon.0.NODE_PORT}} rpc_port={{beacon.0.RPC_PORT}}

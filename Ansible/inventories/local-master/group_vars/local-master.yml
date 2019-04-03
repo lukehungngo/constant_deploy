@@ -1,24 +1,20 @@
-ansible_ssh_private_key_file: '/home/david/constant_key'
-ansible_ssh_user: 'root'
-host_key_checking: false
-
-bootnode: "45.118.135.227"
+bootnode: "127.0.0.1"
 beacon:
   0: 
-    IP: "45.118.135.227"
+    IP: "127.0.0.1"
     NODE_PORT: 9000
     RPC_PORT: 9334
 shard:
   0: 
     0: 
-      IP: "139.162.35.20"
-      NODE_PORT: 9000
-      RPC_PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9001
+      RPC_PORT: 9335
   1:
     0: 
-      IP: "139.162.13.167"
-      NODE_PORT: 9000
-      RPC_PORT: 9334
+      IP: "127.0.0.1"
+      NODE_PORT: 9002
+      RPC_PORT: 9336
 
 KEY:
   beacon:
