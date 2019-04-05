@@ -1,2 +1,9 @@
-local-shard0-3
-local-shard1-3
+local-beacon0
+local-beacon1
+local-beacon2
+local-shard0-0
+local-shard0-1
+local-shard0-2
+local-shard1-0
+local-shard1-1
+local-shard1-2

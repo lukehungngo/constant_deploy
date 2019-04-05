@@ -17,7 +17,7 @@
       
     - name: Deploy full node
       shell: |
-         docker run --net host -e NAME={{inventory_hostname}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e SPENDINGKEY='{{spendingkey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} dungvanautonomous/constant /run_constant.sh {{clear}} || docker restart {{inventory_hostname}} 
+         docker run --net host -e NAME={{inventory_hostname}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} dungvanautonomous/constant /run_constant.sh {{clear}} || docker restart {{inventory_hostname}} 
       when: inventory_hostname != "bootnode" 
     # - name: restart
     #   shell: |

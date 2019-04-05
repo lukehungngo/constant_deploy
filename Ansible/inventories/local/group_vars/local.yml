@@ -1,3 +1,4 @@
+externaladdress: "127.0.0.1"
 bootnode: "127.0.0.1"
 beacon:
   0: 
