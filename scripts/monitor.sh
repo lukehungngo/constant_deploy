@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ../Monitor && node main.js $1
+cd Monitor && node main.js $1
 

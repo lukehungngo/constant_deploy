@@ -1,0 +1,5 @@
+[staking]
+staking0 ansible_ssh_host={{staking.0.IP}}
+staking1 ansible_ssh_host={{staking.1.IP}}
+staking2 ansible_ssh_host={{staking.2.IP}}
+staking3 ansible_ssh_host={{staking.3.IP}}

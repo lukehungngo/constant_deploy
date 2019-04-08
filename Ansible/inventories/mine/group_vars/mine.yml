@@ -1,0 +1,13 @@
+ansible_ssh_private_key_file: '/home/david/constant_key'
+ansible_ssh_user: 'root'
+host_key_checking: false
+
+staking:
+  1: "69.164.206.6"
+  2: "198.58.100.205"
+  3: "45.79.173.125"
+  4: "45.33.57.250"
+  5: "45.79.207.110"
+  6: "45.33.36.89"
+  7: "45.33.101.55"
+  
