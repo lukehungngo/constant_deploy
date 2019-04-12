@@ -94,6 +94,26 @@ backend.GetBlocks = async function (endpoint, numblock, shardID) {
   }
 }
 
+backend.StartProfiling = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'startprofiling')
+    // console.log(res)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
+backend.StopProfiling = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'stopprofiling')
+    // console.log(res)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
 backend.GetNetworkInfo = async function (endpoint) {
   try {
     let res = await rpc(endpoint, 'getnetworkinfo')
@@ -123,9 +143,9 @@ function rpc({ host, port } = ({} = endpoint), method, ...params) {
 
 
 !async function(){
-//   var fs = require("fs")
-//   let res = await backend.RetrieveBlock({ host: '172.104.39.6', port: 19334 },"04d3b6518698928483a218718c5096e7b31e6547a9c53688ce64e5043478907f","2")
-  // let res = await backend.GetBlocks({ host: '72.14.186.233', port: 19335 },1,0)
-  // console.log(res)
+  // var fs = require("fs")
+  let res = await backend.StopProfiling({ host: '178.79.176.185', port: 9336 })
+  // let res = await backend.GetBlocks({ host: '172.104.56.24', port: 19335 },2,0)
+  console.log(res)
 }()
 

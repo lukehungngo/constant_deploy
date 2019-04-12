@@ -9,7 +9,7 @@ beacon:
     NODE_PORT: 9000
     RPC_PORT: 9334
   1: 
-    IP: "72.14.186.233"
+    IP: "172.104.56.24"
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
@@ -63,7 +63,7 @@ shard:
       NODE_PORT: 19004
       RPC_PORT: 19334
     1: 
-      IP: "72.14.186.233"
+      IP: "172.104.56.24"
       NODE_PORT: 19005
       RPC_PORT: 19335
     2: 
@@ -80,7 +80,7 @@ shard:
       NODE_PORT: 29000
       RPC_PORT: 29334
     1: 
-      IP: "72.14.186.233"
+      IP: "172.104.56.24"
       NODE_PORT: 29001
       RPC_PORT: 29335
     2: 

@@ -1,9 +1,14 @@
 #!/bin/bash
 if [ "$1" == "server" ]; then
     echo "Deploy Server"
-    # (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh build.sh)
-    # ansible-playbook Ansible/docker.yml -i Ansible/inventories/server --limit server
+    (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh build.sh)
+    # ansible-playbook Ansible/init.yml -i Ansible/inventories/server --limit  server
+    ansible-playbook Ansible/docker.yml -i Ansible/inventories/server --limit  server
+    # ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit shard0-0
+    # ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  beacon0,beacon1,beacon2,beacon3
     ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  server
+    # ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  shard1-0,shard1-1,shard1-2,shard1-3
+
 elif [ "$1" == "local-master" ]; then
     echo "Deploy Local Master"
     (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh local.sh)
