@@ -8,13 +8,18 @@ if [ "$1" == "server" ]; then
     # ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  beacon0,beacon1,beacon2,beacon3
     ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  server
     # ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/server --limit  shard1-0,shard1-1,shard1-2,shard1-3
-
-elif [ "$1" == "local-master" ]; then
-    echo "Deploy Local Master"
+elif [ "$1" == "metric" ]; then
+    echo "Deploy Metric Server"
+    # (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh build.sh)
+    ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
+    ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric --limit  metric
+    ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/metric --limit  metric
+elif [ "$1" == "single" ]; then
+    echo "Deploy Local Single"
     (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh local.sh)
-    ansible-playbook Ansible/deployLocal.yml -i Ansible/inventories/local-master --limit  local-master
+    ansible-playbook Ansible/deployLocal.yml -i Ansible/inventories/single --limit  single
 elif [ "$1" == "local" ]; then
-    echo "Deploy Local"
+    echo "Deploy Local Multi"
     (cd /usr/local/src/go10/src/github.com/constant-money/constant-chain/bin && sh local.sh)
     ansible-playbook Ansible/deployLocal.yml -i Ansible/inventories/local --limit  local
 #     ansible-playbook Ansible/deployLocal.yml -i Ansible/inventories/local --limit local-bootnode

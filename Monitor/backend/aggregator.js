@@ -15,10 +15,10 @@ for (const [i, v] of Object.entries(config.beacon)) {
     let rpcEndpoint = { host: v.IP, port: v.RPC_PORT }
     let beacon = await backend.GetBeaconBestState(rpcEndpoint) || {}
     let s2bpool = await backend.GetShardToBeaconPoolState(rpcEndpoint) || []
-    let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || []
+    let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || 0
     let blocks = await backend.GetBlocks(rpcEndpoint, 20, -1)
 
-    let bblkCnt = bpool.length
+    let bblkCnt = bpool
     let s2bblkCnt = 0
     
     for (let s in s2bpool) {
@@ -53,7 +53,7 @@ for (let sid in config.shard) {
       let beacon = await backend.GetBeaconBestState(rpcEndpoint) || {}
       
       let blocks = await backend.GetBlocks(rpcEndpoint, 20, shard.ShardID)
-      let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || []
+      let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || 0
       let spool = await backend.GetShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) || []
       let cspool = await backend.GetCrossShardShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) || []
 
@@ -65,7 +65,7 @@ for (let sid in config.shard) {
         cspoolStr += s + ": " + JSON.stringify(cspool[s]) + "\n"
       }
       shard.BeaconBest = beacon.BeaconHeight
-      shard.Pool = bpool.length + "-" + sBlkCnt +  "-" + csblkCnt
+      shard.Pool = bpool + "-" + sBlkCnt +  "-" + csblkCnt
 
       Object.assign(result.shard[shardNodeID],shard)
       result.shard[shardNodeID].blocks = blocks

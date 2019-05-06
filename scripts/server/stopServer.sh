@@ -1,1 +1,0 @@
-ansible-playbook ../../Ansible/stopFullNode.yml -i ../../Ansible/inventories/ --limit shard1

@@ -1,102 +1,58 @@
-ansible_ssh_private_key_file: '/home/david/constant_key'
+ansible_ssh_private_key_file: '/home/david/stagging'
 ansible_ssh_user: 'root'
 host_key_checking: false
 
-bootnode: "172.104.39.6"
+bootnode: "165.22.251.12"
 beacon:
   0: 
-    IP: "172.104.39.6"
+    IP: "165.22.251.12"
     NODE_PORT: 9000
     RPC_PORT: 9334
   1: 
-    IP: "172.104.56.24"
+    IP: "165.22.251.12"
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
-    IP: "178.79.176.185"
+    IP: "165.22.251.12"
     NODE_PORT: 9002
     RPC_PORT: 9336
   3: 
-    IP: "172.104.64.160"
+    IP: "165.22.251.12"
     NODE_PORT: 9003
     RPC_PORT: 9337
-  # 4: 
-  #   IP: "206.189.31.140"
-  #   NODE_PORT: 9000
-  #   RPC_PORT: 9334
-  # 5: 
-  #   IP: "138.197.133.94"
-  #   NODE_PORT: 9001
-  #   RPC_PORT: 9335
-  # 6: 
-  #   IP: "159.203.0.144"
-  #   NODE_PORT: 9002
-  #   RPC_PORT: 9336
-  # 7: 
-  #   IP: "167.99.169.86"
-  #   NODE_PORT: 9003
-  #   RPC_PORT: 9337
-  # 8: 
-  #   IP: "167.99.167.159"
-  #   NODE_PORT: 9000
-  #   RPC_PORT: 9334
-  # 9: 
-  #   IP: "159.203.0.157"
-  #   NODE_PORT: 9001
-  #   RPC_PORT: 9335
-  # 10: 
-  #   IP: "104.248.28.217"
-  #   NODE_PORT: 9002
-  #   RPC_PORT: 9336
-  # 11: 
-  #   IP: "167.99.41.196"
-  #   NODE_PORT: 9003
-  #   RPC_PORT: 9337
-  # 12: 
-  #   IP: "68.183.191.249"
-  #   NODE_PORT: 9003
-  #   RPC_PORT: 9337
 shard:
   0: 
     0: 
-      IP: "172.104.39.6"
+      IP: "157.230.246.25"
       NODE_PORT: 19004
       RPC_PORT: 19334
     1: 
-      IP: "172.104.56.24"
+      IP: "157.230.246.25"
       NODE_PORT: 19005
       RPC_PORT: 19335
     2: 
-      IP: "178.79.176.185"
+      IP: "157.230.246.25"
       NODE_PORT: 19006
       RPC_PORT: 19336
     3: 
-      IP: "172.104.64.160"
+      IP: "157.230.246.25"
       NODE_PORT: 19007
       RPC_PORT: 19337
-    4: 
-      IP: "45.33.36.89"
-      NODE_PORT: 9330
-      RPC_PORT: 9334
-    5: 
-      IP: "198.58.100.205"
-      NODE_PORT: 9330
-      RPC_PORT: 9334
   1:
     0: 
-      IP: "172.104.39.6"
+      IP: "165.22.248.185"
       NODE_PORT: 29000
       RPC_PORT: 29334
     1: 
-      IP: "172.104.56.24"
+      IP: "165.22.248.185"
       NODE_PORT: 29001
       RPC_PORT: 29335
     2: 
-      IP: "178.79.176.185"
+      IP: "165.22.248.185"
       NODE_PORT: 29002
       RPC_PORT: 29336
     3: 
-      IP: "172.104.64.160"
+      IP: "165.22.248.185"
       NODE_PORT: 29003
       RPC_PORT: 29337
     

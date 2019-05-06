@@ -114,6 +114,16 @@ backend.StopProfiling = async function (endpoint) {
   }
 }
 
+backend.GetNextCrossShard = async function (endpoint, from,to, start) {
+  try {
+    let res = await rpc(endpoint, 'getnextcrossshard',from,to, start)
+    // console.log(res)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
 backend.GetNetworkInfo = async function (endpoint) {
   try {
     let res = await rpc(endpoint, 'getnetworkinfo')
@@ -144,8 +154,8 @@ function rpc({ host, port } = ({} = endpoint), method, ...params) {
 
 !async function(){
   // var fs = require("fs")
-  let res = await backend.StopProfiling({ host: '178.79.176.185', port: 9336 })
-  // let res = await backend.GetBlocks({ host: '172.104.56.24', port: 19335 },2,0)
+  let res = await backend.StopProfiling({ host: '45.33.36.89', port: 9334 })
+  // let res = await backend.GetNextCrossShard({ host: '172.104.39.6', port: 19334 },1,0,27993)
   console.log(res)
 }()
 
