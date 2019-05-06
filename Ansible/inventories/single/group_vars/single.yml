@@ -20,6 +20,10 @@ shard:
       IP: "127.0.0.1"
       NODE_PORT: 12003
       RPC_PORT: 11337
+    1: 
+      IP: "127.0.0.1"
+      NODE_PORT: 11004
+      RPC_PORT: 10338
       
 
 KEY:
@@ -30,4 +34,5 @@ KEY:
       0: '112t8rqJHgJp2TPpNpLNx34aWHB5VH5Pys3hVjjhhf9tctVeCNmX2zQLBqzHau6LpUbSV52kXtG2hRZsuYWkXWF5kw2v24RJq791fWmQxVqy'
       1: '112t8rtTwTgp4QKJ7rP2p5TyqtFjKYxeFHCUumTwuH4NbCAk7g7H1MvH5eDKyy6N5wvT1FVVLoPrUzrAKKzJeHcCrc2BoSJfTvkDobVSmSZe'
     1:
-      0: '112t8rnY5yiM5XJCnAH3hD2UzhKnwoQjPCDDy6cRwsoNevRFJBm7HmYLbpijKvpxG8GD1LsamT9DC6xhs1RqCnDzoDhwFv1sd7ckzSa2Cj16'
+      0: '112t8rrEEcDQBMnUM5J17qniHZZmckmr8LGCv9nBjP9x5wmGFGUryKTNvEAf1jh2wwW69rxwtANq4m8JmzowfKVPayUHPmAKdwQw5718GKuH'
+      
