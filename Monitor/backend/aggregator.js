@@ -15,10 +15,10 @@ for (const [i, v] of Object.entries(config.beacon)) {
     let rpcEndpoint = { host: v.IP, port: v.RPC_PORT }
     let beacon = await backend.GetBeaconBestState(rpcEndpoint) || {}
     let s2bpool = await backend.GetShardToBeaconPoolState(rpcEndpoint) || []
-    let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || 0
+    let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || {V:-1, P:-1}
     let blocks = await backend.GetBlocks(rpcEndpoint, 20, -1)
 
-    let bblkCnt = bpool
+    let bblkCnt = JSON.stringify(bpool)
     let s2bblkCnt = 0
     
     for (let s in s2bpool) {
@@ -53,20 +53,30 @@ for (let sid in config.shard) {
       let beacon = await backend.GetBeaconBestState(rpcEndpoint) || {}
       
       let blocks = await backend.GetBlocks(rpcEndpoint, 20, shard.ShardID)
-      let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || 0
-      let spool = await backend.GetShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) || []
-      let cspool = await backend.GetCrossShardShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) || []
+      let bpool = await backend.GetBeaconPoolState(rpcEndpoint) || {V:-1,P:-1}
+      let spool = await backend.GetShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) ||  {V:-1,P:-1}
+      let cspool = await backend.GetCrossShardShardPoolState(rpcEndpoint, Number(shard.ShardID || 0)) || {InexecutableBlock:[], ExecutableBlock:[]}
+      let txpool = await backend.GetTxPoolState(rpcEndpoint) || -1
 
       sBlkCnt = spool.length
-      let csblkCnt = 0
-      let cspoolStr = ""
-      for (let s in cspool) {
-        csblkCnt += cspool[s].length
-        cspoolStr += s + ": " + JSON.stringify(cspool[s]) + "\n"
+      let crossShardValid = -1
+      let crossShardPending = -1
+      if (cspool.ExecutableBlock.length > 0) {
+        crossShardValid = cspool.ExecutableBlock[0].BlockHeightList.length 
       }
+      if (cspool.InexecutableBlock.length > 0) {
+        crossShardPending = cspool.InexecutableBlock[0].BlockHeightList.length 
+      }
+      let csblkCnt = {V: crossShardValid, P: crossShardPending}
+      let cspoolStr = ""
+      // for (let s in cspool) {
+      //   csblkCnt += cspool[s].BlockHeightList.length
+      //   cspoolStr += s + ": " + JSON.stringify(cspool[s].BlockHeightList) + "\n"
+      // }
       shard.BeaconBest = beacon.BeaconHeight
-      shard.Pool = bpool + "-" + sBlkCnt +  "-" + csblkCnt
-
+      shard.Pool = JSON.stringify(bpool) + "-" + JSON.stringify(spool) +  "-" + JSON.stringify(csblkCnt)
+      shard.TxPool = txpool
+      // console.log(shard.Pool)
       Object.assign(result.shard[shardNodeID],shard)
       result.shard[shardNodeID].blocks = blocks
       result.shard[shardNodeID].cspool = cspoolStr

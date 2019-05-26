@@ -2,8 +2,8 @@ var shardData = require('../backend/aggregator').shard
 
 /*  Shard table data */
 function getShardTableData(){
-  function filterShardTableData( { Endpoint, ShardHeight, Epoch, name, BeaconHeight, ShardProposerIdx, BestCrossShard ,Pool,BeaconBest}= {}){
-    return { Endpoint, Name: name, ShardHeight, ShardProposerIdx, BeaconHeight, Epoch, Pool, BeaconBest, BestCrossShard: JSON.stringify(BestCrossShard)}
+  function filterShardTableData( { Endpoint, ShardHeight, Epoch, name, BeaconHeight, ShardProposerIdx, BestCrossShard ,TxPool ,Pool,BeaconBest}= {}){
+    return { Endpoint, Name: name, ShardHeight, ShardProposerIdx, BeaconHeight, Epoch, TxPool, Pool, BeaconBest, BestCrossShard: JSON.stringify(BestCrossShard)}
   }
   tmp = []
   for (let data of shardData) {
@@ -81,6 +81,7 @@ module.exports = {
         'LeaderID',
         'BeaconHeight',
         'Epoch',
+        'Tx Pool',
         'B/S/CS Pool',
         'BeaconBest',
         'Crossshard'

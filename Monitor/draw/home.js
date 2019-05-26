@@ -91,7 +91,7 @@ class HomeScreen {
       keys: true,
       interactive: true,
       selectedBg: 'none',
-      columnWidth: [25, 8, 8, 8, 14, 8, 14, 8, 14]
+      columnWidth: [25, 8, 8, 8, 14, 8, 8, 50, 8, 14]
     })
 
     this.beaconTable.rows.on('focus', data => {

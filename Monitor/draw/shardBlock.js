@@ -23,7 +23,7 @@ class ShardBlock {
       keys: true,
       interactive: true,
       selectedBg: 'none',
-      columnWidth: [25, 8,8, 8, 8,8],
+      columnWidth: [25, 8, 8, 8, 8, 8],
       border: {
         type: 'line',
         fg: 'cyan'

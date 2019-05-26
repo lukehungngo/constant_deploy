@@ -1,7 +1,7 @@
 let beaconData = require('../backend/aggregator').beacon
 
 var beaconTableData = []
-function filterBeaconTableData ({ Endpoint, BeaconHeight, BestShardHeight, BeaconProposerIdx, Epoch,Pool  } = {}) {
+function filterBeaconTableData ({ Endpoint, BeaconHeight, BestShardHeight, BeaconProposerIdx, Epoch, Pool  } = {}) {
   return { Endpoint, BeaconHeight, Epoch, BeaconProposerIdx , Pool, BestShardHeight: JSON.stringify(BestShardHeight) }
 }
 setInterval(() => {

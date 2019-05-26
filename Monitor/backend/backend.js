@@ -39,8 +39,8 @@ backend.GetShardToBeaconPoolState = async function (endpoint) {
 
 backend.GetShardPoolState = async function (endpoint, shardID) {
   try {
-    let res = await rpc(endpoint, 'getshardpoolstate',shardID )
-    return res.Result
+    let res = await rpc(endpoint, 'getshardpoolstatev2',shardID )
+    return {V: res.Result.Valid.length, P: res.Result.Pending.length}
   } catch (err) {
     return null
   }
@@ -48,7 +48,16 @@ backend.GetShardPoolState = async function (endpoint, shardID) {
 
 backend.GetCrossShardShardPoolState = async function (endpoint, shardID) {
   try {
-    let res = await rpc(endpoint, 'getcrossshardpoolstate', shardID)
+    let res = await rpc(endpoint, 'getcrossshardpoolstatev2', shardID)
+    return res.Result
+  } catch (err) {
+    return null
+  }
+}
+
+backend.GetTxPoolState = async function (endpoint) {
+  try {
+    let res = await rpc(endpoint, 'getnumberoftxsinmempool')
     return res.Result
   } catch (err) {
     return null
@@ -66,9 +75,9 @@ backend.RetrieveBlock = async function (endpoint, hash, versobse) {
 
 backend.GetBeaconPoolState = async function (endpoint) {
   try {
-    let res = await rpc(endpoint, 'getbeaconpoolstate')
+    let res = await rpc(endpoint, 'getbeaconpoolstatev2')
     // console.log(res.Result)
-    return res.Result
+    return {V: res.Result.Valid.length, P: res.Result.Pending.length}
   } catch (err) {
     return null
   }
