@@ -20,6 +20,22 @@ beacon:
     IP: "68.183.176.169"
     NODE_PORT: 9001
     RPC_PORT: 9335
+  4: 
+    IP: "68.183.229.181"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
+  5: 
+    IP: "68.183.229.181"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
+  6: 
+    IP: "68.183.176.169"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
+  7: 
+    IP: "68.183.176.169"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
 shard:
   0: 
     0: 
@@ -38,6 +54,22 @@ shard:
       IP: "68.183.183.131"
       NODE_PORT: 19005
       RPC_PORT: 19335
+    4: 
+      IP: "68.183.189.178"
+      NODE_PORT: 19006
+      RPC_PORT: 19336
+    5: 
+      IP: "68.183.189.178"
+      NODE_PORT: 19006
+      RPC_PORT: 19336
+    6: 
+      IP: "68.183.183.131"
+      NODE_PORT: 19006
+      RPC_PORT: 19336
+    7: 
+      IP: "68.183.183.131"
+      NODE_PORT: 19007
+      RPC_PORT: 19337
   1:
     0: 
       IP: "157.230.33.30"
@@ -55,6 +87,22 @@ shard:
       IP: "157.230.33.62"
       NODE_PORT: 29001
       RPC_PORT: 29335
+    4: 
+      IP: "157.230.33.30"
+      NODE_PORT: 29002
+      RPC_PORT: 29335
+    5: 
+      IP: "157.230.33.30"
+      NODE_PORT: 29003
+      RPC_PORT: 29336
+    6: 
+      IP: "157.230.33.62"
+      NODE_PORT: 29002
+      RPC_PORT: 29335
+    7: 
+      IP: "157.230.33.62"
+      NODE_PORT: 29003
+      RPC_PORT: 29336
 fullnode:
   0:
     IP: "128.199.150.40"
@@ -70,17 +118,29 @@ KEY:
     1: '112t8rwFSJ8rQ2nuQRH28tgsy5GufZhfQUDQsURdjdDG2jtUyE8ScDGjQNivmFkEJi7HeYX259xYv3tfBir9GPskF9tjEHxp4HcVK2w3rmxJ'
     2: '112t8rnyr3YjfpLN9unAvAM2TGZhurt7gfcrjCkUv11DWf6gN79raFqrazCHArWsWyosZvGdw5s5cuzzYXgpxDj9sEieyKqKCZ97inpaAXUR'
     3: "112t8rzcRLXhra2ouQo4yCZiQt1iEoZdRkD3m6fixXqCLzygjo28L3isePdPjPbXJ7zcxgyxbiNuF4Ex15NFCHVLwHhJD7QL7AHUfUsH78AP"
+    4: '112t8ronvrruYvgofuXnqqjLWB8abGp3KbJW3pxxMPoriLs6bY3FkyzXG1gsGvcvDp3hYVTEw2w3iH4BGFbrHGPEpx1jERmNoeXVkD8xZPdH'
+    5: '112t8rvfjR4Fwzy5QuQXB1YgFo8z4BZoioQKrcNfHikQGy5HqHQUBbrJqh7UAwCBpFTxJdEmVaucRnhUjDGrAnpccnQyKiStCgTJzAYTSQXt'
+    6: '112t8rpv96fumfPZrVacYRtyv9iXwwpu3t23oj9qh9CXCyTF4f7mHPA6MWTawjJaqsdNZYzVThaWUHzQStLzctLpyr1iquYEGpfs1eMM2c6B'
+    7: '112t8rq8icMVtAtttZyJ6AUWoAFjkGYHPiHdyk2WK5tZzPZGaKRV9enhkESq4Ez5reLts7xuRXBMR47kmk8PuB7rrvGjobR1scibSSfBRHui'
   shard:
     0:
       0: '112t8rqJHgJp2TPpNpLNx34aWHB5VH5Pys3hVjjhhf9tctVeCNmX2zQLBqzHau6LpUbSV52kXtG2hRZsuYWkXWF5kw2v24RJq791fWmQxVqy'
       1: '112t8rrEEcDQBMnUM5J17qniHZZmckmr8LGCv9nBjP9x5wmGFGUryKTNvEAf1jh2wwW69rxwtANq4m8JmzowfKVPayUHPmAKdwQw5718GKuH'
       2: '112t8rnXgYcLCjeHBpnesutJEBfG5xVzhMf8gLVZuL4fya4ov9Ko8pr6Mrj5eEZe5bie4ZVnH7MQNpLjuAxiuSDmPp5WgkuRRGW8NLcJZoF2'
       3: '112t8rnj1Xs9p5D6ue4fuLnVq9mJz5kKtyRMLEVBr8hxxmgd7haNFhruwezHswtEu9YKgAUWrnPrU1uvJE1gvep2pixy55ctDNc593c5pHmB'
+      4: '112t8rrfnKmgLJ9htCg6Bn3QNfTZmQCBR5gsgoMJRhphK1vfHRrRemqKgu9fE9EAKdEYoJBgy4xhnyhDjccsHRmDY2bF5BmkK4kd2juCdVGk'
+      5: '112t8rtqtXgq7SoQefU3iNLk51rDWKNzraKJAfe1AovU7vHQB9ub97S6j3w87mPKVnHp5grJbH3FWnZvDvuh2cnatVndyH9SiSTZqKM2CmL5'
+      6: '112t8ruwgN5fcr7CNriQ6sQki6yvk3Yvp7jotLfNAsGCqQhJsT7XXzpF8Pu3vvYgn1Da8KxGnq2nE323KJQG8BiQbtj97CAbgz5e7ZZViWoQ'
+      7: '112t8rsPnHVrcmTAtayvSGTYUeyj1Lbk5CQ3qp86rb4MaRPpJPHEV8tfQDtvdReK2SJ5Dw34QyGiHjRy8sFLcXjzZ2ge87KBbkQVWcAdJL5Q'
     1:
       0: '112t8rnY5yiM5XJCnAH3hD2UzhKnwoQjPCDDy6cRwsoNevRFJBm7HmYLbpijKvpxG8GD1LsamT9DC6xhs1RqCnDzoDhwFv1sd7ckzSa2Cj16'
       1: '112t8rpDvusPVjYYUECbVd8mSFq9iijuJHtbX2yrEwNT1mebBo8EHAe9neFPNfmd6VmdzAZDHP5ei8QDMxLXE1HRHEqo21gi3twYm8JFiFxJ'
       2: '112t8rq772Lr6tsEri2smLpG5s3v1LrtLNyu9eAavAJk4yMcWz6ziZPoB2sVt8SAjtPY3KT3oGAWXiszXBWXfQxXumJDvgD1rckwiGsS73XU'
       3: '112t8rwRDxAWzCyCq2tp2T4zVXwCpG75crEdKx84TuJNFzeKMiVb1KU65XkwYFB9o4bnJQpt941ptScuTAnHWJ3XJkN9ofWehHdUqzNfQfCt'
+      4: '112t8rpCeKPq68L2YfdadX6yQHn9H3psRhd8MATSD8zsGSADxtArV6fb4PRScZ3xVCLTG4Vkn9X3RoQunTdznu21oKtC9jBFDwxL5JXQvpXP'
+      5: '112t8rsWodMi9WKYmMrQ2QxCte26Yd9RoXQqsZCchWbZRb87GLEBokM7xLSkNsrNByDnBK5yNkz1eEauAsj3pR1bjFwy3Gqj6cDS7UjLdYJp'
+      6: '112t8ruciwAN6t12afoCb2PMxias7CzPKqwjYWULSTwDNgGCdVyWuwRZkkZa5xAnRLf2oL8a2txvJKUKNg1xicENGh4PdSGy2GBeBQoBuYUy'
+      7: '112t8rqTFCCQ8qd47C5k4GYY5RaeCpeB2SntF1WAXdSF1UZwZQ6eQjEhmvQDPDfrNTs2QJtRL9BhP3TzMankcx57ztXbS9je6N8jK1pB1EjR'
   fullnode:
     0: ''
     1: ''
