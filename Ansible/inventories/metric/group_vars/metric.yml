@@ -13,27 +13,11 @@ beacon:
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
-    IP: "68.183.176.169"
-    NODE_PORT: 9000
-    RPC_PORT: 9334
+    IP: "68.183.229.181"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
   3: 
-    IP: "68.183.176.169"
-    NODE_PORT: 9001
-    RPC_PORT: 9335
-  4: 
     IP: "68.183.229.181"
-    NODE_PORT: 9002
-    RPC_PORT: 9336
-  5: 
-    IP: "68.183.229.181"
-    NODE_PORT: 9003
-    RPC_PORT: 9337
-  6: 
-    IP: "68.183.176.169"
-    NODE_PORT: 9002
-    RPC_PORT: 9336
-  7: 
-    IP: "68.183.176.169"
     NODE_PORT: 9003
     RPC_PORT: 9337
 shard:
@@ -55,21 +39,21 @@ shard:
       NODE_PORT: 19005
       RPC_PORT: 19335
     4: 
-      IP: "68.183.189.178"
-      NODE_PORT: 19006
-      RPC_PORT: 19336
+      IP: "68.183.176.169"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     5: 
-      IP: "68.183.189.178"
-      NODE_PORT: 19006
-      RPC_PORT: 19336
+      IP: "68.183.176.169"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
     6: 
-      IP: "68.183.183.131"
-      NODE_PORT: 19006
-      RPC_PORT: 19336
+      IP: "128.199.192.100"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     7: 
-      IP: "68.183.183.131"
-      NODE_PORT: 19007
-      RPC_PORT: 19337
+      IP: "128.199.192.100"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
   1:
     0: 
       IP: "157.230.33.30"
@@ -88,21 +72,21 @@ shard:
       NODE_PORT: 29001
       RPC_PORT: 29335
     4: 
-      IP: "157.230.33.30"
-      NODE_PORT: 29002
-      RPC_PORT: 29335
+      IP: "68.183.229.179"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
     5: 
-      IP: "157.230.33.30"
-      NODE_PORT: 29003
-      RPC_PORT: 29336
-    6: 
-      IP: "157.230.33.62"
-      NODE_PORT: 29002
+      IP: "68.183.229.179"
+      NODE_PORT: 29001
       RPC_PORT: 29335
+    6: 
+      IP: "157.230.38.161"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
     7: 
-      IP: "157.230.33.62"
-      NODE_PORT: 29003
-      RPC_PORT: 29336
+      IP: "157.230.38.161"
+      NODE_PORT: 29001
+      RPC_PORT: 29335
 fullnode:
   0:
     IP: "128.199.150.40"
