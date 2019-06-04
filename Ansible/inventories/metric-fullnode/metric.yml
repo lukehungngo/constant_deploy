@@ -1,0 +1,5 @@
+[metric:children]
+fullnode
+[fullnode]
+fullnode0 ansible_ssh_host={{fullnode.0.IP}} node_port={{fullnode.0.NODE_PORT}} rpc_port={{fullnode.0.RPC_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+fullnode1 ansible_ssh_host={{fullnode.1.IP}} node_port={{fullnode.1.NODE_PORT}} rpc_port={{fullnode.1.RPC_PORT}} GrafanaURL=""

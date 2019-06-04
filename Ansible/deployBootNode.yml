@@ -5,4 +5,4 @@
   tasks:
     - name: Deploy bootnode 
       shell: |
-        docker rm -f bootnode ; docker run -p 9330:9330 -e PORT='9330' --name bootnode -d dungvanautonomous/constant /run_bootnode.sh
+        docker rm -f bootnode ; docker run -p 9330:9330 -e PORT='9330' --name bootnode -d hungngoautonomous/constant /run_bootnode.sh

@@ -9,13 +9,25 @@
 
     - name: Deploy bootnode 
       shell: |
-        docker rm -f Constant_Bootnode ; docker run -p 9330:9330 -e PORT='9330' --name Constant_Bootnode -d dungvanautonomous/constant /run_bootnode.sh
+        docker rm -f Constant_Bootnode ; docker run -p 9330:9330 -e PORT='9330' --name Constant_Bootnode -d hungngoautonomous/constant /run_bootnode.sh
       when: inventory_hostname == "bootnode" 
-      
+    
     - name: Deploy full node
       shell: |
-         docker run --net host -e NAME={{inventory_hostname}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} dungvanautonomous/constant /run_constant.sh n || docker restart {{inventory_hostname}} 
-      when: inventory_hostname != "bootnode" 
+         docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e EXTERNALADDRESS='{{ansible_ssh_host}}' -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/constant /run_fullnode.sh y || docker restart {{inventory_hostname}} 
+      when: inventory_hostname == "fullnode0" or inventory_hostname == "fullnode1"
+
+    - name: Deploy Committees
+      shell: |
+         docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/constant /run_constant.sh y || docker restart {{inventory_hostname}} 
+      when: inventory_hostname != "bootnode" and inventory_hostname != "fullnode0" and inventory_hostname != "fullnode1"
+
+    # - name: Deploy Committees
+    #   shell: |
+    #      docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/constant /run_constant.sh y || docker restart {{inventory_hostname}} 
+    #   when: inventory_hostname == "shard0-0"
+    
+
     # - name: restart
     #   shell: |
     #     docker restart {{inventory_hostname}} 

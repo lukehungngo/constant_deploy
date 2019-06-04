@@ -1,0 +1,18 @@
+ansible_ssh_private_key_file: '/Users/hungautonomous/stagging'
+ansible_ssh_user: 'root'
+host_key_checking: false
+
+bootnode: "165.22.251.12"
+fullnode:
+  0:
+    IP: "159.65.1.134"
+    NODE_PORT: 19004
+    RPC_PORT: 19334
+  1: 
+    IP: "159.65.1.134"
+    NODE_PORT: 19005
+    RPC_PORT: 19335
+KEY:
+  fullnode:
+    0: ''
+    1: ''

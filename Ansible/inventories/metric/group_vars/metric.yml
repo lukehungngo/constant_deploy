@@ -1,61 +1,69 @@
-ansible_ssh_private_key_file: '/home/david/stagging'
+ansible_ssh_private_key_file: '/Users/hungautonomous/stagging'
 ansible_ssh_user: 'root'
 host_key_checking: false
 
-bootnode: "165.22.251.12"
+bootnode: "68.183.229.181"
 beacon:
   0: 
-    IP: "165.22.251.12"
+    IP: "68.183.229.181"
     NODE_PORT: 9000
     RPC_PORT: 9334
   1: 
-    IP: "165.22.251.12"
+    IP: "68.183.229.181"
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
-    IP: "165.22.251.12"
-    NODE_PORT: 9002
-    RPC_PORT: 9336
+    IP: "68.183.176.169"
+    NODE_PORT: 9000
+    RPC_PORT: 9334
   3: 
-    IP: "165.22.251.12"
-    NODE_PORT: 9003
-    RPC_PORT: 9337
+    IP: "68.183.176.169"
+    NODE_PORT: 9001
+    RPC_PORT: 9335
 shard:
   0: 
     0: 
-      IP: "157.230.246.25"
+      IP: "68.183.189.178"
       NODE_PORT: 19004
       RPC_PORT: 19334
     1: 
-      IP: "157.230.246.25"
+      IP: "68.183.189.178"
       NODE_PORT: 19005
       RPC_PORT: 19335
     2: 
-      IP: "157.230.246.25"
-      NODE_PORT: 19006
-      RPC_PORT: 19336
+      IP: "68.183.183.131"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     3: 
-      IP: "157.230.246.25"
-      NODE_PORT: 19007
-      RPC_PORT: 19337
+      IP: "68.183.183.131"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
   1:
     0: 
-      IP: "165.22.248.185"
+      IP: "157.230.33.30"
       NODE_PORT: 29000
       RPC_PORT: 29334
     1: 
-      IP: "165.22.248.185"
+      IP: "157.230.33.30"
       NODE_PORT: 29001
       RPC_PORT: 29335
     2: 
-      IP: "165.22.248.185"
-      NODE_PORT: 29002
-      RPC_PORT: 29336
+      IP: "157.230.33.62"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
     3: 
-      IP: "165.22.248.185"
-      NODE_PORT: 29003
-      RPC_PORT: 29337
-    
+      IP: "157.230.33.62"
+      NODE_PORT: 29001
+      RPC_PORT: 29335
+fullnode:
+  0:
+    IP: "128.199.150.40"
+    NODE_PORT: 19004
+    RPC_PORT: 19334
+  1: 
+    IP: "128.199.150.40"
+    NODE_PORT: 19005
+    RPC_PORT: 19335
 KEY:
   beacon:
     0: '112t8ruLZgaV3ze37GRikKn8QVnrJDJ5C9Dhtou66vyeBfBDSJ6ZGRSg3k4qTwTjm14kgvwuFX3aAqeU64cGiixDh1ip4nvnmW7xHbSuXpwB'
@@ -73,3 +81,6 @@ KEY:
       1: '112t8rpDvusPVjYYUECbVd8mSFq9iijuJHtbX2yrEwNT1mebBo8EHAe9neFPNfmd6VmdzAZDHP5ei8QDMxLXE1HRHEqo21gi3twYm8JFiFxJ'
       2: '112t8rq772Lr6tsEri2smLpG5s3v1LrtLNyu9eAavAJk4yMcWz6ziZPoB2sVt8SAjtPY3KT3oGAWXiszXBWXfQxXumJDvgD1rckwiGsS73XU'
       3: '112t8rwRDxAWzCyCq2tp2T4zVXwCpG75crEdKx84TuJNFzeKMiVb1KU65XkwYFB9o4bnJQpt941ptScuTAnHWJ3XJkN9ofWehHdUqzNfQfCt'
+  fullnode:
+    0: ''
+    1: ''
