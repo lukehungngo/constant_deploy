@@ -54,6 +54,22 @@ shard:
       IP: "128.199.192.100"
       NODE_PORT: 19005
       RPC_PORT: 19335
+    8: 
+      IP: "134.209.156.97"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    9: 
+      IP: "134.209.156.97"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
+    10: 
+      IP: "134.209.156.99"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    11: 
+      IP: "134.209.156.99"
+      NODE_PORT: 19005
+      RPC_PORT: 19335
   1:
     0: 
       IP: "157.230.33.30"
@@ -87,6 +103,22 @@ shard:
       IP: "157.230.38.161"
       NODE_PORT: 29001
       RPC_PORT: 29335
+    8: 
+      IP: "134.209.148.176"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
+    9: 
+      IP: "134.209.148.176"
+      NODE_PORT: 29001
+      RPC_PORT: 29335
+    10: 
+      IP: "134.209.146.13"
+      NODE_PORT: 29000
+      RPC_PORT: 29334
+    11: 
+      IP: "134.209.146.13"
+      NODE_PORT: 29001
+      RPC_PORT: 29335
 fullnode:
   0:
     IP: "128.199.150.40"
@@ -116,6 +148,10 @@ KEY:
       5: '112t8rtqtXgq7SoQefU3iNLk51rDWKNzraKJAfe1AovU7vHQB9ub97S6j3w87mPKVnHp5grJbH3FWnZvDvuh2cnatVndyH9SiSTZqKM2CmL5'
       6: '112t8ruwgN5fcr7CNriQ6sQki6yvk3Yvp7jotLfNAsGCqQhJsT7XXzpF8Pu3vvYgn1Da8KxGnq2nE323KJQG8BiQbtj97CAbgz5e7ZZViWoQ'
       7: '112t8rsPnHVrcmTAtayvSGTYUeyj1Lbk5CQ3qp86rb4MaRPpJPHEV8tfQDtvdReK2SJ5Dw34QyGiHjRy8sFLcXjzZ2ge87KBbkQVWcAdJL5Q'
+      8: '112t8rscTg3KFf5qqS9HfbTm33yYWWEVjmBJWYGQyBY6jhNYSrhmQ7EhoiKuo6WYcepu6w5VaQhCLo7kukzxiGbVWVVcA5jZNdiNWnzF9n8D'
+      9: '112t8rtunw8SHAPwpFi1PXphJwQqHuka7aj6popni9hwkpiihbRtfJWAXn5AFEwP7aZaPZxUEGJzymjzABf5BmHPb4RRdmevWKqmxPRhxqfp'
+      10: '112t8rpobQAXKobDr18XR7hgaRGJDGze1zCMfyJoh9Hn7vNpjkffpiko47c5NCSBpT2nryDdrp2zjXj3dniW9TuTj49kZ3EcfzoBgzdgCzmD'
+      11: '112t8rq2S9n5czQdEy1UXV2HrcY7eTz5zSLK2P9PsPVpMzsfQv6yPAaBLnjmBmgaHavUXck9owzmg8bSGRwggUuEJEmtUzg6vWeEqP1LY4d2'
     1:
       0: '112t8rnY5yiM5XJCnAH3hD2UzhKnwoQjPCDDy6cRwsoNevRFJBm7HmYLbpijKvpxG8GD1LsamT9DC6xhs1RqCnDzoDhwFv1sd7ckzSa2Cj16'
       1: '112t8rpDvusPVjYYUECbVd8mSFq9iijuJHtbX2yrEwNT1mebBo8EHAe9neFPNfmd6VmdzAZDHP5ei8QDMxLXE1HRHEqo21gi3twYm8JFiFxJ'
@@ -125,6 +161,10 @@ KEY:
       5: '112t8rsWodMi9WKYmMrQ2QxCte26Yd9RoXQqsZCchWbZRb87GLEBokM7xLSkNsrNByDnBK5yNkz1eEauAsj3pR1bjFwy3Gqj6cDS7UjLdYJp'
       6: '112t8ruciwAN6t12afoCb2PMxias7CzPKqwjYWULSTwDNgGCdVyWuwRZkkZa5xAnRLf2oL8a2txvJKUKNg1xicENGh4PdSGy2GBeBQoBuYUy'
       7: '112t8rqTFCCQ8qd47C5k4GYY5RaeCpeB2SntF1WAXdSF1UZwZQ6eQjEhmvQDPDfrNTs2QJtRL9BhP3TzMankcx57ztXbS9je6N8jK1pB1EjR'
+      8: '112t8rvG2C3ev2HooZPJxHBwqL6ZLPswYiNKMsWzHDWPTQk4WLzn44LhezUaDz8uxRZTqd11xMLVTHf46hg3XmeA5bX8LxaCzmqNR4oHpeRX'
+      9: '112t8rxCcrHdJADsgXvzKRbgfchpD9gSDCah83NF21tj8cH3d5FBkFsKwMYv6CMZFnYgDmjcdEq3N6LsP5aMoV7GiASWcYmHL8XpQ1TdMDi1'
+      10: '112t8rruhqnrrJxEn4AfQrNxj3dVZ5kSV45xhhN6HdE7N4qcJAfPQPdJJq6er4BfUotLFXHzxTTCf4o2brgeDC2q1MT9apCP6rMfQqtbeLid'
+      11: '112t8rsYWnJ3SGu3SCkKLRUXkLmZFZUNLCEpfzgNCHpREPPqXXsFmGJfrsgNN4ZNwb3JdgzB7sMqkrBmusNJTV1ibtcJDVN7s6Wz3j45uWbP'
   fullnode:
     0: ''
     1: ''
