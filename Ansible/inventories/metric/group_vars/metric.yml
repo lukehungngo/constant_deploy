@@ -13,13 +13,13 @@ beacon:
     NODE_PORT: 9001
     RPC_PORT: 9335
   2: 
-    IP: "68.183.176.169"
-    NODE_PORT: 9000
-    RPC_PORT: 9334
+    IP: "68.183.229.181"
+    NODE_PORT: 9002
+    RPC_PORT: 9336
   3: 
-    IP: "68.183.176.169"
-    NODE_PORT: 9001
-    RPC_PORT: 9335
+    IP: "68.183.229.181"
+    NODE_PORT: 9003
+    RPC_PORT: 9337
 shard:
   0: 
     0: 
