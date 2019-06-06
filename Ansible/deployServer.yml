@@ -20,7 +20,7 @@
     - name: Deploy Committees
       shell: |
          docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/constant /run_constant.sh y || docker restart {{inventory_hostname}} 
-      when: inventory_hostname != "bootnode" and inventory_hostname != "fullnode0" and inventory_hostname != "fullnode1"
+      when: inventory_hostname != "bootnode" and inventory_hostname != "fullnode0" and inventory_hostname != "fullnode1" 
 
     # - name: Deploy Committees
     #   shell: |
