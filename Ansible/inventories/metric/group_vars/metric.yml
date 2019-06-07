@@ -23,7 +23,7 @@ beacon:
 shard:
   0: 
     0: 
-      IP: "68.183.189.178"
+      IP: "68.183.176.169"
       NODE_PORT: 19004
       RPC_PORT: 19334
     1: 
@@ -35,99 +35,63 @@ shard:
       NODE_PORT: 19004
       RPC_PORT: 19334
     3: 
-      IP: "68.183.183.131"
+      IP: "157.230.33.30"
       NODE_PORT: 19005
       RPC_PORT: 19335
     4: 
-      IP: "68.183.176.169"
+      IP: "157.230.33.62"
       NODE_PORT: 19004
       RPC_PORT: 19334
     5: 
-      IP: "68.183.176.169"
+      IP: "68.183.229.179"
       NODE_PORT: 19005
       RPC_PORT: 19335
     6: 
-      IP: "128.199.192.100"
+      IP: "128.199.150.40"
       NODE_PORT: 19004
       RPC_PORT: 19334
     7: 
       IP: "128.199.192.100"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
-    8: 
-      IP: "134.209.156.97"
-      NODE_PORT: 19004
-      RPC_PORT: 19334
-    9: 
-      IP: "134.209.156.97"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
-    10: 
-      IP: "134.209.156.99"
-      NODE_PORT: 19004
-      RPC_PORT: 19334
-    11: 
-      IP: "134.209.156.99"
       NODE_PORT: 19005
       RPC_PORT: 19335
   1:
     0: 
-      IP: "157.230.33.30"
+      IP: "157.230.38.161"
       NODE_PORT: 29000
       RPC_PORT: 29334
     1: 
-      IP: "157.230.33.30"
+      IP: "134.209.156.97"
       NODE_PORT: 29001
       RPC_PORT: 29335
     2: 
-      IP: "157.230.33.62"
+      IP: "134.209.156.99"
       NODE_PORT: 29000
       RPC_PORT: 29334
     3: 
-      IP: "157.230.33.62"
+      IP: "134.209.148.176"
       NODE_PORT: 29001
       RPC_PORT: 29335
     4: 
-      IP: "68.183.229.179"
+      IP: "134.209.146.13"
       NODE_PORT: 29000
       RPC_PORT: 29334
     5: 
-      IP: "68.183.229.179"
+      IP: "134.209.146.83"
       NODE_PORT: 29001
       RPC_PORT: 29335
     6: 
-      IP: "157.230.38.161"
+      IP: "134.209.146.87"
       NODE_PORT: 29000
       RPC_PORT: 29334
     7: 
-      IP: "157.230.38.161"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
-    8: 
-      IP: "134.209.148.176"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
-    9: 
-      IP: "134.209.148.176"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
-    10: 
-      IP: "134.209.146.13"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
-    11: 
-      IP: "134.209.146.13"
+      IP: "134.209.146.96"
       NODE_PORT: 29001
       RPC_PORT: 29335
 fullnode:
   0:
-    IP: "128.199.150.40"
+    IP: "134.209.146.109"
     NODE_PORT: 19004
     RPC_PORT: 19334
-  1: 
-    IP: "128.199.150.40"
-    NODE_PORT: 19005
-    RPC_PORT: 19335
 KEY:
   beacon:
     0: '112t8ruLZgaV3ze37GRikKn8QVnrJDJ5C9Dhtou66vyeBfBDSJ6ZGRSg3k4qTwTjm14kgvwuFX3aAqeU64cGiixDh1ip4nvnmW7xHbSuXpwB'
