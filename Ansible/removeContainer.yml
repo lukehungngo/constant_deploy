@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  serial: 30
+  tasks:
+    - name: Remove container
+      shell: |
+        docker rm -f {{inventory_hostname}}; echo 1
