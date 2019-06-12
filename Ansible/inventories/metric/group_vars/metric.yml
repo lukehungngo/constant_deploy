@@ -28,65 +28,65 @@ shard:
       RPC_PORT: 19334
     1: 
       IP: "68.183.189.178"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     2: 
       IP: "68.183.183.131"
       NODE_PORT: 19004
       RPC_PORT: 19334
     3: 
       IP: "157.230.33.30"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     4: 
       IP: "157.230.33.62"
       NODE_PORT: 19004
       RPC_PORT: 19334
     5: 
       IP: "68.183.229.179"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     6: 
       IP: "128.199.150.40"
       NODE_PORT: 19004
       RPC_PORT: 19334
     7: 
       IP: "128.199.192.100"
-      NODE_PORT: 19005
-      RPC_PORT: 19335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
   1:
     0: 
       IP: "157.230.38.161"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     1: 
       IP: "134.209.156.97"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     2: 
       IP: "134.209.156.99"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     3: 
       IP: "134.209.148.176"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     4: 
       IP: "134.209.146.13"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     5: 
       IP: "134.209.146.83"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     6: 
       IP: "134.209.146.87"
-      NODE_PORT: 29000
-      RPC_PORT: 29334
+      NODE_PORT: 19004
+      RPC_PORT: 19334
     7: 
       IP: "134.209.146.96"
-      NODE_PORT: 29001
-      RPC_PORT: 29335
+      NODE_PORT: 19004
+      RPC_PORT: 19334
 fullnode:
   0:
     IP: "134.209.146.109"
