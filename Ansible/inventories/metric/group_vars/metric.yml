@@ -54,6 +54,38 @@ shard:
       IP: "128.199.192.100"
       NODE_PORT: 19004
       RPC_PORT: 19334
+    8: 
+      IP: "68.183.231.70"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    9: 
+      IP: "68.183.191.103"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    10: 
+      IP: "68.183.231.68"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    11: 
+      IP: "68.183.191.90"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    12: 
+      IP: "68.183.235.130"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    13: 
+      IP: "68.183.191.88"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    14: 
+      IP: "68.183.191.109"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    15: 
+      IP: "68.183.231.70"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
   1:
     0: 
       IP: "157.230.38.161"
@@ -87,6 +119,38 @@ shard:
       IP: "134.209.146.96"
       NODE_PORT: 19004
       RPC_PORT: 19334
+    8: 
+      IP: "142.93.221.107"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    9: 
+      IP: "142.93.213.11"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    10: 
+      IP: "142.93.221.126"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    11: 
+      IP: "142.93.221.17"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    12: 
+      IP: "142.93.221.155"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    13: 
+      IP: "142.93.221.149"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    14: 
+      IP: "142.93.221.63"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
+    15: 
+      IP: "142.93.217.249"
+      NODE_PORT: 19004
+      RPC_PORT: 19334
 fullnode:
   0:
     IP: "134.209.146.109"
@@ -116,6 +180,10 @@ KEY:
       9: '112t8rtunw8SHAPwpFi1PXphJwQqHuka7aj6popni9hwkpiihbRtfJWAXn5AFEwP7aZaPZxUEGJzymjzABf5BmHPb4RRdmevWKqmxPRhxqfp'
       10: '112t8rpobQAXKobDr18XR7hgaRGJDGze1zCMfyJoh9Hn7vNpjkffpiko47c5NCSBpT2nryDdrp2zjXj3dniW9TuTj49kZ3EcfzoBgzdgCzmD'
       11: '112t8rq2S9n5czQdEy1UXV2HrcY7eTz5zSLK2P9PsPVpMzsfQv6yPAaBLnjmBmgaHavUXck9owzmg8bSGRwggUuEJEmtUzg6vWeEqP1LY4d2'
+      12: '112t8rtzNmyYjYHB6ffXbXdzQSfUCbrNiPPpGMSofaLXMaFBvEWTCG3gEGfMeGc8xMHDG5Eng5Suk6u5RCyZ3rSp3XLQY7iWj9hShmB2PNLe'
+      13: '112t8rqyVeEvEhNwHmtiwurSJJt8Td7GQvSqCGzTFMEpMzHNGrgh9B5StcDKvTXXjuRR5m2QD2HeNCv1ru186uMUnhmtRiiPae5vu9V1ppqY'
+      14: '112t8rz77Cqyj1D7cz1p6y18RJ1UU69Y2hsvZnSDdkEucoD64DZKeE8ijbZYDE98bzmF1wUn9TtSkoTALGgPKetSZ1JC3BLCjqrntLQuBsPD'
+      15: '112t8roEu1K8gUXF3cyRBv1GSGHDXNaSFh45sxgCCSi4Q6KWbW91DtYFqJdAP5MFBJEziejirb4cdDhE2Mxi4PSg8wf277vnCryQyL3VtBK2'
     1:
       0: '112t8rnY5yiM5XJCnAH3hD2UzhKnwoQjPCDDy6cRwsoNevRFJBm7HmYLbpijKvpxG8GD1LsamT9DC6xhs1RqCnDzoDhwFv1sd7ckzSa2Cj16'
       1: '112t8rpDvusPVjYYUECbVd8mSFq9iijuJHtbX2yrEwNT1mebBo8EHAe9neFPNfmd6VmdzAZDHP5ei8QDMxLXE1HRHEqo21gi3twYm8JFiFxJ'
@@ -129,6 +197,10 @@ KEY:
       9: '112t8rxCcrHdJADsgXvzKRbgfchpD9gSDCah83NF21tj8cH3d5FBkFsKwMYv6CMZFnYgDmjcdEq3N6LsP5aMoV7GiASWcYmHL8XpQ1TdMDi1'
       10: '112t8rruhqnrrJxEn4AfQrNxj3dVZ5kSV45xhhN6HdE7N4qcJAfPQPdJJq6er4BfUotLFXHzxTTCf4o2brgeDC2q1MT9apCP6rMfQqtbeLid'
       11: '112t8rsYWnJ3SGu3SCkKLRUXkLmZFZUNLCEpfzgNCHpREPPqXXsFmGJfrsgNN4ZNwb3JdgzB7sMqkrBmusNJTV1ibtcJDVN7s6Wz3j45uWbP'
+      12: '112t8rtkjexJ99i4fSESVxSjeLo6ApEbwCQdxLLt8hZy8houiG9dZJex4bA25MdmEveqJN9HZdkrswC6eg2iMHRe6S8rEiyYBuu3d4YCr5ZD'
+      13: '112t8rp8ijFiMDPhsy22LyYwTR3CzGXaqJq4xTP4KigADPX2fBz8n94C2rCfBcht9t8GYPYHVASF2RRqBZ93Lus35jSiwwPZaQhiP35iFWLh'
+      14: '112t8rsdgUhYMQW6DKw5jN2qwhDX2XFZDVKxoqUWy2ctz4RaetYbxZ9K4Qeioe5Dyid6zAs1c9YeVvVmNwXqMgn5AC1w5TStBZBWVcZf8fNp'
+      15: '112t8s2wBVMobT6Qwu6tpRKPBTQDo81PyuBdodDEyHc4u8YoQWU7AXqw8BPf37Cq5Ft4j7Ayk8Qas57kxSBqShGhvWtrJxxatVDNQAaAoTjX'
   fullnode:
     0: ''
     1: ''
