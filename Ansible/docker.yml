@@ -4,13 +4,13 @@
   serial: 20
   
   tasks:
-    - name: Pull constant image
+    - name: Pull incognito image
       shell: |
-        docker pull hungngoautonomous/constant
+        docker pull hungngoautonomous/incognito
 
     # - name: Check pull history
     #   shell: |
-    #     docker images | grep constant | grep latest
+    #     docker images | grep incognito | grep latest
     #   register: out
     # - debug: var=out.stdout_lines
     
