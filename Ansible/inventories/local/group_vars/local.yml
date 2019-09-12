@@ -3,107 +3,94 @@ bootnode: "127.0.0.1"
 beacon:
   0: 
     IP: "127.0.0.1"
-    NODE_PORT: 9423
-    RPC_PORT: 9340
+    NODE_PORT: 9434
+    RPC_PORT: 9334
+    WS_PORT: 19330
   1: 
     IP: "127.0.0.1"
-    NODE_PORT: 9424
-    RPC_PORT: 9341
+    NODE_PORT: 9435
+    RPC_PORT: 9335
+    WS_PORT: 19331
   2: 
     IP: "127.0.0.1"
-    NODE_PORT: 9425
-    RPC_PORT: 9342
+    NODE_PORT: 9436
+    RPC_PORT: 9336
+    WS_PORT: 19332
   3: 
     IP: "127.0.0.1"
-    NODE_PORT: 9426
-    RPC_PORT: 9343
-  # 4: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9004
-  #   RPC_PORT: 9338
-  # 5: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9005
-  #   RPC_PORT: 9339
-  # 6: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9006
-  #   RPC_PORT: 9340
-  # 7: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9007
-  #   RPC_PORT: 9341
-  # 8: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9008
-  #   RPC_PORT: 9342
-  # 9: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9009
-  #   RPC_PORT: 9343
-  # 10: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9010
-  #   RPC_PORT: 9344
-  # 11: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9011
-  #   RPC_PORT: 9345
-  # 12: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9012
-  #   RPC_PORT: 9346
-  # 13: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9013
-  #   RPC_PORT: 9347
-  # 14: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9014
-  #   RPC_PORT: 9348
-  # 15: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9015
-  #   RPC_PORT: 9349
-  # 16: 
-  #   IP: "127.0.0.1"
-  #   NODE_PORT: 9016
-  #   RPC_PORT: 9350
+    NODE_PORT: 9437
+    RPC_PORT: 9337
+    WS_PORT: 19333
 shard:
   0:
     0: 
       IP: "127.0.0.1"
-      NODE_PORT: 9433
-      RPC_PORT: 9334
+      NODE_PORT: 9451
+      RPC_PORT: 9351
+      WS_PORT: 19334
     1: 
       IP: "127.0.0.1"
-      NODE_PORT: 9434
-      RPC_PORT: 9335
+      NODE_PORT: 9452
+      RPC_PORT: 9352
+      WS_PORT: 19335
     2: 
       IP: "127.0.0.1"
-      NODE_PORT: 9435
-      RPC_PORT: 9336
+      NODE_PORT: 9453
+      RPC_PORT: 9353
+      WS_PORT: 19336
     3: 
       IP: "127.0.0.1"
-      NODE_PORT: 9436
-      RPC_PORT: 11341
+      NODE_PORT: 9454
+      RPC_PORT: 9354
+      WS_PORT: 19337
   1:
     0: 
       IP: "127.0.0.1"
-      NODE_PORT: 9443
-      RPC_PORT: 9337
+      NODE_PORT: 9455
+      RPC_PORT: 9355
+      WS_PORT: 19338
     1: 
       IP: "127.0.0.1"
-      NODE_PORT: 9444
-      RPC_PORT: 9338
+      NODE_PORT: 9456
+      RPC_PORT: 9356
+      WS_PORT: 19339
     2: 
       IP: "127.0.0.1"
-      NODE_PORT: 9445
-      RPC_PORT: 9339
+      NODE_PORT: 9457
+      RPC_PORT: 9357
+      WS_PORT: 19340
     3: 
       IP: "127.0.0.1"
-      NODE_PORT: 9443
-      RPC_PORT: 11340
+      NODE_PORT: 9458
+      RPC_PORT: 9358
+      WS_PORT: 19341
+stake:      
+  1:
+    0: 
+      IP: "127.0.0.1"
+      NODE_PORT: 9459
+      RPC_PORT: 9359
+      WS_PORT: 19342
+    1: 
+      IP: "127.0.0.1"
+      NODE_PORT: 9460
+      RPC_PORT: 9360
+      WS_PORT: 19343
+    2: 
+      IP: "127.0.0.1"
+      NODE_PORT: 9461
+      RPC_PORT: 9361
+      WS_PORT: 19344
+    3: 
+      IP: "127.0.0.1"
+      NODE_PORT: 9462
+      RPC_PORT: 9362
+      WS_PORT: 19345
+    4: 
+      IP: "127.0.0.1"
+      NODE_PORT: 9463
+      RPC_PORT: 9363
+      WS_PORT: 19346
       
 
 KEY:
@@ -114,12 +101,19 @@ KEY:
     3: "112t8rzcRLXhra2ouQo4yCZiQt1iEoZdRkD3m6fixXqCLzygjo28L3isePdPjPbXJ7zcxgyxbiNuF4Ex15NFCHVLwHhJD7QL7AHUfUsH78AP"
   shard:
     0:
-      0: '112t8rqJHgJp2TPpNpLNx34aWHB5VH5Pys3hVjjhhf9tctVeCNmX2zQLBqzHau6LpUbSV52kXtG2hRZsuYWkXWF5kw2v24RJq791fWmQxVqy'
-      1: '112t8rrEEcDQBMnUM5J17qniHZZmckmr8LGCv9nBjP9x5wmGFGUryKTNvEAf1jh2wwW69rxwtANq4m8JmzowfKVPayUHPmAKdwQw5718GKuH'
-      2: '112t8rnXgYcLCjeHBpnesutJEBfG5xVzhMf8gLVZuL4fya4ov9Ko8pr6Mrj5eEZe5bie4ZVnH7MQNpLjuAxiuSDmPp5WgkuRRGW8NLcJZoF2'
-      3: '112t8rnj1Xs9p5D6ue4fuLnVq9mJz5kKtyRMLEVBr8hxxmgd7haNFhruwezHswtEu9YKgAUWrnPrU1uvJE1gvep2pixy55ctDNc593c5pHmB'
+      0: '112t8rqEd6a7v4PfWu9CwXFAmRyazCNRNEQi8G8eGBYtrg2Cix6GNYhhs3tz1JRPxJ4FsHq3mH7fJBq3bC8c3DJM3noWAQE8eY4sMeHxXYDe'
+      1: '112t8rtidnuL3BBzhfVptK6mPmAr2AttXgmcdE8xZwYyQd3t7t5a16dDPPnSSx4KzzWAvM7AgXo8UQBCo5o4Wn1K6Cs27hHCjQpSY8UjV5Gy'
+      2: '112t8rtxdpGEx5H7MHi5EXGKZhKAxgbEkRv1d8TH1cbqKzc5j4mXEKC2NUCeCSQRA3zDeUQxKUW54sAGzpqFi86JQGaPAh4Ao4Gqo7q51yGw'
+      3: '112t8ruUPhxinaPG89z372Gza7B7G7ZZHkHaXa3PvARVpqdAjB6Nwe32Qtt8fV3yCEA4jgnZGuYHsS2Un89juYwv9Uqpw9v5b8cunXmtoULJ'
     1:
-      0: '112t8rnY5yiM5XJCnAH3hD2UzhKnwoQjPCDDy6cRwsoNevRFJBm7HmYLbpijKvpxG8GD1LsamT9DC6xhs1RqCnDzoDhwFv1sd7ckzSa2Cj16'
-      1: '112t8rpDvusPVjYYUECbVd8mSFq9iijuJHtbX2yrEwNT1mebBo8EHAe9neFPNfmd6VmdzAZDHP5ei8QDMxLXE1HRHEqo21gi3twYm8JFiFxJ'
-      2: '112t8rq772Lr6tsEri2smLpG5s3v1LrtLNyu9eAavAJk4yMcWz6ziZPoB2sVt8SAjtPY3KT3oGAWXiszXBWXfQxXumJDvgD1rckwiGsS73XU'
-      3: '112t8rwRDxAWzCyCq2tp2T4zVXwCpG75crEdKx84TuJNFzeKMiVb1KU65XkwYFB9o4bnJQpt941ptScuTAnHWJ3XJkN9ofWehHdUqzNfQfCt'
+      0: '112t8roCAzRKCBy3VpSwujBaM2iPJZ82Sb5dtYJiyS1Cknax3bxd3x9aynNkZmoNsNLJWb8NMtJZXf9S68RHHy5W9iuvVErrd1Q37eW3uerc'
+      1: '112t8rpHmXL5Eb9tW4wuKT3sh5ADthEBKJPw8thFreVNJyvY6o9iRTbdomrCC3VchVmLYox6pnxS7pvNzwdPrykokmaNQa1Q1ZYfNVEDMwKS'
+      2: '112t8rqXccVRRjL4CGxoJUD3Fya7rzfWXXF5uakQokbNuiiWSabr78SwnXLEqSozeJZzgUWajgZkUbMJmoAUnkVvkDgYTEBzjhKeU9ECNPtY'
+      3: '112t8rrYgmYrxDRyBoWHw7RMksy2RoETHC9DRXTMLTDrN6gid6M3wsvYfUZ9Gn9vsFHC25tujQBkvYKeJNAtUAActG69V6Rp6rgy69g8zcrA'
+  stake:    
+    1:
+      0: '112t8rotpPVSeHrknwVUTLQgy2avatUWKh2oV9EjVMw6eEtwyJT1FsrHGzvBaLpHL4gPVfJjuSUWvTtiTKuWGNNwGuLo8SHCgfA36ttJ5J7u'
+      1: '112t8roEu1K8gUXF3cyRBv1GSGHDXNaSFh45sxgCCSi4Q6KWbW91DtYFqJdAP5MFBJEziejirb4cdDhE2Mxi4PSg8wf277vnCryQyL3VtBK2'
+      2: '112t8rrEgLjxmpzQTh3i2SFxxV27WntXpAkoe9JbseqFvDBPpaPaudzJWXFctZorJXtivEXv1nPzggnmNfNDyj9d5PKh5S4N3UTs6fHBWgeo'
+      3: '112t8rnZk7K75qq4GWuVUJwxfRy5EAcrvCyJnMs4ayznzsiV4MWqHdW1DqBPohCutvJzaiwWff1VZvVaH9s6CYHnbvhAhEMtA5dhvMzRDLQv'
+      4: '112t8rna7M8BYBfNjNHmw3Tie6Yir9mQgp5rSRgUngTqn6A6iSRvAPex4sXsmGxVzXcpUUDfnRfRys3QrPnTHauiipdUNtj7Ef6t3mHUwiC3'    

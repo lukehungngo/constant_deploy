@@ -1,8 +1,11 @@
 ---
 - hosts: all
   gather_facts: no
-  serial: 30
+  serial: 150
   tasks:
     - name: Remove container
       shell: |
         docker rm -f {{inventory_hostname}}; echo 1
+    - name: Remove Data
+      shell: |
+        rm -rf /data

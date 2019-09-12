@@ -1,16 +1,16 @@
 ---
 - hosts: all
   gather_facts: no
-  serial: 20
+  serial: 50
   
   pre_tasks:
     - name: 'install python2'
-      raw: apt-get -y install python
+      raw: apt-get update && apt-get -y install python
 
   tasks:
-    - name: Update apt
-      shell: |
-        apt update
+    # - name: Update apt
+    #   shell: |
+    #     apt update
 
     - name: Install deps
       shell: |
