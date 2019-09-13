@@ -1,7 +1,7 @@
 ---
 - hosts: all
   gather_facts: no
-  serial: 20
+  serial: 300
   
   tasks:
     - name: Pull incognito image

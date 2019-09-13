@@ -26,6 +26,18 @@ elif [ "$1" == "metric-4s-b" ]; then
     # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
     ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-4s-beacon --limit  metric
     ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/metric-4s-beacon --limit  metric
+elif [ "$1" == "metric-15s-b" ]; then
+    echo "Deploy Metric Server"
+    (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
+    # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
+    ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-15s-beacon --limit  metric
+    ansible-playbook Ansible/deployServer.yml -i Ansible/inventories/metric-15s-beacon --limit  metric
+elif [ "$1" == "metric-32s-b" ]; then
+    echo "Deploy Metric Server"
+    (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
+    # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
+    ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-32s-beacon --limit  metric
+    ansible-playbook Ansible/deployServerSuperBeacon.yml -i Ansible/inventories/metric-32s-beacon --limit  metric
 elif [ "$1" == "metric-fullnode" ]; then
     echo "Deploy Metric Server FullNode Only"
     (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)

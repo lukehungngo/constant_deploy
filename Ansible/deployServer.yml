@@ -9,7 +9,7 @@
 
     - name: Deploy bootnode 
       shell: |
-        docker rm -f Incognito_Bootnode ; docker run --restart=always -p 9330:9433 -e PORT='9433' --name Incognito_Bootnode -d hungngoautonomous/incognito /run_bootnode.sh
+        docker rm -f Incognito_Bootnode ; docker run --restart=on-failure -p 9330:9433 -e PORT='9433' --name Incognito_Bootnode -d hungngoautonomous/incognito /run_bootnode.sh
       when: inventory_hostname == "bootnode" 
     
     - name: Deploy full node
@@ -19,9 +19,9 @@
 
     - name: Deploy Committees
       shell: |
-         docker run --net host --cpus="1.5" -e NAME={{inventory_hostname}} -e METRIC_URL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -e WS_PORT='{{ws_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh y  || docker restart {{inventory_hostname}} 
+         docker run --net host -e NAME={{inventory_hostname}} -e METRIC_URL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -e WS_PORT='{{ws_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh n  || docker restart {{inventory_hostname}} 
       when: inventory_hostname != "bootnode" and inventory_hostname != "fullnode0" and inventory_hostname != "fullnode1"
-
+      #--cpus="2"
     # - name: Deploy Committees
     #   shell: |
     #      docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh y || docker restart {{inventory_hostname}} 

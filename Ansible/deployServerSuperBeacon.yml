@@ -1,0 +1,37 @@
+---
+- hosts: all
+  gather_facts: no
+  serial: 300
+  tasks:
+    - name: Remove container
+      shell: |
+        docker rm -f {{inventory_hostname}}; echo 1
+
+    - name: Deploy bootnode 
+      shell: |
+        docker rm -f Incognito_Bootnode ; docker run --restart=always -p 9330:9433 -e PORT='9433' --name Incognito_Bootnode -d hungngoautonomous/incognito /run_bootnode.sh
+      when: inventory_hostname == "bootnode" 
+    
+    # - name: Deploy full node
+    #   shell: |
+    #      docker run --net host -e NAME={{inventory_hostname}} -e METRIC_URL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e EXTERNALADDRESS='{{ansible_ssh_host}}' -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_fullnode.sh y || docker restart {{inventory_hostname}} 
+    #   when: inventory_hostname == "fullnode0" or inventory_hostname == "fullnode1"
+
+    - name: Deploy Shard Committees
+      shell: |
+         docker run --net host --cpus="1.5" -e NAME={{inventory_hostname}} -e METRIC_URL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -e WS_PORT='{{ws_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh y  || docker restart {{inventory_hostname}} 
+      when: inventory_hostname != "bootnode" and inventory_hostname != "fullnode0" and inventory_hostname != "fullnode1" and inventory_hostname != "beacon0" and inventory_hostname != "beacon1" and inventory_hostname != "beacon2" and inventory_hostname != "beacon3" and inventory_hostname != "beacon4" and inventory_hostname != "beacon5"
+    
+    - name: Deploy Beacon Committees
+      shell: |
+         docker run --net host -e NAME={{inventory_hostname}} -e METRIC_URL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -e WS_PORT='{{ws_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh y  || docker restart {{inventory_hostname}} 
+      when: inventory_hostname == "beacon0" or inventory_hostname == "beacon1" or inventory_hostname == "beacon2" or inventory_hostname == "beacon3" or inventory_hostname == "beacon4" or inventory_hostname == "beacon5"
+    # - name: Deploy Committees
+    #   shell: |
+    #      docker run --net host -e NAME={{inventory_hostname}} -e GRAFANAURL={{GrafanaURL}} -e DISCOVERPEERSADDRESS='{{bootnode}}:9330' -v /data/{{inventory_hostname}}:/data -e PRIVATEKEY='{{privatekey}}' -e EXTERNALADDRESS='{{ansible_ssh_host}}'  -e PORT='{{node_port}}' -e RPC_PORT='{{rpc_port}}' -d --name {{inventory_hostname}} hungngoautonomous/incognito /run_incognito.sh y || docker restart {{inventory_hostname}} 
+    #   when: inventory_hostname == "shard0-0"
+    
+
+    # - name: restart
+    #   shell: |
+    #     docker restart {{inventory_hostname}} 
