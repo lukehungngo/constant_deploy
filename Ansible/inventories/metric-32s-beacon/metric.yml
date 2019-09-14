@@ -32,7 +32,6 @@ shard28
 shard29
 shard30
 shard31
-
 boot
 # fullnode
 
@@ -46,6 +45,12 @@ beacon2 ansible_ssh_host={{beacon.8.IP}} privatekey={{KEY.beacon.2}} node_port={
 beacon3 ansible_ssh_host={{beacon.12.IP}} privatekey={{KEY.beacon.3}} node_port={{beacon.12.NODE_PORT}} rpc_port={{beacon.12.RPC_PORT}} ws_port={{beacon.12.WS_PORT}} GrafanaURL=""
 beacon4 ansible_ssh_host={{beacon.16.IP}} privatekey={{KEY.beacon.4}} node_port={{beacon.16.NODE_PORT}} rpc_port={{beacon.16.RPC_PORT}} ws_port={{beacon.16.WS_PORT}} GrafanaURL=""
 beacon5 ansible_ssh_host={{beacon.20.IP}} privatekey={{KEY.beacon.5}} node_port={{beacon.20.NODE_PORT}} rpc_port={{beacon.20.RPC_PORT}} ws_port={{beacon.20.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+# beacon6 ansible_ssh_host={{beacon.1.IP}} privatekey={{KEY.beacon.6}} node_port={{beacon.1.NODE_PORT}} rpc_port={{beacon.1.RPC_PORT}} ws_port={{beacon.1.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+# beacon7 ansible_ssh_host={{beacon.5.IP}} privatekey={{KEY.beacon.7}} node_port={{beacon.5.NODE_PORT}} rpc_port={{beacon.5.RPC_PORT}} ws_port={{beacon.5.WS_PORT}} GrafanaURL=""
+# beacon8 ansible_ssh_host={{beacon.9.IP}} privatekey={{KEY.beacon.8}} node_port={{beacon.9.NODE_PORT}} rpc_port={{beacon.9.RPC_PORT}} ws_port={{beacon.9.WS_PORT}} GrafanaURL=""
+# beacon9 ansible_ssh_host={{beacon.13.IP}} privatekey={{KEY.beacon.9}} node_port={{beacon.13.NODE_PORT}} rpc_port={{beacon.13.RPC_PORT}} ws_port={{beacon.13.WS_PORT}} GrafanaURL=""
+# beacon10 ansible_ssh_host={{beacon.17.IP}} privatekey={{KEY.beacon.10}} node_port={{beacon.17.NODE_PORT}} rpc_port={{beacon.17.RPC_PORT}} ws_port={{beacon.17.WS_PORT}} GrafanaURL=""
+# beacon11 ansible_ssh_host={{beacon.21.IP}} privatekey={{KEY.beacon.11}} node_port={{beacon.21.NODE_PORT}} rpc_port={{beacon.21.RPC_PORT}} ws_port={{beacon.21.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
 
 [shard0]
 shard0-0 ansible_ssh_host={{shard.0.0.IP}} privatekey={{KEY.shard.0.0}} node_port={{shard.0.0.NODE_PORT}} rpc_port={{shard.0.0.RPC_PORT}} ws_port={{shard.0.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
