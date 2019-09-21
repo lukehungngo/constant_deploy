@@ -19,7 +19,15 @@ if [ "$1" == "metric-32s-b" ]; then
     echo "Remove Container Metric Server"
     ansible-playbook Ansible/removeContainer.yml -i Ansible/inventories/metric-32s-beacon --limit  metric
 fi
+if [ "$1" == "metric-64s-b" ]; then
+    echo "Remove Container Metric Server"
+    ansible-playbook Ansible/removeContainer.yml -i Ansible/inventories/metric-64s-beacon --limit  metric
+fi
 if [ "$1" == "metric-2s-100-b" ]; then
     echo "Remove Container Metric Server"
     ansible-playbook Ansible/removeContainer.yml -i Ansible/inventories/metric-2s-100-beacon --limit  metric
+fi
+if [ "$1" == "metric-1s-256-b" ]; then
+    echo "Remove Container Metric Server"
+    ansible-playbook Ansible/removeContainer.yml -i Ansible/inventories/metric-1s-256-beacon --limit  metric
 fi

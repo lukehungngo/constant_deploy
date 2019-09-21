@@ -1,0 +1,691 @@
+[metric:children]
+
+boot
+
+beacon
+
+shard0
+shard1
+shard2
+shard3
+shard4
+shard5
+shard6
+shard7
+shard8
+shard9
+shard10
+shard11
+shard12
+shard13
+shard14
+shard15
+shard16
+shard17
+shard18
+shard19
+shard20
+shard21
+shard22
+shard23
+shard24
+shard25
+shard26
+shard27
+shard28
+shard29
+shard30
+shard31
+
+# shard32
+shard33
+# shard34
+# shard35
+
+# shard36
+shard37
+# shard38
+# shard39
+
+# shard40
+shard41
+# shard42
+# shard43
+
+# shard44
+shard45
+# shard46
+# shard47
+
+# shard48
+shard49
+# shard50
+# shard51
+
+# shard52
+shard53
+# shard54
+# shard55
+
+# shard56
+shard57
+# shard58
+# shard59
+
+# shard60
+shard61
+# shard62
+# shard63
+
+# fullnode
+
+[boot]
+bootnode ansible_ssh_host={{beacon.0.IP}} 
+
+[beacon]
+beacon0 ansible_ssh_host={{beacon.0.IP}} privatekey={{KEY.beacon.0}} node_port={{beacon.0.NODE_PORT}} rpc_port={{beacon.0.RPC_PORT}} ws_port={{beacon.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+beacon1 ansible_ssh_host={{beacon.4.IP}} privatekey={{KEY.beacon.1}} node_port={{beacon.4.NODE_PORT}} rpc_port={{beacon.4.RPC_PORT}} ws_port={{beacon.4.WS_PORT}} GrafanaURL=""
+beacon2 ansible_ssh_host={{beacon.8.IP}} privatekey={{KEY.beacon.2}} node_port={{beacon.8.NODE_PORT}} rpc_port={{beacon.8.RPC_PORT}} ws_port={{beacon.8.WS_PORT}} GrafanaURL=""
+beacon3 ansible_ssh_host={{beacon.12.IP}} privatekey={{KEY.beacon.3}} node_port={{beacon.12.NODE_PORT}} rpc_port={{beacon.12.RPC_PORT}} ws_port={{beacon.12.WS_PORT}} GrafanaURL=""
+beacon4 ansible_ssh_host={{beacon.16.IP}} privatekey={{KEY.beacon.4}} node_port={{beacon.16.NODE_PORT}} rpc_port={{beacon.16.RPC_PORT}} ws_port={{beacon.16.WS_PORT}} GrafanaURL=""
+beacon5 ansible_ssh_host={{beacon.17.IP}} privatekey={{KEY.beacon.5}} node_port={{beacon.17.NODE_PORT}} rpc_port={{beacon.17.RPC_PORT}} ws_port={{beacon.17.WS_PORT}} GrafanaURL=""
+# beacon6 ansible_ssh_host={{beacon.1.IP}} privatekey={{KEY.beacon.6}} node_port={{beacon.1.NODE_PORT}} rpc_port={{beacon.1.RPC_PORT}} ws_port={{beacon.1.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+# beacon7 ansible_ssh_host={{beacon.5.IP}} privatekey={{KEY.beacon.7}} node_port={{beacon.5.NODE_PORT}} rpc_port={{beacon.5.RPC_PORT}} ws_port={{beacon.5.WS_PORT}} GrafanaURL=""
+# beacon8 ansible_ssh_host={{beacon.9.IP}} privatekey={{KEY.beacon.8}} node_port={{beacon.9.NODE_PORT}} rpc_port={{beacon.9.RPC_PORT}} ws_port={{beacon.9.WS_PORT}} GrafanaURL=""
+# beacon9 ansible_ssh_host={{beacon.13.IP}} privatekey={{KEY.beacon.9}} node_port={{beacon.13.NODE_PORT}} rpc_port={{beacon.13.RPC_PORT}} ws_port={{beacon.13.WS_PORT}} GrafanaURL=""
+# beacon10 ansible_ssh_host={{beacon.17.IP}} privatekey={{KEY.beacon.10}} node_port={{beacon.17.NODE_PORT}} rpc_port={{beacon.17.RPC_PORT}} ws_port={{beacon.17.WS_PORT}} GrafanaURL=""
+# beacon11 ansible_ssh_host={{beacon.21.IP}} privatekey={{KEY.beacon.11}} node_port={{beacon.21.NODE_PORT}} rpc_port={{beacon.21.RPC_PORT}} ws_port={{beacon.21.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+
+[shard0]
+shard0-0 ansible_ssh_host={{beacon.20.IP}} privatekey={{KEY.shard.0.0}} node_port={{beacon.20.NODE_PORT}} rpc_port={{beacon.20.RPC_PORT}} ws_port={{beacon.20.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard0-1 ansible_ssh_host={{shard.0.1.IP}} privatekey={{KEY.shard.0.1}} node_port={{shard.0.1.NODE_PORT}} rpc_port={{shard.0.1.RPC_PORT}} ws_port={{shard.0.1.WS_PORT}} GrafanaURL="" 
+shard0-2 ansible_ssh_host={{shard.0.2.IP}} privatekey={{KEY.shard.0.2}} node_port={{shard.0.2.NODE_PORT}} rpc_port={{shard.0.2.RPC_PORT}} ws_port={{shard.0.2.WS_PORT}} GrafanaURL=""
+shard0-3 ansible_ssh_host={{shard.0.3.IP}} privatekey={{KEY.shard.0.3}} node_port={{shard.0.3.NODE_PORT}} rpc_port={{shard.0.3.RPC_PORT}} ws_port={{shard.0.3.WS_PORT}} GrafanaURL=""
+shard0-4 ansible_ssh_host={{shard.0.4.IP}} privatekey={{KEY.shard.0.4}} node_port={{shard.0.4.NODE_PORT}} rpc_port={{shard.0.4.RPC_PORT}} ws_port={{shard.0.4.WS_PORT}} GrafanaURL=""
+shard0-5 ansible_ssh_host={{shard.0.5.IP}} privatekey={{KEY.shard.0.5}} node_port={{shard.0.5.NODE_PORT}} rpc_port={{shard.0.5.RPC_PORT}} ws_port={{shard.0.5.WS_PORT}} GrafanaURL="" 
+shard0-6 ansible_ssh_host={{shard.0.6.IP}} privatekey={{KEY.shard.0.6}} node_port={{shard.0.6.NODE_PORT}} rpc_port={{shard.0.6.RPC_PORT}} ws_port={{shard.0.6.WS_PORT}} GrafanaURL=""
+shard0-7 ansible_ssh_host={{shard.0.7.IP}} privatekey={{KEY.shard.0.7}} node_port={{shard.0.7.NODE_PORT}} rpc_port={{shard.0.7.RPC_PORT}} ws_port={{shard.0.7.WS_PORT}} GrafanaURL=""
+[shard1]
+shard1-0 ansible_ssh_host={{shard.1.0.IP}} privatekey={{KEY.shard.1.0}} node_port={{shard.1.0.NODE_PORT}} rpc_port={{shard.1.0.RPC_PORT}} ws_port={{shard.1.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard1-1 ansible_ssh_host={{shard.1.1.IP}} privatekey={{KEY.shard.1.1}} node_port={{shard.1.1.NODE_PORT}} rpc_port={{shard.1.1.RPC_PORT}} ws_port={{shard.1.1.WS_PORT}} GrafanaURL="" 
+shard1-2 ansible_ssh_host={{shard.1.2.IP}} privatekey={{KEY.shard.1.2}} node_port={{shard.1.2.NODE_PORT}} rpc_port={{shard.1.2.RPC_PORT}} ws_port={{shard.1.2.WS_PORT}} GrafanaURL=""
+shard1-3 ansible_ssh_host={{shard.1.3.IP}} privatekey={{KEY.shard.1.3}} node_port={{shard.1.3.NODE_PORT}} rpc_port={{shard.1.3.RPC_PORT}} ws_port={{shard.1.3.WS_PORT}} GrafanaURL=""
+shard1-4 ansible_ssh_host={{shard.1.4.IP}} privatekey={{KEY.shard.1.4}} node_port={{shard.1.4.NODE_PORT}} rpc_port={{shard.1.4.RPC_PORT}} ws_port={{shard.1.4.WS_PORT}} GrafanaURL=""
+shard1-5 ansible_ssh_host={{shard.1.5.IP}} privatekey={{KEY.shard.1.5}} node_port={{shard.1.5.NODE_PORT}} rpc_port={{shard.1.5.RPC_PORT}} ws_port={{shard.1.5.WS_PORT}} GrafanaURL="" 
+shard1-6 ansible_ssh_host={{shard.1.6.IP}} privatekey={{KEY.shard.1.6}} node_port={{shard.1.6.NODE_PORT}} rpc_port={{shard.1.6.RPC_PORT}} ws_port={{shard.1.6.WS_PORT}} GrafanaURL=""
+shard1-7 ansible_ssh_host={{shard.1.7.IP}} privatekey={{KEY.shard.1.7}} node_port={{shard.1.7.NODE_PORT}} rpc_port={{shard.1.7.RPC_PORT}} ws_port={{shard.1.7.WS_PORT}} GrafanaURL=""
+[shard2]
+shard2-0 ansible_ssh_host={{shard.2.0.IP}} privatekey={{KEY.shard.2.0}} node_port={{shard.2.0.NODE_PORT}} rpc_port={{shard.2.0.RPC_PORT}} ws_port={{shard.2.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard2-1 ansible_ssh_host={{shard.2.1.IP}} privatekey={{KEY.shard.2.1}} node_port={{shard.2.1.NODE_PORT}} rpc_port={{shard.2.1.RPC_PORT}} ws_port={{shard.2.1.WS_PORT}} GrafanaURL="" 
+shard2-2 ansible_ssh_host={{shard.2.2.IP}} privatekey={{KEY.shard.2.2}} node_port={{shard.2.2.NODE_PORT}} rpc_port={{shard.2.2.RPC_PORT}} ws_port={{shard.2.2.WS_PORT}} GrafanaURL=""
+shard2-3 ansible_ssh_host={{shard.2.3.IP}} privatekey={{KEY.shard.2.3}} node_port={{shard.2.3.NODE_PORT}} rpc_port={{shard.2.3.RPC_PORT}} ws_port={{shard.2.3.WS_PORT}} GrafanaURL=""
+shard2-4 ansible_ssh_host={{shard.2.4.IP}} privatekey={{KEY.shard.2.4}} node_port={{shard.2.4.NODE_PORT}} rpc_port={{shard.2.4.RPC_PORT}} ws_port={{shard.2.4.WS_PORT}} GrafanaURL=""
+shard2-5 ansible_ssh_host={{shard.2.5.IP}} privatekey={{KEY.shard.2.5}} node_port={{shard.2.5.NODE_PORT}} rpc_port={{shard.2.5.RPC_PORT}} ws_port={{shard.2.5.WS_PORT}} GrafanaURL="" 
+shard2-6 ansible_ssh_host={{shard.2.6.IP}} privatekey={{KEY.shard.2.6}} node_port={{shard.2.6.NODE_PORT}} rpc_port={{shard.2.6.RPC_PORT}} ws_port={{shard.2.6.WS_PORT}} GrafanaURL=""
+shard2-7 ansible_ssh_host={{shard.2.7.IP}} privatekey={{KEY.shard.2.7}} node_port={{shard.2.7.NODE_PORT}} rpc_port={{shard.2.7.RPC_PORT}} ws_port={{shard.2.7.WS_PORT}} GrafanaURL=""
+[shard3]
+shard3-0 ansible_ssh_host={{shard.3.0.IP}} privatekey={{KEY.shard.3.0}} node_port={{shard.3.0.NODE_PORT}} rpc_port={{shard.3.0.RPC_PORT}} ws_port={{shard.3.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard3-1 ansible_ssh_host={{shard.3.1.IP}} privatekey={{KEY.shard.3.1}} node_port={{shard.3.1.NODE_PORT}} rpc_port={{shard.3.1.RPC_PORT}} ws_port={{shard.3.1.WS_PORT}} GrafanaURL="" 
+shard3-2 ansible_ssh_host={{shard.3.2.IP}} privatekey={{KEY.shard.3.2}} node_port={{shard.3.2.NODE_PORT}} rpc_port={{shard.3.2.RPC_PORT}} ws_port={{shard.3.2.WS_PORT}} GrafanaURL=""
+shard3-3 ansible_ssh_host={{shard.3.3.IP}} privatekey={{KEY.shard.3.3}} node_port={{shard.3.3.NODE_PORT}} rpc_port={{shard.3.3.RPC_PORT}} ws_port={{shard.3.3.WS_PORT}} GrafanaURL=""
+shard3-4 ansible_ssh_host={{shard.3.4.IP}} privatekey={{KEY.shard.3.4}} node_port={{shard.3.4.NODE_PORT}} rpc_port={{shard.3.4.RPC_PORT}} ws_port={{shard.3.4.WS_PORT}} GrafanaURL=""
+shard3-5 ansible_ssh_host={{shard.3.5.IP}} privatekey={{KEY.shard.3.5}} node_port={{shard.3.5.NODE_PORT}} rpc_port={{shard.3.5.RPC_PORT}} ws_port={{shard.3.5.WS_PORT}} GrafanaURL="" 
+shard3-6 ansible_ssh_host={{shard.3.6.IP}} privatekey={{KEY.shard.3.6}} node_port={{shard.3.6.NODE_PORT}} rpc_port={{shard.3.6.RPC_PORT}} ws_port={{shard.3.6.WS_PORT}} GrafanaURL=""
+shard3-7 ansible_ssh_host={{shard.3.7.IP}} privatekey={{KEY.shard.3.7}} node_port={{shard.3.7.NODE_PORT}} rpc_port={{shard.3.7.RPC_PORT}} ws_port={{shard.3.7.WS_PORT}} GrafanaURL=""
+
+[shard4]
+shard4-0 ansible_ssh_host={{shard.4.8.IP}} privatekey={{KEY.shard.4.0}} node_port={{shard.4.8.NODE_PORT}} rpc_port={{shard.4.8.RPC_PORT}} ws_port={{shard.4.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard4-1 ansible_ssh_host={{shard.4.9.IP}} privatekey={{KEY.shard.4.1}} node_port={{shard.4.9.NODE_PORT}} rpc_port={{shard.4.9.RPC_PORT}} ws_port={{shard.4.9.WS_PORT}} GrafanaURL="" 
+shard4-2 ansible_ssh_host={{shard.4.10.IP}} privatekey={{KEY.shard.4.2}} node_port={{shard.4.10.NODE_PORT}} rpc_port={{shard.4.10.RPC_PORT}} ws_port={{shard.4.10.WS_PORT}} GrafanaURL=""
+shard4-3 ansible_ssh_host={{shard.4.11.IP}} privatekey={{KEY.shard.4.3}} node_port={{shard.4.11.NODE_PORT}} rpc_port={{shard.4.11.RPC_PORT}} ws_port={{shard.4.11.WS_PORT}} GrafanaURL=""
+shard4-4 ansible_ssh_host={{shard.4.12.IP}} privatekey={{KEY.shard.4.4}} node_port={{shard.4.12.NODE_PORT}} rpc_port={{shard.4.12.RPC_PORT}} ws_port={{shard.4.12.WS_PORT}} GrafanaURL=""
+shard4-5 ansible_ssh_host={{shard.4.13.IP}} privatekey={{KEY.shard.4.5}} node_port={{shard.4.13.NODE_PORT}} rpc_port={{shard.4.13.RPC_PORT}} ws_port={{shard.4.13.WS_PORT}} GrafanaURL="" 
+shard4-6 ansible_ssh_host={{shard.4.14.IP}} privatekey={{KEY.shard.4.6}} node_port={{shard.4.14.NODE_PORT}} rpc_port={{shard.4.14.RPC_PORT}} ws_port={{shard.4.14.WS_PORT}} GrafanaURL=""
+shard4-7 ansible_ssh_host={{shard.4.15.IP}} privatekey={{KEY.shard.4.7}} node_port={{shard.4.15.NODE_PORT}} rpc_port={{shard.4.15.RPC_PORT}} ws_port={{shard.4.15.WS_PORT}} GrafanaURL=""
+[shard5]
+shard5-0 ansible_ssh_host={{shard.5.8.IP}} privatekey={{KEY.shard.5.0}} node_port={{shard.5.8.NODE_PORT}} rpc_port={{shard.5.8.RPC_PORT}} ws_port={{shard.5.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard5-1 ansible_ssh_host={{shard.5.9.IP}} privatekey={{KEY.shard.5.1}} node_port={{shard.5.9.NODE_PORT}} rpc_port={{shard.5.9.RPC_PORT}} ws_port={{shard.5.9.WS_PORT}} GrafanaURL="" 
+shard5-2 ansible_ssh_host={{shard.5.10.IP}} privatekey={{KEY.shard.5.2}} node_port={{shard.5.10.NODE_PORT}} rpc_port={{shard.5.10.RPC_PORT}} ws_port={{shard.5.10.WS_PORT}} GrafanaURL=""
+shard5-3 ansible_ssh_host={{shard.5.11.IP}} privatekey={{KEY.shard.5.3}} node_port={{shard.5.11.NODE_PORT}} rpc_port={{shard.5.11.RPC_PORT}} ws_port={{shard.5.11.WS_PORT}} GrafanaURL=""
+shard5-4 ansible_ssh_host={{shard.5.12.IP}} privatekey={{KEY.shard.5.4}} node_port={{shard.5.12.NODE_PORT}} rpc_port={{shard.5.12.RPC_PORT}} ws_port={{shard.5.12.WS_PORT}} GrafanaURL=""
+shard5-5 ansible_ssh_host={{shard.5.13.IP}} privatekey={{KEY.shard.5.5}} node_port={{shard.5.13.NODE_PORT}} rpc_port={{shard.5.13.RPC_PORT}} ws_port={{shard.5.13.WS_PORT}} GrafanaURL="" 
+shard5-6 ansible_ssh_host={{shard.5.14.IP}} privatekey={{KEY.shard.5.6}} node_port={{shard.5.14.NODE_PORT}} rpc_port={{shard.5.14.RPC_PORT}} ws_port={{shard.5.14.WS_PORT}} GrafanaURL=""
+shard5-7 ansible_ssh_host={{shard.5.15.IP}} privatekey={{KEY.shard.5.7}} node_port={{shard.5.15.NODE_PORT}} rpc_port={{shard.5.15.RPC_PORT}} ws_port={{shard.5.15.WS_PORT}} GrafanaURL=""
+[shard6]
+shard6-0 ansible_ssh_host={{shard.6.8.IP}} privatekey={{KEY.shard.6.0}} node_port={{shard.6.8.NODE_PORT}} rpc_port={{shard.6.8.RPC_PORT}} ws_port={{shard.6.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard6-1 ansible_ssh_host={{shard.6.9.IP}} privatekey={{KEY.shard.6.1}} node_port={{shard.6.9.NODE_PORT}} rpc_port={{shard.6.9.RPC_PORT}} ws_port={{shard.6.9.WS_PORT}} GrafanaURL="" 
+shard6-2 ansible_ssh_host={{shard.6.10.IP}} privatekey={{KEY.shard.6.2}} node_port={{shard.6.10.NODE_PORT}} rpc_port={{shard.6.10.RPC_PORT}} ws_port={{shard.6.10.WS_PORT}} GrafanaURL=""
+shard6-3 ansible_ssh_host={{shard.6.11.IP}} privatekey={{KEY.shard.6.3}} node_port={{shard.6.11.NODE_PORT}} rpc_port={{shard.6.11.RPC_PORT}} ws_port={{shard.6.11.WS_PORT}} GrafanaURL=""
+shard6-4 ansible_ssh_host={{shard.6.12.IP}} privatekey={{KEY.shard.6.4}} node_port={{shard.6.12.NODE_PORT}} rpc_port={{shard.6.12.RPC_PORT}} ws_port={{shard.6.12.WS_PORT}} GrafanaURL=""
+shard6-5 ansible_ssh_host={{shard.6.13.IP}} privatekey={{KEY.shard.6.5}} node_port={{shard.6.13.NODE_PORT}} rpc_port={{shard.6.13.RPC_PORT}} ws_port={{shard.6.13.WS_PORT}} GrafanaURL="" 
+shard6-6 ansible_ssh_host={{shard.6.14.IP}} privatekey={{KEY.shard.6.6}} node_port={{shard.6.14.NODE_PORT}} rpc_port={{shard.6.14.RPC_PORT}} ws_port={{shard.6.14.WS_PORT}} GrafanaURL=""
+shard6-7 ansible_ssh_host={{shard.6.15.IP}} privatekey={{KEY.shard.6.7}} node_port={{shard.6.15.NODE_PORT}} rpc_port={{shard.6.15.RPC_PORT}} ws_port={{shard.6.15.WS_PORT}} GrafanaURL=""
+[shard7]
+shard7-0 ansible_ssh_host={{shard.7.8.IP}} privatekey={{KEY.shard.7.0}} node_port={{shard.7.8.NODE_PORT}} rpc_port={{shard.7.8.RPC_PORT}} ws_port={{shard.7.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard7-1 ansible_ssh_host={{shard.7.9.IP}} privatekey={{KEY.shard.7.1}} node_port={{shard.7.9.NODE_PORT}} rpc_port={{shard.7.9.RPC_PORT}} ws_port={{shard.7.9.WS_PORT}} GrafanaURL="" 
+shard7-2 ansible_ssh_host={{shard.7.10.IP}} privatekey={{KEY.shard.7.2}} node_port={{shard.7.10.NODE_PORT}} rpc_port={{shard.7.10.RPC_PORT}} ws_port={{shard.7.10.WS_PORT}} GrafanaURL=""
+shard7-3 ansible_ssh_host={{shard.7.11.IP}} privatekey={{KEY.shard.7.3}} node_port={{shard.7.11.NODE_PORT}} rpc_port={{shard.7.11.RPC_PORT}} ws_port={{shard.7.11.WS_PORT}} GrafanaURL=""
+shard7-4 ansible_ssh_host={{shard.7.12.IP}} privatekey={{KEY.shard.7.4}} node_port={{shard.7.12.NODE_PORT}} rpc_port={{shard.7.12.RPC_PORT}} ws_port={{shard.7.12.WS_PORT}} GrafanaURL=""
+shard7-5 ansible_ssh_host={{shard.7.13.IP}} privatekey={{KEY.shard.7.5}} node_port={{shard.7.13.NODE_PORT}} rpc_port={{shard.7.13.RPC_PORT}} ws_port={{shard.7.13.WS_PORT}} GrafanaURL="" 
+shard7-6 ansible_ssh_host={{shard.7.14.IP}} privatekey={{KEY.shard.7.6}} node_port={{shard.7.14.NODE_PORT}} rpc_port={{shard.7.14.RPC_PORT}} ws_port={{shard.7.14.WS_PORT}} GrafanaURL=""
+shard7-7 ansible_ssh_host={{shard.7.15.IP}} privatekey={{KEY.shard.7.7}} node_port={{shard.7.15.NODE_PORT}} rpc_port={{shard.7.15.RPC_PORT}} ws_port={{shard.7.15.WS_PORT}} GrafanaURL=""
+
+[shard8]
+shard8-0 ansible_ssh_host={{shard.8.16.IP}} privatekey={{KEY.shard.8.0}} node_port={{shard.8.16.NODE_PORT}} rpc_port={{shard.8.16.RPC_PORT}} ws_port={{shard.8.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard8-1 ansible_ssh_host={{shard.8.17.IP}} privatekey={{KEY.shard.8.1}} node_port={{shard.8.17.NODE_PORT}} rpc_port={{shard.8.17.RPC_PORT}} ws_port={{shard.8.17.WS_PORT}} GrafanaURL="" 
+shard8-2 ansible_ssh_host={{shard.8.18.IP}} privatekey={{KEY.shard.8.2}} node_port={{shard.8.18.NODE_PORT}} rpc_port={{shard.8.18.RPC_PORT}} ws_port={{shard.8.18.WS_PORT}} GrafanaURL=""
+shard8-3 ansible_ssh_host={{shard.8.19.IP}} privatekey={{KEY.shard.8.3}} node_port={{shard.8.19.NODE_PORT}} rpc_port={{shard.8.19.RPC_PORT}} ws_port={{shard.8.19.WS_PORT}} GrafanaURL=""
+shard8-4 ansible_ssh_host={{shard.8.20.IP}} privatekey={{KEY.shard.8.4}} node_port={{shard.8.20.NODE_PORT}} rpc_port={{shard.8.20.RPC_PORT}} ws_port={{shard.8.20.WS_PORT}} GrafanaURL=""
+shard8-5 ansible_ssh_host={{shard.8.21.IP}} privatekey={{KEY.shard.8.5}} node_port={{shard.8.21.NODE_PORT}} rpc_port={{shard.8.21.RPC_PORT}} ws_port={{shard.8.21.WS_PORT}} GrafanaURL="" 
+shard8-6 ansible_ssh_host={{shard.8.22.IP}} privatekey={{KEY.shard.8.6}} node_port={{shard.8.22.NODE_PORT}} rpc_port={{shard.8.22.RPC_PORT}} ws_port={{shard.8.22.WS_PORT}} GrafanaURL=""
+shard8-7 ansible_ssh_host={{shard.8.23.IP}} privatekey={{KEY.shard.8.7}} node_port={{shard.8.23.NODE_PORT}} rpc_port={{shard.8.23.RPC_PORT}} ws_port={{shard.8.23.WS_PORT}} GrafanaURL=""
+[shard9]
+shard9-0 ansible_ssh_host={{shard.9.16.IP}} privatekey={{KEY.shard.9.0}} node_port={{shard.9.16.NODE_PORT}} rpc_port={{shard.9.16.RPC_PORT}} ws_port={{shard.9.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard9-1 ansible_ssh_host={{shard.9.17.IP}} privatekey={{KEY.shard.9.1}} node_port={{shard.9.17.NODE_PORT}} rpc_port={{shard.9.17.RPC_PORT}} ws_port={{shard.9.17.WS_PORT}} GrafanaURL="" 
+shard9-2 ansible_ssh_host={{shard.9.18.IP}} privatekey={{KEY.shard.9.2}} node_port={{shard.9.18.NODE_PORT}} rpc_port={{shard.9.18.RPC_PORT}} ws_port={{shard.9.18.WS_PORT}} GrafanaURL=""
+shard9-3 ansible_ssh_host={{shard.9.19.IP}} privatekey={{KEY.shard.9.3}} node_port={{shard.9.19.NODE_PORT}} rpc_port={{shard.9.19.RPC_PORT}} ws_port={{shard.9.19.WS_PORT}} GrafanaURL=""
+shard9-4 ansible_ssh_host={{shard.9.20.IP}} privatekey={{KEY.shard.9.4}} node_port={{shard.9.20.NODE_PORT}} rpc_port={{shard.9.20.RPC_PORT}} ws_port={{shard.9.20.WS_PORT}} GrafanaURL=""
+shard9-5 ansible_ssh_host={{shard.9.21.IP}} privatekey={{KEY.shard.9.5}} node_port={{shard.9.21.NODE_PORT}} rpc_port={{shard.9.21.RPC_PORT}} ws_port={{shard.9.21.WS_PORT}} GrafanaURL="" 
+shard9-6 ansible_ssh_host={{shard.9.22.IP}} privatekey={{KEY.shard.9.6}} node_port={{shard.9.22.NODE_PORT}} rpc_port={{shard.9.22.RPC_PORT}} ws_port={{shard.9.22.WS_PORT}} GrafanaURL=""
+shard9-7 ansible_ssh_host={{shard.9.23.IP}} privatekey={{KEY.shard.9.7}} node_port={{shard.9.23.NODE_PORT}} rpc_port={{shard.9.23.RPC_PORT}} ws_port={{shard.9.23.WS_PORT}} GrafanaURL=""
+[shard10]
+shard10-0 ansible_ssh_host={{shard.10.16.IP}} privatekey={{KEY.shard.10.0}} node_port={{shard.10.16.NODE_PORT}} rpc_port={{shard.10.16.RPC_PORT}} ws_port={{shard.10.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard10-1 ansible_ssh_host={{shard.10.17.IP}} privatekey={{KEY.shard.10.1}} node_port={{shard.10.17.NODE_PORT}} rpc_port={{shard.10.17.RPC_PORT}} ws_port={{shard.10.17.WS_PORT}} GrafanaURL="" 
+shard10-2 ansible_ssh_host={{shard.10.18.IP}} privatekey={{KEY.shard.10.2}} node_port={{shard.10.18.NODE_PORT}} rpc_port={{shard.10.18.RPC_PORT}} ws_port={{shard.10.18.WS_PORT}} GrafanaURL=""
+shard10-3 ansible_ssh_host={{shard.10.19.IP}} privatekey={{KEY.shard.10.3}} node_port={{shard.10.19.NODE_PORT}} rpc_port={{shard.10.19.RPC_PORT}} ws_port={{shard.10.19.WS_PORT}} GrafanaURL=""
+shard10-4 ansible_ssh_host={{shard.10.20.IP}} privatekey={{KEY.shard.10.4}} node_port={{shard.10.20.NODE_PORT}} rpc_port={{shard.10.20.RPC_PORT}} ws_port={{shard.10.20.WS_PORT}} GrafanaURL=""
+shard10-5 ansible_ssh_host={{shard.10.21.IP}} privatekey={{KEY.shard.10.5}} node_port={{shard.10.21.NODE_PORT}} rpc_port={{shard.10.21.RPC_PORT}} ws_port={{shard.10.21.WS_PORT}} GrafanaURL="" 
+shard10-6 ansible_ssh_host={{shard.10.22.IP}} privatekey={{KEY.shard.10.6}} node_port={{shard.10.22.NODE_PORT}} rpc_port={{shard.10.22.RPC_PORT}} ws_port={{shard.10.22.WS_PORT}} GrafanaURL=""
+shard10-7 ansible_ssh_host={{shard.10.23.IP}} privatekey={{KEY.shard.10.7}} node_port={{shard.10.23.NODE_PORT}} rpc_port={{shard.10.23.RPC_PORT}} ws_port={{shard.10.23.WS_PORT}} GrafanaURL=""
+[shard11]
+shard11-0 ansible_ssh_host={{shard.11.16.IP}} privatekey={{KEY.shard.11.0}} node_port={{shard.11.16.NODE_PORT}} rpc_port={{shard.11.16.RPC_PORT}} ws_port={{shard.11.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard11-1 ansible_ssh_host={{shard.11.17.IP}} privatekey={{KEY.shard.11.1}} node_port={{shard.11.17.NODE_PORT}} rpc_port={{shard.11.17.RPC_PORT}} ws_port={{shard.11.17.WS_PORT}} GrafanaURL="" 
+shard11-2 ansible_ssh_host={{shard.11.18.IP}} privatekey={{KEY.shard.11.2}} node_port={{shard.11.18.NODE_PORT}} rpc_port={{shard.11.18.RPC_PORT}} ws_port={{shard.11.18.WS_PORT}} GrafanaURL=""
+shard11-3 ansible_ssh_host={{shard.11.19.IP}} privatekey={{KEY.shard.11.3}} node_port={{shard.11.19.NODE_PORT}} rpc_port={{shard.11.19.RPC_PORT}} ws_port={{shard.11.19.WS_PORT}} GrafanaURL=""
+shard11-4 ansible_ssh_host={{shard.11.20.IP}} privatekey={{KEY.shard.11.4}} node_port={{shard.11.20.NODE_PORT}} rpc_port={{shard.11.20.RPC_PORT}} ws_port={{shard.11.20.WS_PORT}} GrafanaURL=""
+shard11-5 ansible_ssh_host={{shard.11.21.IP}} privatekey={{KEY.shard.11.5}} node_port={{shard.11.21.NODE_PORT}} rpc_port={{shard.11.21.RPC_PORT}} ws_port={{shard.11.21.WS_PORT}} GrafanaURL="" 
+shard11-6 ansible_ssh_host={{shard.11.22.IP}} privatekey={{KEY.shard.11.6}} node_port={{shard.11.22.NODE_PORT}} rpc_port={{shard.11.22.RPC_PORT}} ws_port={{shard.11.22.WS_PORT}} GrafanaURL=""
+shard11-7 ansible_ssh_host={{shard.11.23.IP}} privatekey={{KEY.shard.11.7}} node_port={{shard.11.23.NODE_PORT}} rpc_port={{shard.11.23.RPC_PORT}} ws_port={{shard.11.23.WS_PORT}} GrafanaURL=""
+
+[shard12]
+shard12-0 ansible_ssh_host={{shard.12.24.IP}} privatekey={{KEY.shard.12.0}} node_port={{shard.12.24.NODE_PORT}} rpc_port={{shard.12.24.RPC_PORT}} ws_port={{shard.12.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard12-1 ansible_ssh_host={{shard.12.25.IP}} privatekey={{KEY.shard.12.1}} node_port={{shard.12.25.NODE_PORT}} rpc_port={{shard.12.25.RPC_PORT}} ws_port={{shard.12.25.WS_PORT}} GrafanaURL="" 
+shard12-2 ansible_ssh_host={{shard.12.26.IP}} privatekey={{KEY.shard.12.2}} node_port={{shard.12.26.NODE_PORT}} rpc_port={{shard.12.26.RPC_PORT}} ws_port={{shard.12.26.WS_PORT}} GrafanaURL=""
+shard12-3 ansible_ssh_host={{shard.12.27.IP}} privatekey={{KEY.shard.12.3}} node_port={{shard.12.27.NODE_PORT}} rpc_port={{shard.12.27.RPC_PORT}} ws_port={{shard.12.27.WS_PORT}} GrafanaURL=""
+shard12-4 ansible_ssh_host={{shard.12.28.IP}} privatekey={{KEY.shard.12.4}} node_port={{shard.12.28.NODE_PORT}} rpc_port={{shard.12.28.RPC_PORT}} ws_port={{shard.12.28.WS_PORT}} GrafanaURL=""
+shard12-5 ansible_ssh_host={{shard.12.29.IP}} privatekey={{KEY.shard.12.5}} node_port={{shard.12.29.NODE_PORT}} rpc_port={{shard.12.29.RPC_PORT}} ws_port={{shard.12.29.WS_PORT}} GrafanaURL="" 
+shard12-6 ansible_ssh_host={{shard.12.30.IP}} privatekey={{KEY.shard.12.6}} node_port={{shard.12.30.NODE_PORT}} rpc_port={{shard.12.30.RPC_PORT}} ws_port={{shard.12.30.WS_PORT}} GrafanaURL=""
+shard12-7 ansible_ssh_host={{shard.12.31.IP}} privatekey={{KEY.shard.12.7}} node_port={{shard.12.31.NODE_PORT}} rpc_port={{shard.12.31.RPC_PORT}} ws_port={{shard.12.31.WS_PORT}} GrafanaURL=""
+[shard13]
+shard13-0 ansible_ssh_host={{shard.13.24.IP}} privatekey={{KEY.shard.13.0}} node_port={{shard.13.24.NODE_PORT}} rpc_port={{shard.13.24.RPC_PORT}} ws_port={{shard.13.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard13-1 ansible_ssh_host={{shard.13.25.IP}} privatekey={{KEY.shard.13.1}} node_port={{shard.13.25.NODE_PORT}} rpc_port={{shard.13.25.RPC_PORT}} ws_port={{shard.13.25.WS_PORT}} GrafanaURL="" 
+shard13-2 ansible_ssh_host={{shard.13.26.IP}} privatekey={{KEY.shard.13.2}} node_port={{shard.13.26.NODE_PORT}} rpc_port={{shard.13.26.RPC_PORT}} ws_port={{shard.13.26.WS_PORT}} GrafanaURL=""
+shard13-3 ansible_ssh_host={{shard.13.27.IP}} privatekey={{KEY.shard.13.3}} node_port={{shard.13.27.NODE_PORT}} rpc_port={{shard.13.27.RPC_PORT}} ws_port={{shard.13.27.WS_PORT}} GrafanaURL=""
+shard13-4 ansible_ssh_host={{shard.13.28.IP}} privatekey={{KEY.shard.13.4}} node_port={{shard.13.28.NODE_PORT}} rpc_port={{shard.13.28.RPC_PORT}} ws_port={{shard.13.28.WS_PORT}} GrafanaURL=""
+shard13-5 ansible_ssh_host={{shard.13.29.IP}} privatekey={{KEY.shard.13.5}} node_port={{shard.13.29.NODE_PORT}} rpc_port={{shard.13.29.RPC_PORT}} ws_port={{shard.13.29.WS_PORT}} GrafanaURL="" 
+shard13-6 ansible_ssh_host={{shard.13.30.IP}} privatekey={{KEY.shard.13.6}} node_port={{shard.13.30.NODE_PORT}} rpc_port={{shard.13.30.RPC_PORT}} ws_port={{shard.13.30.WS_PORT}} GrafanaURL=""
+shard13-7 ansible_ssh_host={{shard.13.31.IP}} privatekey={{KEY.shard.13.7}} node_port={{shard.13.31.NODE_PORT}} rpc_port={{shard.13.31.RPC_PORT}} ws_port={{shard.13.31.WS_PORT}} GrafanaURL=""
+[shard14]
+shard14-0 ansible_ssh_host={{shard.14.24.IP}} privatekey={{KEY.shard.14.0}} node_port={{shard.14.24.NODE_PORT}} rpc_port={{shard.14.24.RPC_PORT}} ws_port={{shard.14.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard14-1 ansible_ssh_host={{shard.14.25.IP}} privatekey={{KEY.shard.14.1}} node_port={{shard.14.25.NODE_PORT}} rpc_port={{shard.14.25.RPC_PORT}} ws_port={{shard.14.25.WS_PORT}} GrafanaURL="" 
+shard14-2 ansible_ssh_host={{shard.14.26.IP}} privatekey={{KEY.shard.14.2}} node_port={{shard.14.26.NODE_PORT}} rpc_port={{shard.14.26.RPC_PORT}} ws_port={{shard.14.26.WS_PORT}} GrafanaURL=""
+shard14-3 ansible_ssh_host={{shard.14.27.IP}} privatekey={{KEY.shard.14.3}} node_port={{shard.14.27.NODE_PORT}} rpc_port={{shard.14.27.RPC_PORT}} ws_port={{shard.14.27.WS_PORT}} GrafanaURL=""
+shard14-4 ansible_ssh_host={{shard.14.28.IP}} privatekey={{KEY.shard.14.4}} node_port={{shard.14.28.NODE_PORT}} rpc_port={{shard.14.28.RPC_PORT}} ws_port={{shard.14.28.WS_PORT}} GrafanaURL=""
+shard14-5 ansible_ssh_host={{shard.14.29.IP}} privatekey={{KEY.shard.14.5}} node_port={{shard.14.29.NODE_PORT}} rpc_port={{shard.14.29.RPC_PORT}} ws_port={{shard.14.29.WS_PORT}} GrafanaURL="" 
+shard14-6 ansible_ssh_host={{shard.14.30.IP}} privatekey={{KEY.shard.14.6}} node_port={{shard.14.30.NODE_PORT}} rpc_port={{shard.14.30.RPC_PORT}} ws_port={{shard.14.30.WS_PORT}} GrafanaURL=""
+shard14-7 ansible_ssh_host={{shard.14.31.IP}} privatekey={{KEY.shard.14.7}} node_port={{shard.14.31.NODE_PORT}} rpc_port={{shard.14.31.RPC_PORT}} ws_port={{shard.14.31.WS_PORT}} GrafanaURL=""
+[shard15]
+shard15-0 ansible_ssh_host={{shard.15.24.IP}} privatekey={{KEY.shard.15.0}} node_port={{shard.15.24.NODE_PORT}} rpc_port={{shard.15.24.RPC_PORT}} ws_port={{shard.15.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard15-1 ansible_ssh_host={{shard.15.25.IP}} privatekey={{KEY.shard.15.1}} node_port={{shard.15.25.NODE_PORT}} rpc_port={{shard.15.25.RPC_PORT}} ws_port={{shard.15.25.WS_PORT}} GrafanaURL="" 
+shard15-2 ansible_ssh_host={{shard.15.26.IP}} privatekey={{KEY.shard.15.2}} node_port={{shard.15.26.NODE_PORT}} rpc_port={{shard.15.26.RPC_PORT}} ws_port={{shard.15.26.WS_PORT}} GrafanaURL=""
+shard15-3 ansible_ssh_host={{shard.15.27.IP}} privatekey={{KEY.shard.15.3}} node_port={{shard.15.27.NODE_PORT}} rpc_port={{shard.15.27.RPC_PORT}} ws_port={{shard.15.27.WS_PORT}} GrafanaURL=""
+shard15-4 ansible_ssh_host={{shard.15.28.IP}} privatekey={{KEY.shard.15.4}} node_port={{shard.15.28.NODE_PORT}} rpc_port={{shard.15.28.RPC_PORT}} ws_port={{shard.15.28.WS_PORT}} GrafanaURL=""
+shard15-5 ansible_ssh_host={{shard.15.29.IP}} privatekey={{KEY.shard.15.5}} node_port={{shard.15.29.NODE_PORT}} rpc_port={{shard.15.29.RPC_PORT}} ws_port={{shard.15.29.WS_PORT}} GrafanaURL="" 
+shard15-6 ansible_ssh_host={{shard.15.30.IP}} privatekey={{KEY.shard.15.6}} node_port={{shard.15.30.NODE_PORT}} rpc_port={{shard.15.30.RPC_PORT}} ws_port={{shard.15.30.WS_PORT}} GrafanaURL=""
+shard15-7 ansible_ssh_host={{shard.15.31.IP}} privatekey={{KEY.shard.15.7}} node_port={{shard.15.31.NODE_PORT}} rpc_port={{shard.15.31.RPC_PORT}} ws_port={{shard.15.31.WS_PORT}} GrafanaURL=""
+
+[shard16]
+shard16-0 ansible_ssh_host={{shard.16.32.IP}} privatekey={{KEY.shard.16.0}} node_port={{shard.16.32.NODE_PORT}} rpc_port={{shard.16.32.RPC_PORT}} ws_port={{shard.16.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard16-1 ansible_ssh_host={{shard.16.33.IP}} privatekey={{KEY.shard.16.1}} node_port={{shard.16.33.NODE_PORT}} rpc_port={{shard.16.33.RPC_PORT}} ws_port={{shard.16.33.WS_PORT}} GrafanaURL="" 
+shard16-2 ansible_ssh_host={{shard.16.34.IP}} privatekey={{KEY.shard.16.2}} node_port={{shard.16.34.NODE_PORT}} rpc_port={{shard.16.34.RPC_PORT}} ws_port={{shard.16.34.WS_PORT}} GrafanaURL=""
+shard16-3 ansible_ssh_host={{shard.16.35.IP}} privatekey={{KEY.shard.16.3}} node_port={{shard.16.35.NODE_PORT}} rpc_port={{shard.16.35.RPC_PORT}} ws_port={{shard.16.35.WS_PORT}} GrafanaURL=""
+shard16-4 ansible_ssh_host={{shard.16.36.IP}} privatekey={{KEY.shard.16.4}} node_port={{shard.16.36.NODE_PORT}} rpc_port={{shard.16.36.RPC_PORT}} ws_port={{shard.16.36.WS_PORT}} GrafanaURL=""
+shard16-5 ansible_ssh_host={{shard.16.37.IP}} privatekey={{KEY.shard.16.5}} node_port={{shard.16.37.NODE_PORT}} rpc_port={{shard.16.37.RPC_PORT}} ws_port={{shard.16.37.WS_PORT}} GrafanaURL="" 
+shard16-6 ansible_ssh_host={{shard.16.38.IP}} privatekey={{KEY.shard.16.6}} node_port={{shard.16.38.NODE_PORT}} rpc_port={{shard.16.38.RPC_PORT}} ws_port={{shard.16.38.WS_PORT}} GrafanaURL=""
+shard16-7 ansible_ssh_host={{shard.16.39.IP}} privatekey={{KEY.shard.16.7}} node_port={{shard.16.39.NODE_PORT}} rpc_port={{shard.16.39.RPC_PORT}} ws_port={{shard.16.39.WS_PORT}} GrafanaURL=""
+[shard17]
+shard17-0 ansible_ssh_host={{shard.17.32.IP}} privatekey={{KEY.shard.17.0}} node_port={{shard.17.32.NODE_PORT}} rpc_port={{shard.17.32.RPC_PORT}} ws_port={{shard.17.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard17-1 ansible_ssh_host={{shard.17.33.IP}} privatekey={{KEY.shard.17.1}} node_port={{shard.17.33.NODE_PORT}} rpc_port={{shard.17.33.RPC_PORT}} ws_port={{shard.17.33.WS_PORT}} GrafanaURL="" 
+shard17-2 ansible_ssh_host={{shard.17.34.IP}} privatekey={{KEY.shard.17.2}} node_port={{shard.17.34.NODE_PORT}} rpc_port={{shard.17.34.RPC_PORT}} ws_port={{shard.17.34.WS_PORT}} GrafanaURL=""
+shard17-3 ansible_ssh_host={{shard.17.35.IP}} privatekey={{KEY.shard.17.3}} node_port={{shard.17.35.NODE_PORT}} rpc_port={{shard.17.35.RPC_PORT}} ws_port={{shard.17.35.WS_PORT}} GrafanaURL=""
+shard17-4 ansible_ssh_host={{shard.17.36.IP}} privatekey={{KEY.shard.17.4}} node_port={{shard.17.36.NODE_PORT}} rpc_port={{shard.17.36.RPC_PORT}} ws_port={{shard.17.36.WS_PORT}} GrafanaURL=""
+shard17-5 ansible_ssh_host={{shard.17.37.IP}} privatekey={{KEY.shard.17.5}} node_port={{shard.17.37.NODE_PORT}} rpc_port={{shard.17.37.RPC_PORT}} ws_port={{shard.17.37.WS_PORT}} GrafanaURL="" 
+shard17-6 ansible_ssh_host={{shard.17.38.IP}} privatekey={{KEY.shard.17.6}} node_port={{shard.17.38.NODE_PORT}} rpc_port={{shard.17.38.RPC_PORT}} ws_port={{shard.17.38.WS_PORT}} GrafanaURL=""
+shard17-7 ansible_ssh_host={{shard.17.39.IP}} privatekey={{KEY.shard.17.7}} node_port={{shard.17.39.NODE_PORT}} rpc_port={{shard.17.39.RPC_PORT}} ws_port={{shard.17.39.WS_PORT}} GrafanaURL=""
+[shard18]
+shard18-0 ansible_ssh_host={{shard.18.32.IP}} privatekey={{KEY.shard.18.0}} node_port={{shard.18.32.NODE_PORT}} rpc_port={{shard.18.32.RPC_PORT}} ws_port={{shard.18.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard18-1 ansible_ssh_host={{shard.18.33.IP}} privatekey={{KEY.shard.18.1}} node_port={{shard.18.33.NODE_PORT}} rpc_port={{shard.18.33.RPC_PORT}} ws_port={{shard.18.33.WS_PORT}} GrafanaURL="" 
+shard18-2 ansible_ssh_host={{shard.18.34.IP}} privatekey={{KEY.shard.18.2}} node_port={{shard.18.34.NODE_PORT}} rpc_port={{shard.18.34.RPC_PORT}} ws_port={{shard.18.34.WS_PORT}} GrafanaURL=""
+shard18-3 ansible_ssh_host={{shard.18.35.IP}} privatekey={{KEY.shard.18.3}} node_port={{shard.18.35.NODE_PORT}} rpc_port={{shard.18.35.RPC_PORT}} ws_port={{shard.18.35.WS_PORT}} GrafanaURL=""
+shard18-4 ansible_ssh_host={{shard.18.36.IP}} privatekey={{KEY.shard.18.4}} node_port={{shard.18.36.NODE_PORT}} rpc_port={{shard.18.36.RPC_PORT}} ws_port={{shard.18.36.WS_PORT}} GrafanaURL=""
+shard18-5 ansible_ssh_host={{shard.18.37.IP}} privatekey={{KEY.shard.18.5}} node_port={{shard.18.37.NODE_PORT}} rpc_port={{shard.18.37.RPC_PORT}} ws_port={{shard.18.37.WS_PORT}} GrafanaURL="" 
+shard18-6 ansible_ssh_host={{shard.18.38.IP}} privatekey={{KEY.shard.18.6}} node_port={{shard.18.38.NODE_PORT}} rpc_port={{shard.18.38.RPC_PORT}} ws_port={{shard.18.38.WS_PORT}} GrafanaURL=""
+shard18-7 ansible_ssh_host={{shard.18.39.IP}} privatekey={{KEY.shard.18.7}} node_port={{shard.18.39.NODE_PORT}} rpc_port={{shard.18.39.RPC_PORT}} ws_port={{shard.18.39.WS_PORT}} GrafanaURL=""
+[shard19]
+shard19-0 ansible_ssh_host={{shard.19.32.IP}} privatekey={{KEY.shard.19.0}} node_port={{shard.19.32.NODE_PORT}} rpc_port={{shard.19.32.RPC_PORT}} ws_port={{shard.19.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard19-1 ansible_ssh_host={{shard.19.33.IP}} privatekey={{KEY.shard.19.1}} node_port={{shard.19.33.NODE_PORT}} rpc_port={{shard.19.33.RPC_PORT}} ws_port={{shard.19.33.WS_PORT}} GrafanaURL="" 
+shard19-2 ansible_ssh_host={{shard.19.34.IP}} privatekey={{KEY.shard.19.2}} node_port={{shard.19.34.NODE_PORT}} rpc_port={{shard.19.34.RPC_PORT}} ws_port={{shard.19.34.WS_PORT}} GrafanaURL=""
+shard19-3 ansible_ssh_host={{shard.19.35.IP}} privatekey={{KEY.shard.19.3}} node_port={{shard.19.35.NODE_PORT}} rpc_port={{shard.19.35.RPC_PORT}} ws_port={{shard.19.35.WS_PORT}} GrafanaURL=""
+shard19-4 ansible_ssh_host={{shard.19.36.IP}} privatekey={{KEY.shard.19.4}} node_port={{shard.19.36.NODE_PORT}} rpc_port={{shard.19.36.RPC_PORT}} ws_port={{shard.19.36.WS_PORT}} GrafanaURL=""
+shard19-5 ansible_ssh_host={{shard.19.37.IP}} privatekey={{KEY.shard.19.5}} node_port={{shard.19.37.NODE_PORT}} rpc_port={{shard.19.37.RPC_PORT}} ws_port={{shard.19.37.WS_PORT}} GrafanaURL="" 
+shard19-6 ansible_ssh_host={{shard.19.38.IP}} privatekey={{KEY.shard.19.6}} node_port={{shard.19.38.NODE_PORT}} rpc_port={{shard.19.38.RPC_PORT}} ws_port={{shard.19.38.WS_PORT}} GrafanaURL=""
+shard19-7 ansible_ssh_host={{shard.19.39.IP}} privatekey={{KEY.shard.19.7}} node_port={{shard.19.39.NODE_PORT}} rpc_port={{shard.19.39.RPC_PORT}} ws_port={{shard.19.39.WS_PORT}} GrafanaURL=""
+
+[shard20]
+shard20-0 ansible_ssh_host={{shard.20.40.IP}} privatekey={{KEY.shard.20.0}} node_port={{shard.20.40.NODE_PORT}} rpc_port={{shard.20.40.RPC_PORT}} ws_port={{shard.20.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard20-1 ansible_ssh_host={{shard.20.41.IP}} privatekey={{KEY.shard.20.1}} node_port={{shard.20.41.NODE_PORT}} rpc_port={{shard.20.41.RPC_PORT}} ws_port={{shard.20.41.WS_PORT}} GrafanaURL="" 
+shard20-2 ansible_ssh_host={{shard.20.42.IP}} privatekey={{KEY.shard.20.2}} node_port={{shard.20.42.NODE_PORT}} rpc_port={{shard.20.42.RPC_PORT}} ws_port={{shard.20.42.WS_PORT}} GrafanaURL=""
+shard20-3 ansible_ssh_host={{shard.20.43.IP}} privatekey={{KEY.shard.20.3}} node_port={{shard.20.43.NODE_PORT}} rpc_port={{shard.20.43.RPC_PORT}} ws_port={{shard.20.43.WS_PORT}} GrafanaURL=""
+shard20-4 ansible_ssh_host={{shard.20.44.IP}} privatekey={{KEY.shard.20.4}} node_port={{shard.20.44.NODE_PORT}} rpc_port={{shard.20.44.RPC_PORT}} ws_port={{shard.20.44.WS_PORT}} GrafanaURL=""
+shard20-5 ansible_ssh_host={{shard.20.45.IP}} privatekey={{KEY.shard.20.5}} node_port={{shard.20.45.NODE_PORT}} rpc_port={{shard.20.45.RPC_PORT}} ws_port={{shard.20.45.WS_PORT}} GrafanaURL="" 
+shard20-6 ansible_ssh_host={{shard.20.46.IP}} privatekey={{KEY.shard.20.6}} node_port={{shard.20.46.NODE_PORT}} rpc_port={{shard.20.46.RPC_PORT}} ws_port={{shard.20.46.WS_PORT}} GrafanaURL=""
+shard20-7 ansible_ssh_host={{shard.20.47.IP}} privatekey={{KEY.shard.20.7}} node_port={{shard.20.47.NODE_PORT}} rpc_port={{shard.20.47.RPC_PORT}} ws_port={{shard.20.47.WS_PORT}} GrafanaURL=""
+[shard21]
+shard21-0 ansible_ssh_host={{shard.21.40.IP}} privatekey={{KEY.shard.21.0}} node_port={{shard.21.40.NODE_PORT}} rpc_port={{shard.21.40.RPC_PORT}} ws_port={{shard.21.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard21-1 ansible_ssh_host={{shard.21.41.IP}} privatekey={{KEY.shard.21.1}} node_port={{shard.21.41.NODE_PORT}} rpc_port={{shard.21.41.RPC_PORT}} ws_port={{shard.21.41.WS_PORT}} GrafanaURL="" 
+shard21-2 ansible_ssh_host={{shard.21.42.IP}} privatekey={{KEY.shard.21.2}} node_port={{shard.21.42.NODE_PORT}} rpc_port={{shard.21.42.RPC_PORT}} ws_port={{shard.21.42.WS_PORT}} GrafanaURL=""
+shard21-3 ansible_ssh_host={{shard.21.43.IP}} privatekey={{KEY.shard.21.3}} node_port={{shard.21.43.NODE_PORT}} rpc_port={{shard.21.43.RPC_PORT}} ws_port={{shard.21.43.WS_PORT}} GrafanaURL=""
+shard21-4 ansible_ssh_host={{shard.21.44.IP}} privatekey={{KEY.shard.21.4}} node_port={{shard.21.44.NODE_PORT}} rpc_port={{shard.21.44.RPC_PORT}} ws_port={{shard.21.44.WS_PORT}} GrafanaURL=""
+shard21-5 ansible_ssh_host={{shard.21.45.IP}} privatekey={{KEY.shard.21.5}} node_port={{shard.21.45.NODE_PORT}} rpc_port={{shard.21.45.RPC_PORT}} ws_port={{shard.21.45.WS_PORT}} GrafanaURL="" 
+shard21-6 ansible_ssh_host={{shard.21.46.IP}} privatekey={{KEY.shard.21.6}} node_port={{shard.21.46.NODE_PORT}} rpc_port={{shard.21.46.RPC_PORT}} ws_port={{shard.21.46.WS_PORT}} GrafanaURL=""
+shard21-7 ansible_ssh_host={{shard.21.47.IP}} privatekey={{KEY.shard.21.7}} node_port={{shard.21.47.NODE_PORT}} rpc_port={{shard.21.47.RPC_PORT}} ws_port={{shard.21.47.WS_PORT}} GrafanaURL=""
+[shard22]
+shard22-0 ansible_ssh_host={{shard.22.40.IP}} privatekey={{KEY.shard.22.0}} node_port={{shard.22.40.NODE_PORT}} rpc_port={{shard.22.40.RPC_PORT}} ws_port={{shard.22.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard22-1 ansible_ssh_host={{shard.22.41.IP}} privatekey={{KEY.shard.22.1}} node_port={{shard.22.41.NODE_PORT}} rpc_port={{shard.22.41.RPC_PORT}} ws_port={{shard.22.41.WS_PORT}} GrafanaURL="" 
+shard22-2 ansible_ssh_host={{shard.22.42.IP}} privatekey={{KEY.shard.22.2}} node_port={{shard.22.42.NODE_PORT}} rpc_port={{shard.22.42.RPC_PORT}} ws_port={{shard.22.42.WS_PORT}} GrafanaURL=""
+shard22-3 ansible_ssh_host={{shard.22.43.IP}} privatekey={{KEY.shard.22.3}} node_port={{shard.22.43.NODE_PORT}} rpc_port={{shard.22.43.RPC_PORT}} ws_port={{shard.22.43.WS_PORT}} GrafanaURL=""
+shard22-4 ansible_ssh_host={{shard.22.44.IP}} privatekey={{KEY.shard.22.4}} node_port={{shard.22.44.NODE_PORT}} rpc_port={{shard.22.44.RPC_PORT}} ws_port={{shard.22.44.WS_PORT}} GrafanaURL=""
+shard22-5 ansible_ssh_host={{shard.22.45.IP}} privatekey={{KEY.shard.22.5}} node_port={{shard.22.45.NODE_PORT}} rpc_port={{shard.22.45.RPC_PORT}} ws_port={{shard.22.45.WS_PORT}} GrafanaURL="" 
+shard22-6 ansible_ssh_host={{shard.22.46.IP}} privatekey={{KEY.shard.22.6}} node_port={{shard.22.46.NODE_PORT}} rpc_port={{shard.22.46.RPC_PORT}} ws_port={{shard.22.46.WS_PORT}} GrafanaURL=""
+shard22-7 ansible_ssh_host={{shard.22.47.IP}} privatekey={{KEY.shard.22.7}} node_port={{shard.22.47.NODE_PORT}} rpc_port={{shard.22.47.RPC_PORT}} ws_port={{shard.22.47.WS_PORT}} GrafanaURL=""
+[shard23]
+shard23-0 ansible_ssh_host={{shard.23.40.IP}} privatekey={{KEY.shard.23.0}} node_port={{shard.23.40.NODE_PORT}} rpc_port={{shard.23.40.RPC_PORT}} ws_port={{shard.23.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard23-1 ansible_ssh_host={{shard.23.41.IP}} privatekey={{KEY.shard.23.1}} node_port={{shard.23.41.NODE_PORT}} rpc_port={{shard.23.41.RPC_PORT}} ws_port={{shard.23.41.WS_PORT}} GrafanaURL="" 
+shard23-2 ansible_ssh_host={{shard.23.42.IP}} privatekey={{KEY.shard.23.2}} node_port={{shard.23.42.NODE_PORT}} rpc_port={{shard.23.42.RPC_PORT}} ws_port={{shard.23.42.WS_PORT}} GrafanaURL=""
+shard23-3 ansible_ssh_host={{shard.23.43.IP}} privatekey={{KEY.shard.23.3}} node_port={{shard.23.43.NODE_PORT}} rpc_port={{shard.23.43.RPC_PORT}} ws_port={{shard.23.43.WS_PORT}} GrafanaURL=""
+shard23-4 ansible_ssh_host={{shard.23.44.IP}} privatekey={{KEY.shard.23.4}} node_port={{shard.23.44.NODE_PORT}} rpc_port={{shard.23.44.RPC_PORT}} ws_port={{shard.23.44.WS_PORT}} GrafanaURL=""
+shard23-5 ansible_ssh_host={{shard.23.45.IP}} privatekey={{KEY.shard.23.5}} node_port={{shard.23.45.NODE_PORT}} rpc_port={{shard.23.45.RPC_PORT}} ws_port={{shard.23.45.WS_PORT}} GrafanaURL="" 
+shard23-6 ansible_ssh_host={{shard.23.46.IP}} privatekey={{KEY.shard.23.6}} node_port={{shard.23.46.NODE_PORT}} rpc_port={{shard.23.46.RPC_PORT}} ws_port={{shard.23.46.WS_PORT}} GrafanaURL=""
+shard23-7 ansible_ssh_host={{shard.23.47.IP}} privatekey={{KEY.shard.23.7}} node_port={{shard.23.47.NODE_PORT}} rpc_port={{shard.23.47.RPC_PORT}} ws_port={{shard.23.47.WS_PORT}} GrafanaURL=""
+
+[shard24]
+shard24-0 ansible_ssh_host={{shard.24.48.IP}} privatekey={{KEY.shard.24.0}} node_port={{shard.24.48.NODE_PORT}} rpc_port={{shard.24.48.RPC_PORT}} ws_port={{shard.24.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard24-1 ansible_ssh_host={{shard.24.49.IP}} privatekey={{KEY.shard.24.1}} node_port={{shard.24.49.NODE_PORT}} rpc_port={{shard.24.49.RPC_PORT}} ws_port={{shard.24.49.WS_PORT}} GrafanaURL="" 
+shard24-2 ansible_ssh_host={{shard.24.50.IP}} privatekey={{KEY.shard.24.2}} node_port={{shard.24.50.NODE_PORT}} rpc_port={{shard.24.50.RPC_PORT}} ws_port={{shard.24.50.WS_PORT}} GrafanaURL=""
+shard24-3 ansible_ssh_host={{shard.24.51.IP}} privatekey={{KEY.shard.24.3}} node_port={{shard.24.51.NODE_PORT}} rpc_port={{shard.24.51.RPC_PORT}} ws_port={{shard.24.51.WS_PORT}} GrafanaURL=""
+shard24-4 ansible_ssh_host={{shard.24.52.IP}} privatekey={{KEY.shard.24.4}} node_port={{shard.24.52.NODE_PORT}} rpc_port={{shard.24.52.RPC_PORT}} ws_port={{shard.24.52.WS_PORT}} GrafanaURL=""
+shard24-5 ansible_ssh_host={{shard.24.53.IP}} privatekey={{KEY.shard.24.5}} node_port={{shard.24.53.NODE_PORT}} rpc_port={{shard.24.53.RPC_PORT}} ws_port={{shard.24.53.WS_PORT}} GrafanaURL="" 
+shard24-6 ansible_ssh_host={{shard.24.54.IP}} privatekey={{KEY.shard.24.6}} node_port={{shard.24.54.NODE_PORT}} rpc_port={{shard.24.54.RPC_PORT}} ws_port={{shard.24.54.WS_PORT}} GrafanaURL=""
+shard24-7 ansible_ssh_host={{shard.24.55.IP}} privatekey={{KEY.shard.24.7}} node_port={{shard.24.55.NODE_PORT}} rpc_port={{shard.24.55.RPC_PORT}} ws_port={{shard.24.55.WS_PORT}} GrafanaURL=""
+[shard25]
+shard25-0 ansible_ssh_host={{shard.25.48.IP}} privatekey={{KEY.shard.25.0}} node_port={{shard.25.48.NODE_PORT}} rpc_port={{shard.25.48.RPC_PORT}} ws_port={{shard.25.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard25-1 ansible_ssh_host={{shard.25.49.IP}} privatekey={{KEY.shard.25.1}} node_port={{shard.25.49.NODE_PORT}} rpc_port={{shard.25.49.RPC_PORT}} ws_port={{shard.25.49.WS_PORT}} GrafanaURL="" 
+shard25-2 ansible_ssh_host={{shard.25.50.IP}} privatekey={{KEY.shard.25.2}} node_port={{shard.25.50.NODE_PORT}} rpc_port={{shard.25.50.RPC_PORT}} ws_port={{shard.25.50.WS_PORT}} GrafanaURL=""
+shard25-3 ansible_ssh_host={{shard.25.51.IP}} privatekey={{KEY.shard.25.3}} node_port={{shard.25.51.NODE_PORT}} rpc_port={{shard.25.51.RPC_PORT}} ws_port={{shard.25.51.WS_PORT}} GrafanaURL=""
+shard25-4 ansible_ssh_host={{shard.25.52.IP}} privatekey={{KEY.shard.25.4}} node_port={{shard.25.52.NODE_PORT}} rpc_port={{shard.25.52.RPC_PORT}} ws_port={{shard.25.52.WS_PORT}} GrafanaURL=""
+shard25-5 ansible_ssh_host={{shard.25.53.IP}} privatekey={{KEY.shard.25.5}} node_port={{shard.25.53.NODE_PORT}} rpc_port={{shard.25.53.RPC_PORT}} ws_port={{shard.25.53.WS_PORT}} GrafanaURL="" 
+shard25-6 ansible_ssh_host={{shard.25.54.IP}} privatekey={{KEY.shard.25.6}} node_port={{shard.25.54.NODE_PORT}} rpc_port={{shard.25.54.RPC_PORT}} ws_port={{shard.25.54.WS_PORT}} GrafanaURL=""
+shard25-7 ansible_ssh_host={{shard.25.55.IP}} privatekey={{KEY.shard.25.7}} node_port={{shard.25.55.NODE_PORT}} rpc_port={{shard.25.55.RPC_PORT}} ws_port={{shard.25.55.WS_PORT}} GrafanaURL=""
+[shard26]
+shard26-0 ansible_ssh_host={{shard.26.48.IP}} privatekey={{KEY.shard.26.0}} node_port={{shard.26.48.NODE_PORT}} rpc_port={{shard.26.48.RPC_PORT}} ws_port={{shard.26.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard26-1 ansible_ssh_host={{shard.26.49.IP}} privatekey={{KEY.shard.26.1}} node_port={{shard.26.49.NODE_PORT}} rpc_port={{shard.26.49.RPC_PORT}} ws_port={{shard.26.49.WS_PORT}} GrafanaURL="" 
+shard26-2 ansible_ssh_host={{shard.26.50.IP}} privatekey={{KEY.shard.26.2}} node_port={{shard.26.50.NODE_PORT}} rpc_port={{shard.26.50.RPC_PORT}} ws_port={{shard.26.50.WS_PORT}} GrafanaURL=""
+shard26-3 ansible_ssh_host={{shard.26.51.IP}} privatekey={{KEY.shard.26.3}} node_port={{shard.26.51.NODE_PORT}} rpc_port={{shard.26.51.RPC_PORT}} ws_port={{shard.26.51.WS_PORT}} GrafanaURL=""
+shard26-4 ansible_ssh_host={{shard.26.52.IP}} privatekey={{KEY.shard.26.4}} node_port={{shard.26.52.NODE_PORT}} rpc_port={{shard.26.52.RPC_PORT}} ws_port={{shard.26.52.WS_PORT}} GrafanaURL=""
+shard26-5 ansible_ssh_host={{shard.26.53.IP}} privatekey={{KEY.shard.26.5}} node_port={{shard.26.53.NODE_PORT}} rpc_port={{shard.26.53.RPC_PORT}} ws_port={{shard.26.53.WS_PORT}} GrafanaURL="" 
+shard26-6 ansible_ssh_host={{shard.26.54.IP}} privatekey={{KEY.shard.26.6}} node_port={{shard.26.54.NODE_PORT}} rpc_port={{shard.26.54.RPC_PORT}} ws_port={{shard.26.54.WS_PORT}} GrafanaURL=""
+shard26-7 ansible_ssh_host={{shard.26.55.IP}} privatekey={{KEY.shard.26.7}} node_port={{shard.26.55.NODE_PORT}} rpc_port={{shard.26.55.RPC_PORT}} ws_port={{shard.26.55.WS_PORT}} GrafanaURL=""
+[shard27]
+shard27-0 ansible_ssh_host={{shard.27.48.IP}} privatekey={{KEY.shard.27.0}} node_port={{shard.27.48.NODE_PORT}} rpc_port={{shard.27.48.RPC_PORT}} ws_port={{shard.27.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard27-1 ansible_ssh_host={{shard.27.49.IP}} privatekey={{KEY.shard.27.1}} node_port={{shard.27.49.NODE_PORT}} rpc_port={{shard.27.49.RPC_PORT}} ws_port={{shard.27.49.WS_PORT}} GrafanaURL="" 
+shard27-2 ansible_ssh_host={{shard.27.50.IP}} privatekey={{KEY.shard.27.2}} node_port={{shard.27.50.NODE_PORT}} rpc_port={{shard.27.50.RPC_PORT}} ws_port={{shard.27.50.WS_PORT}} GrafanaURL=""
+shard27-3 ansible_ssh_host={{shard.27.51.IP}} privatekey={{KEY.shard.27.3}} node_port={{shard.27.51.NODE_PORT}} rpc_port={{shard.27.51.RPC_PORT}} ws_port={{shard.27.51.WS_PORT}} GrafanaURL=""
+shard27-4 ansible_ssh_host={{shard.27.52.IP}} privatekey={{KEY.shard.27.4}} node_port={{shard.27.52.NODE_PORT}} rpc_port={{shard.27.52.RPC_PORT}} ws_port={{shard.27.52.WS_PORT}} GrafanaURL=""
+shard27-5 ansible_ssh_host={{shard.27.53.IP}} privatekey={{KEY.shard.27.5}} node_port={{shard.27.53.NODE_PORT}} rpc_port={{shard.27.53.RPC_PORT}} ws_port={{shard.27.53.WS_PORT}} GrafanaURL="" 
+shard27-6 ansible_ssh_host={{shard.27.54.IP}} privatekey={{KEY.shard.27.6}} node_port={{shard.27.54.NODE_PORT}} rpc_port={{shard.27.54.RPC_PORT}} ws_port={{shard.27.54.WS_PORT}} GrafanaURL=""
+shard27-7 ansible_ssh_host={{shard.27.55.IP}} privatekey={{KEY.shard.27.7}} node_port={{shard.27.55.NODE_PORT}} rpc_port={{shard.27.55.RPC_PORT}} ws_port={{shard.27.55.WS_PORT}} GrafanaURL=""
+
+[shard28]
+shard28-0 ansible_ssh_host={{shard.28.56.IP}} privatekey={{KEY.shard.28.0}} node_port={{shard.28.56.NODE_PORT}} rpc_port={{shard.28.56.RPC_PORT}} ws_port={{shard.28.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard28-1 ansible_ssh_host={{shard.28.57.IP}} privatekey={{KEY.shard.28.1}} node_port={{shard.28.57.NODE_PORT}} rpc_port={{shard.28.57.RPC_PORT}} ws_port={{shard.28.57.WS_PORT}} GrafanaURL="" 
+shard28-2 ansible_ssh_host={{shard.28.58.IP}} privatekey={{KEY.shard.28.2}} node_port={{shard.28.58.NODE_PORT}} rpc_port={{shard.28.58.RPC_PORT}} ws_port={{shard.28.58.WS_PORT}} GrafanaURL=""
+shard28-3 ansible_ssh_host={{shard.28.59.IP}} privatekey={{KEY.shard.28.3}} node_port={{shard.28.59.NODE_PORT}} rpc_port={{shard.28.59.RPC_PORT}} ws_port={{shard.28.59.WS_PORT}} GrafanaURL=""
+shard28-4 ansible_ssh_host={{shard.28.60.IP}} privatekey={{KEY.shard.28.4}} node_port={{shard.28.60.NODE_PORT}} rpc_port={{shard.28.60.RPC_PORT}} ws_port={{shard.28.60.WS_PORT}} GrafanaURL=""
+shard28-5 ansible_ssh_host={{shard.28.61.IP}} privatekey={{KEY.shard.28.5}} node_port={{shard.28.61.NODE_PORT}} rpc_port={{shard.28.61.RPC_PORT}} ws_port={{shard.28.61.WS_PORT}} GrafanaURL="" 
+shard28-6 ansible_ssh_host={{shard.28.62.IP}} privatekey={{KEY.shard.28.6}} node_port={{shard.28.62.NODE_PORT}} rpc_port={{shard.28.62.RPC_PORT}} ws_port={{shard.28.62.WS_PORT}} GrafanaURL=""
+shard28-7 ansible_ssh_host={{shard.28.63.IP}} privatekey={{KEY.shard.28.7}} node_port={{shard.28.63.NODE_PORT}} rpc_port={{shard.28.63.RPC_PORT}} ws_port={{shard.28.63.WS_PORT}} GrafanaURL=""
+[shard29]
+shard29-0 ansible_ssh_host={{shard.29.56.IP}} privatekey={{KEY.shard.29.0}} node_port={{shard.29.56.NODE_PORT}} rpc_port={{shard.29.56.RPC_PORT}} ws_port={{shard.29.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard29-1 ansible_ssh_host={{shard.29.57.IP}} privatekey={{KEY.shard.29.1}} node_port={{shard.29.57.NODE_PORT}} rpc_port={{shard.29.57.RPC_PORT}} ws_port={{shard.29.57.WS_PORT}} GrafanaURL="" 
+shard29-2 ansible_ssh_host={{shard.29.58.IP}} privatekey={{KEY.shard.29.2}} node_port={{shard.29.58.NODE_PORT}} rpc_port={{shard.29.58.RPC_PORT}} ws_port={{shard.29.58.WS_PORT}} GrafanaURL=""
+shard29-3 ansible_ssh_host={{shard.29.59.IP}} privatekey={{KEY.shard.29.3}} node_port={{shard.29.59.NODE_PORT}} rpc_port={{shard.29.59.RPC_PORT}} ws_port={{shard.29.59.WS_PORT}} GrafanaURL=""
+shard29-4 ansible_ssh_host={{shard.29.60.IP}} privatekey={{KEY.shard.29.4}} node_port={{shard.29.60.NODE_PORT}} rpc_port={{shard.29.60.RPC_PORT}} ws_port={{shard.29.60.WS_PORT}} GrafanaURL=""
+shard29-5 ansible_ssh_host={{shard.29.61.IP}} privatekey={{KEY.shard.29.5}} node_port={{shard.29.61.NODE_PORT}} rpc_port={{shard.29.61.RPC_PORT}} ws_port={{shard.29.61.WS_PORT}} GrafanaURL="" 
+shard29-6 ansible_ssh_host={{shard.29.62.IP}} privatekey={{KEY.shard.29.6}} node_port={{shard.29.62.NODE_PORT}} rpc_port={{shard.29.62.RPC_PORT}} ws_port={{shard.29.62.WS_PORT}} GrafanaURL=""
+shard29-7 ansible_ssh_host={{shard.29.63.IP}} privatekey={{KEY.shard.29.7}} node_port={{shard.29.63.NODE_PORT}} rpc_port={{shard.29.63.RPC_PORT}} ws_port={{shard.29.63.WS_PORT}} GrafanaURL=""
+[shard30]
+shard30-0 ansible_ssh_host={{shard.30.56.IP}} privatekey={{KEY.shard.30.0}} node_port={{shard.30.56.NODE_PORT}} rpc_port={{shard.30.56.RPC_PORT}} ws_port={{shard.30.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard30-1 ansible_ssh_host={{shard.30.57.IP}} privatekey={{KEY.shard.30.1}} node_port={{shard.30.57.NODE_PORT}} rpc_port={{shard.30.57.RPC_PORT}} ws_port={{shard.30.57.WS_PORT}} GrafanaURL="" 
+shard30-2 ansible_ssh_host={{shard.30.58.IP}} privatekey={{KEY.shard.30.2}} node_port={{shard.30.58.NODE_PORT}} rpc_port={{shard.30.58.RPC_PORT}} ws_port={{shard.30.58.WS_PORT}} GrafanaURL=""
+shard30-3 ansible_ssh_host={{shard.30.59.IP}} privatekey={{KEY.shard.30.3}} node_port={{shard.30.59.NODE_PORT}} rpc_port={{shard.30.59.RPC_PORT}} ws_port={{shard.30.59.WS_PORT}} GrafanaURL=""
+shard30-4 ansible_ssh_host={{shard.30.60.IP}} privatekey={{KEY.shard.30.4}} node_port={{shard.30.60.NODE_PORT}} rpc_port={{shard.30.60.RPC_PORT}} ws_port={{shard.30.60.WS_PORT}} GrafanaURL=""
+shard30-5 ansible_ssh_host={{shard.30.61.IP}} privatekey={{KEY.shard.30.5}} node_port={{shard.30.61.NODE_PORT}} rpc_port={{shard.30.61.RPC_PORT}} ws_port={{shard.30.61.WS_PORT}} GrafanaURL="" 
+shard30-6 ansible_ssh_host={{shard.30.62.IP}} privatekey={{KEY.shard.30.6}} node_port={{shard.30.62.NODE_PORT}} rpc_port={{shard.30.62.RPC_PORT}} ws_port={{shard.30.62.WS_PORT}} GrafanaURL=""
+shard30-7 ansible_ssh_host={{shard.30.63.IP}} privatekey={{KEY.shard.30.7}} node_port={{shard.30.63.NODE_PORT}} rpc_port={{shard.30.63.RPC_PORT}} ws_port={{shard.30.63.WS_PORT}} GrafanaURL=""
+[shard31]
+shard31-0 ansible_ssh_host={{shard.31.56.IP}} privatekey={{KEY.shard.31.0}} node_port={{shard.31.56.NODE_PORT}} rpc_port={{shard.31.56.RPC_PORT}} ws_port={{shard.31.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard31-1 ansible_ssh_host={{shard.31.57.IP}} privatekey={{KEY.shard.31.1}} node_port={{shard.31.57.NODE_PORT}} rpc_port={{shard.31.57.RPC_PORT}} ws_port={{shard.31.57.WS_PORT}} GrafanaURL="" 
+shard31-2 ansible_ssh_host={{shard.31.58.IP}} privatekey={{KEY.shard.31.2}} node_port={{shard.31.58.NODE_PORT}} rpc_port={{shard.31.58.RPC_PORT}} ws_port={{shard.31.58.WS_PORT}} GrafanaURL=""
+shard31-3 ansible_ssh_host={{shard.31.59.IP}} privatekey={{KEY.shard.31.3}} node_port={{shard.31.59.NODE_PORT}} rpc_port={{shard.31.59.RPC_PORT}} ws_port={{shard.31.59.WS_PORT}} GrafanaURL=""
+shard31-4 ansible_ssh_host={{shard.31.60.IP}} privatekey={{KEY.shard.31.4}} node_port={{shard.31.60.NODE_PORT}} rpc_port={{shard.31.60.RPC_PORT}} ws_port={{shard.31.60.WS_PORT}} GrafanaURL=""
+shard31-5 ansible_ssh_host={{shard.31.61.IP}} privatekey={{KEY.shard.31.5}} node_port={{shard.31.61.NODE_PORT}} rpc_port={{shard.31.61.RPC_PORT}} ws_port={{shard.31.61.WS_PORT}} GrafanaURL="" 
+shard31-6 ansible_ssh_host={{shard.31.62.IP}} privatekey={{KEY.shard.31.6}} node_port={{shard.31.62.NODE_PORT}} rpc_port={{shard.31.62.RPC_PORT}} ws_port={{shard.31.62.WS_PORT}} GrafanaURL=""
+shard31-7 ansible_ssh_host={{shard.31.63.IP}} privatekey={{KEY.shard.31.7}} node_port={{shard.31.63.NODE_PORT}} rpc_port={{shard.31.63.RPC_PORT}} ws_port={{shard.31.63.WS_PORT}} GrafanaURL=""
+
+[shard32]
+shard32-0 ansible_ssh_host={{shard.32.0.IP}} privatekey={{KEY.shard.32.0}} node_port={{shard.32.0.NODE_PORT}} rpc_port={{shard.32.0.RPC_PORT}} ws_port={{shard.32.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard32-1 ansible_ssh_host={{shard.32.1.IP}} privatekey={{KEY.shard.32.1}} node_port={{shard.32.1.NODE_PORT}} rpc_port={{shard.32.1.RPC_PORT}} ws_port={{shard.32.1.WS_PORT}} GrafanaURL="" 
+shard32-2 ansible_ssh_host={{shard.32.2.IP}} privatekey={{KEY.shard.32.2}} node_port={{shard.32.2.NODE_PORT}} rpc_port={{shard.32.2.RPC_PORT}} ws_port={{shard.32.2.WS_PORT}} GrafanaURL=""
+shard32-3 ansible_ssh_host={{shard.32.3.IP}} privatekey={{KEY.shard.32.3}} node_port={{shard.32.3.NODE_PORT}} rpc_port={{shard.32.3.RPC_PORT}} ws_port={{shard.32.3.WS_PORT}} GrafanaURL=""
+shard32-4 ansible_ssh_host={{shard.32.4.IP}} privatekey={{KEY.shard.32.4}} node_port={{shard.32.4.NODE_PORT}} rpc_port={{shard.32.4.RPC_PORT}} ws_port={{shard.32.4.WS_PORT}} GrafanaURL=""
+shard32-5 ansible_ssh_host={{shard.32.5.IP}} privatekey={{KEY.shard.32.5}} node_port={{shard.32.5.NODE_PORT}} rpc_port={{shard.32.5.RPC_PORT}} ws_port={{shard.32.5.WS_PORT}} GrafanaURL="" 
+shard32-6 ansible_ssh_host={{shard.32.6.IP}} privatekey={{KEY.shard.32.6}} node_port={{shard.32.6.NODE_PORT}} rpc_port={{shard.32.6.RPC_PORT}} ws_port={{shard.32.6.WS_PORT}} GrafanaURL=""
+shard32-7 ansible_ssh_host={{shard.32.7.IP}} privatekey={{KEY.shard.32.7}} node_port={{shard.32.7.NODE_PORT}} rpc_port={{shard.32.7.RPC_PORT}} ws_port={{shard.32.7.WS_PORT}} GrafanaURL=""
+[shard33]
+shard33-0 ansible_ssh_host={{shard.33.0.IP}} privatekey={{KEY.shard.33.0}} node_port={{shard.33.0.NODE_PORT}} rpc_port={{shard.33.0.RPC_PORT}} ws_port={{shard.33.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard33-1 ansible_ssh_host={{shard.33.1.IP}} privatekey={{KEY.shard.33.1}} node_port={{shard.33.1.NODE_PORT}} rpc_port={{shard.33.1.RPC_PORT}} ws_port={{shard.33.1.WS_PORT}} GrafanaURL="" 
+shard33-2 ansible_ssh_host={{shard.33.2.IP}} privatekey={{KEY.shard.33.2}} node_port={{shard.33.2.NODE_PORT}} rpc_port={{shard.33.2.RPC_PORT}} ws_port={{shard.33.2.WS_PORT}} GrafanaURL=""
+shard33-3 ansible_ssh_host={{shard.33.3.IP}} privatekey={{KEY.shard.33.3}} node_port={{shard.33.3.NODE_PORT}} rpc_port={{shard.33.3.RPC_PORT}} ws_port={{shard.33.3.WS_PORT}} GrafanaURL=""
+shard33-4 ansible_ssh_host={{shard.33.4.IP}} privatekey={{KEY.shard.33.4}} node_port={{shard.33.4.NODE_PORT}} rpc_port={{shard.33.4.RPC_PORT}} ws_port={{shard.33.4.WS_PORT}} GrafanaURL=""
+shard33-5 ansible_ssh_host={{shard.33.5.IP}} privatekey={{KEY.shard.33.5}} node_port={{shard.33.5.NODE_PORT}} rpc_port={{shard.33.5.RPC_PORT}} ws_port={{shard.33.5.WS_PORT}} GrafanaURL="" 
+shard33-6 ansible_ssh_host={{shard.33.6.IP}} privatekey={{KEY.shard.33.6}} node_port={{shard.33.6.NODE_PORT}} rpc_port={{shard.33.6.RPC_PORT}} ws_port={{shard.33.6.WS_PORT}} GrafanaURL=""
+shard33-7 ansible_ssh_host={{shard.33.7.IP}} privatekey={{KEY.shard.33.7}} node_port={{shard.33.7.NODE_PORT}} rpc_port={{shard.33.7.RPC_PORT}} ws_port={{shard.33.7.WS_PORT}} GrafanaURL=""
+[shard34]
+shard34-0 ansible_ssh_host={{shard.34.0.IP}} privatekey={{KEY.shard.34.0}} node_port={{shard.34.0.NODE_PORT}} rpc_port={{shard.34.0.RPC_PORT}} ws_port={{shard.34.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard34-1 ansible_ssh_host={{shard.34.1.IP}} privatekey={{KEY.shard.34.1}} node_port={{shard.34.1.NODE_PORT}} rpc_port={{shard.34.1.RPC_PORT}} ws_port={{shard.34.1.WS_PORT}} GrafanaURL="" 
+shard34-2 ansible_ssh_host={{shard.34.2.IP}} privatekey={{KEY.shard.34.2}} node_port={{shard.34.2.NODE_PORT}} rpc_port={{shard.34.2.RPC_PORT}} ws_port={{shard.34.2.WS_PORT}} GrafanaURL=""
+shard34-3 ansible_ssh_host={{shard.34.3.IP}} privatekey={{KEY.shard.34.3}} node_port={{shard.34.3.NODE_PORT}} rpc_port={{shard.34.3.RPC_PORT}} ws_port={{shard.34.3.WS_PORT}} GrafanaURL=""
+shard34-4 ansible_ssh_host={{shard.34.4.IP}} privatekey={{KEY.shard.34.4}} node_port={{shard.34.4.NODE_PORT}} rpc_port={{shard.34.4.RPC_PORT}} ws_port={{shard.34.4.WS_PORT}} GrafanaURL=""
+shard34-5 ansible_ssh_host={{shard.34.5.IP}} privatekey={{KEY.shard.34.5}} node_port={{shard.34.5.NODE_PORT}} rpc_port={{shard.34.5.RPC_PORT}} ws_port={{shard.34.5.WS_PORT}} GrafanaURL="" 
+shard34-6 ansible_ssh_host={{shard.34.6.IP}} privatekey={{KEY.shard.34.6}} node_port={{shard.34.6.NODE_PORT}} rpc_port={{shard.34.6.RPC_PORT}} ws_port={{shard.34.6.WS_PORT}} GrafanaURL=""
+shard34-7 ansible_ssh_host={{shard.34.7.IP}} privatekey={{KEY.shard.34.7}} node_port={{shard.34.7.NODE_PORT}} rpc_port={{shard.34.7.RPC_PORT}} ws_port={{shard.34.7.WS_PORT}} GrafanaURL=""
+[shard35]
+shard35-0 ansible_ssh_host={{shard.35.0.IP}} privatekey={{KEY.shard.35.0}} node_port={{shard.35.0.NODE_PORT}} rpc_port={{shard.35.0.RPC_PORT}} ws_port={{shard.35.0.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard35-1 ansible_ssh_host={{shard.35.1.IP}} privatekey={{KEY.shard.35.1}} node_port={{shard.35.1.NODE_PORT}} rpc_port={{shard.35.1.RPC_PORT}} ws_port={{shard.35.1.WS_PORT}} GrafanaURL="" 
+shard35-2 ansible_ssh_host={{shard.35.2.IP}} privatekey={{KEY.shard.35.2}} node_port={{shard.35.2.NODE_PORT}} rpc_port={{shard.35.2.RPC_PORT}} ws_port={{shard.35.2.WS_PORT}} GrafanaURL=""
+shard35-3 ansible_ssh_host={{shard.35.3.IP}} privatekey={{KEY.shard.35.3}} node_port={{shard.35.3.NODE_PORT}} rpc_port={{shard.35.3.RPC_PORT}} ws_port={{shard.35.3.WS_PORT}} GrafanaURL=""
+shard35-4 ansible_ssh_host={{shard.35.4.IP}} privatekey={{KEY.shard.35.4}} node_port={{shard.35.4.NODE_PORT}} rpc_port={{shard.35.4.RPC_PORT}} ws_port={{shard.35.4.WS_PORT}} GrafanaURL=""
+shard35-5 ansible_ssh_host={{shard.35.5.IP}} privatekey={{KEY.shard.35.5}} node_port={{shard.35.5.NODE_PORT}} rpc_port={{shard.35.5.RPC_PORT}} ws_port={{shard.35.5.WS_PORT}} GrafanaURL="" 
+shard35-6 ansible_ssh_host={{shard.35.6.IP}} privatekey={{KEY.shard.35.6}} node_port={{shard.35.6.NODE_PORT}} rpc_port={{shard.35.6.RPC_PORT}} ws_port={{shard.35.6.WS_PORT}} GrafanaURL=""
+shard35-7 ansible_ssh_host={{shard.35.7.IP}} privatekey={{KEY.shard.35.7}} node_port={{shard.35.7.NODE_PORT}} rpc_port={{shard.35.7.RPC_PORT}} ws_port={{shard.35.7.WS_PORT}} GrafanaURL=""
+
+[shard36]
+shard36-0 ansible_ssh_host={{shard.36.8.IP}} privatekey={{KEY.shard.36.0}} node_port={{shard.36.8.NODE_PORT}} rpc_port={{shard.36.8.RPC_PORT}} ws_port={{shard.36.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard36-1 ansible_ssh_host={{shard.36.9.IP}} privatekey={{KEY.shard.36.1}} node_port={{shard.36.9.NODE_PORT}} rpc_port={{shard.36.9.RPC_PORT}} ws_port={{shard.36.9.WS_PORT}} GrafanaURL="" 
+shard36-2 ansible_ssh_host={{shard.36.10.IP}} privatekey={{KEY.shard.36.2}} node_port={{shard.36.10.NODE_PORT}} rpc_port={{shard.36.10.RPC_PORT}} ws_port={{shard.36.10.WS_PORT}} GrafanaURL=""
+shard36-3 ansible_ssh_host={{shard.36.11.IP}} privatekey={{KEY.shard.36.3}} node_port={{shard.36.11.NODE_PORT}} rpc_port={{shard.36.11.RPC_PORT}} ws_port={{shard.36.11.WS_PORT}} GrafanaURL=""
+shard36-4 ansible_ssh_host={{shard.36.12.IP}} privatekey={{KEY.shard.36.4}} node_port={{shard.36.12.NODE_PORT}} rpc_port={{shard.36.12.RPC_PORT}} ws_port={{shard.36.12.WS_PORT}} GrafanaURL=""
+shard36-5 ansible_ssh_host={{shard.36.13.IP}} privatekey={{KEY.shard.36.5}} node_port={{shard.36.13.NODE_PORT}} rpc_port={{shard.36.13.RPC_PORT}} ws_port={{shard.36.13.WS_PORT}} GrafanaURL="" 
+shard36-6 ansible_ssh_host={{shard.36.14.IP}} privatekey={{KEY.shard.36.6}} node_port={{shard.36.14.NODE_PORT}} rpc_port={{shard.36.14.RPC_PORT}} ws_port={{shard.36.14.WS_PORT}} GrafanaURL=""
+shard36-7 ansible_ssh_host={{shard.36.15.IP}} privatekey={{KEY.shard.36.7}} node_port={{shard.36.15.NODE_PORT}} rpc_port={{shard.36.15.RPC_PORT}} ws_port={{shard.36.15.WS_PORT}} GrafanaURL=""
+[shard37]
+shard37-0 ansible_ssh_host={{shard.37.8.IP}} privatekey={{KEY.shard.37.0}} node_port={{shard.37.8.NODE_PORT}} rpc_port={{shard.37.8.RPC_PORT}} ws_port={{shard.37.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard37-1 ansible_ssh_host={{shard.37.9.IP}} privatekey={{KEY.shard.37.1}} node_port={{shard.37.9.NODE_PORT}} rpc_port={{shard.37.9.RPC_PORT}} ws_port={{shard.37.9.WS_PORT}} GrafanaURL="" 
+shard37-2 ansible_ssh_host={{shard.37.10.IP}} privatekey={{KEY.shard.37.2}} node_port={{shard.37.10.NODE_PORT}} rpc_port={{shard.37.10.RPC_PORT}} ws_port={{shard.37.10.WS_PORT}} GrafanaURL=""
+shard37-3 ansible_ssh_host={{shard.37.11.IP}} privatekey={{KEY.shard.37.3}} node_port={{shard.37.11.NODE_PORT}} rpc_port={{shard.37.11.RPC_PORT}} ws_port={{shard.37.11.WS_PORT}} GrafanaURL=""
+shard37-4 ansible_ssh_host={{shard.37.12.IP}} privatekey={{KEY.shard.37.4}} node_port={{shard.37.12.NODE_PORT}} rpc_port={{shard.37.12.RPC_PORT}} ws_port={{shard.37.12.WS_PORT}} GrafanaURL=""
+shard37-5 ansible_ssh_host={{shard.37.13.IP}} privatekey={{KEY.shard.37.5}} node_port={{shard.37.13.NODE_PORT}} rpc_port={{shard.37.13.RPC_PORT}} ws_port={{shard.37.13.WS_PORT}} GrafanaURL="" 
+shard37-6 ansible_ssh_host={{shard.37.14.IP}} privatekey={{KEY.shard.37.6}} node_port={{shard.37.14.NODE_PORT}} rpc_port={{shard.37.14.RPC_PORT}} ws_port={{shard.37.14.WS_PORT}} GrafanaURL=""
+shard37-7 ansible_ssh_host={{shard.37.15.IP}} privatekey={{KEY.shard.37.7}} node_port={{shard.37.15.NODE_PORT}} rpc_port={{shard.37.15.RPC_PORT}} ws_port={{shard.37.15.WS_PORT}} GrafanaURL=""
+[shard38]
+shard38-0 ansible_ssh_host={{shard.38.8.IP}} privatekey={{KEY.shard.38.0}} node_port={{shard.38.8.NODE_PORT}} rpc_port={{shard.38.8.RPC_PORT}} ws_port={{shard.38.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard38-1 ansible_ssh_host={{shard.38.9.IP}} privatekey={{KEY.shard.38.1}} node_port={{shard.38.9.NODE_PORT}} rpc_port={{shard.38.9.RPC_PORT}} ws_port={{shard.38.9.WS_PORT}} GrafanaURL="" 
+shard38-2 ansible_ssh_host={{shard.38.10.IP}} privatekey={{KEY.shard.38.2}} node_port={{shard.38.10.NODE_PORT}} rpc_port={{shard.38.10.RPC_PORT}} ws_port={{shard.38.10.WS_PORT}} GrafanaURL=""
+shard38-3 ansible_ssh_host={{shard.38.11.IP}} privatekey={{KEY.shard.38.3}} node_port={{shard.38.11.NODE_PORT}} rpc_port={{shard.38.11.RPC_PORT}} ws_port={{shard.38.11.WS_PORT}} GrafanaURL=""
+shard38-4 ansible_ssh_host={{shard.38.12.IP}} privatekey={{KEY.shard.38.4}} node_port={{shard.38.12.NODE_PORT}} rpc_port={{shard.38.12.RPC_PORT}} ws_port={{shard.38.12.WS_PORT}} GrafanaURL=""
+shard38-5 ansible_ssh_host={{shard.38.13.IP}} privatekey={{KEY.shard.38.5}} node_port={{shard.38.13.NODE_PORT}} rpc_port={{shard.38.13.RPC_PORT}} ws_port={{shard.38.13.WS_PORT}} GrafanaURL="" 
+shard38-6 ansible_ssh_host={{shard.38.14.IP}} privatekey={{KEY.shard.38.6}} node_port={{shard.38.14.NODE_PORT}} rpc_port={{shard.38.14.RPC_PORT}} ws_port={{shard.38.14.WS_PORT}} GrafanaURL=""
+shard38-7 ansible_ssh_host={{shard.38.15.IP}} privatekey={{KEY.shard.38.7}} node_port={{shard.38.15.NODE_PORT}} rpc_port={{shard.38.15.RPC_PORT}} ws_port={{shard.38.15.WS_PORT}} GrafanaURL=""
+[shard39]
+shard39-0 ansible_ssh_host={{shard.39.8.IP}} privatekey={{KEY.shard.39.0}} node_port={{shard.39.8.NODE_PORT}} rpc_port={{shard.39.8.RPC_PORT}} ws_port={{shard.39.8.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard39-1 ansible_ssh_host={{shard.39.9.IP}} privatekey={{KEY.shard.39.1}} node_port={{shard.39.9.NODE_PORT}} rpc_port={{shard.39.9.RPC_PORT}} ws_port={{shard.39.9.WS_PORT}} GrafanaURL="" 
+shard39-2 ansible_ssh_host={{shard.39.10.IP}} privatekey={{KEY.shard.39.2}} node_port={{shard.39.10.NODE_PORT}} rpc_port={{shard.39.10.RPC_PORT}} ws_port={{shard.39.10.WS_PORT}} GrafanaURL=""
+shard39-3 ansible_ssh_host={{shard.39.11.IP}} privatekey={{KEY.shard.39.3}} node_port={{shard.39.11.NODE_PORT}} rpc_port={{shard.39.11.RPC_PORT}} ws_port={{shard.39.11.WS_PORT}} GrafanaURL=""
+shard39-4 ansible_ssh_host={{shard.39.12.IP}} privatekey={{KEY.shard.39.4}} node_port={{shard.39.12.NODE_PORT}} rpc_port={{shard.39.12.RPC_PORT}} ws_port={{shard.39.12.WS_PORT}} GrafanaURL=""
+shard39-5 ansible_ssh_host={{shard.39.13.IP}} privatekey={{KEY.shard.39.5}} node_port={{shard.39.13.NODE_PORT}} rpc_port={{shard.39.13.RPC_PORT}} ws_port={{shard.39.13.WS_PORT}} GrafanaURL="" 
+shard39-6 ansible_ssh_host={{shard.39.14.IP}} privatekey={{KEY.shard.39.6}} node_port={{shard.39.14.NODE_PORT}} rpc_port={{shard.39.14.RPC_PORT}} ws_port={{shard.39.14.WS_PORT}} GrafanaURL=""
+shard39-7 ansible_ssh_host={{shard.39.15.IP}} privatekey={{KEY.shard.39.7}} node_port={{shard.39.15.NODE_PORT}} rpc_port={{shard.39.15.RPC_PORT}} ws_port={{shard.39.15.WS_PORT}} GrafanaURL=""
+
+[shard40]
+shard40-0 ansible_ssh_host={{shard.40.16.IP}} privatekey={{KEY.shard.40.0}} node_port={{shard.40.16.NODE_PORT}} rpc_port={{shard.40.16.RPC_PORT}} ws_port={{shard.40.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard40-1 ansible_ssh_host={{shard.40.17.IP}} privatekey={{KEY.shard.40.1}} node_port={{shard.40.17.NODE_PORT}} rpc_port={{shard.40.17.RPC_PORT}} ws_port={{shard.40.17.WS_PORT}} GrafanaURL="" 
+shard40-2 ansible_ssh_host={{shard.40.18.IP}} privatekey={{KEY.shard.40.2}} node_port={{shard.40.18.NODE_PORT}} rpc_port={{shard.40.18.RPC_PORT}} ws_port={{shard.40.18.WS_PORT}} GrafanaURL=""
+shard40-3 ansible_ssh_host={{shard.40.19.IP}} privatekey={{KEY.shard.40.3}} node_port={{shard.40.19.NODE_PORT}} rpc_port={{shard.40.19.RPC_PORT}} ws_port={{shard.40.19.WS_PORT}} GrafanaURL=""
+shard40-4 ansible_ssh_host={{shard.40.20.IP}} privatekey={{KEY.shard.40.4}} node_port={{shard.40.20.NODE_PORT}} rpc_port={{shard.40.20.RPC_PORT}} ws_port={{shard.40.20.WS_PORT}} GrafanaURL=""
+shard40-5 ansible_ssh_host={{shard.40.21.IP}} privatekey={{KEY.shard.40.5}} node_port={{shard.40.21.NODE_PORT}} rpc_port={{shard.40.21.RPC_PORT}} ws_port={{shard.40.21.WS_PORT}} GrafanaURL="" 
+shard40-6 ansible_ssh_host={{shard.40.22.IP}} privatekey={{KEY.shard.40.6}} node_port={{shard.40.22.NODE_PORT}} rpc_port={{shard.40.22.RPC_PORT}} ws_port={{shard.40.22.WS_PORT}} GrafanaURL=""
+shard40-7 ansible_ssh_host={{shard.40.23.IP}} privatekey={{KEY.shard.40.7}} node_port={{shard.40.23.NODE_PORT}} rpc_port={{shard.40.23.RPC_PORT}} ws_port={{shard.40.23.WS_PORT}} GrafanaURL=""
+[shard41]
+shard41-0 ansible_ssh_host={{shard.41.16.IP}} privatekey={{KEY.shard.41.0}} node_port={{shard.41.16.NODE_PORT}} rpc_port={{shard.41.16.RPC_PORT}} ws_port={{shard.41.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard41-1 ansible_ssh_host={{shard.41.17.IP}} privatekey={{KEY.shard.41.1}} node_port={{shard.41.17.NODE_PORT}} rpc_port={{shard.41.17.RPC_PORT}} ws_port={{shard.41.17.WS_PORT}} GrafanaURL="" 
+shard41-2 ansible_ssh_host={{shard.41.18.IP}} privatekey={{KEY.shard.41.2}} node_port={{shard.41.18.NODE_PORT}} rpc_port={{shard.41.18.RPC_PORT}} ws_port={{shard.41.18.WS_PORT}} GrafanaURL=""
+shard41-3 ansible_ssh_host={{shard.41.19.IP}} privatekey={{KEY.shard.41.3}} node_port={{shard.41.19.NODE_PORT}} rpc_port={{shard.41.19.RPC_PORT}} ws_port={{shard.41.19.WS_PORT}} GrafanaURL=""
+shard41-4 ansible_ssh_host={{shard.41.20.IP}} privatekey={{KEY.shard.41.4}} node_port={{shard.41.20.NODE_PORT}} rpc_port={{shard.41.20.RPC_PORT}} ws_port={{shard.41.20.WS_PORT}} GrafanaURL=""
+shard41-5 ansible_ssh_host={{shard.41.21.IP}} privatekey={{KEY.shard.41.5}} node_port={{shard.41.21.NODE_PORT}} rpc_port={{shard.41.21.RPC_PORT}} ws_port={{shard.41.21.WS_PORT}} GrafanaURL="" 
+shard41-6 ansible_ssh_host={{shard.41.22.IP}} privatekey={{KEY.shard.41.6}} node_port={{shard.41.22.NODE_PORT}} rpc_port={{shard.41.22.RPC_PORT}} ws_port={{shard.41.22.WS_PORT}} GrafanaURL=""
+shard41-7 ansible_ssh_host={{shard.41.23.IP}} privatekey={{KEY.shard.41.7}} node_port={{shard.41.23.NODE_PORT}} rpc_port={{shard.41.23.RPC_PORT}} ws_port={{shard.41.23.WS_PORT}} GrafanaURL=""
+[shard42]
+shard42-0 ansible_ssh_host={{shard.42.16.IP}} privatekey={{KEY.shard.42.0}} node_port={{shard.42.16.NODE_PORT}} rpc_port={{shard.42.16.RPC_PORT}} ws_port={{shard.42.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard42-1 ansible_ssh_host={{shard.42.17.IP}} privatekey={{KEY.shard.42.1}} node_port={{shard.42.17.NODE_PORT}} rpc_port={{shard.42.17.RPC_PORT}} ws_port={{shard.42.17.WS_PORT}} GrafanaURL="" 
+shard42-2 ansible_ssh_host={{shard.42.18.IP}} privatekey={{KEY.shard.42.2}} node_port={{shard.42.18.NODE_PORT}} rpc_port={{shard.42.18.RPC_PORT}} ws_port={{shard.42.18.WS_PORT}} GrafanaURL=""
+shard42-3 ansible_ssh_host={{shard.42.19.IP}} privatekey={{KEY.shard.42.3}} node_port={{shard.42.19.NODE_PORT}} rpc_port={{shard.42.19.RPC_PORT}} ws_port={{shard.42.19.WS_PORT}} GrafanaURL=""
+shard42-4 ansible_ssh_host={{shard.42.20.IP}} privatekey={{KEY.shard.42.4}} node_port={{shard.42.20.NODE_PORT}} rpc_port={{shard.42.20.RPC_PORT}} ws_port={{shard.42.20.WS_PORT}} GrafanaURL=""
+shard42-5 ansible_ssh_host={{shard.42.21.IP}} privatekey={{KEY.shard.42.5}} node_port={{shard.42.21.NODE_PORT}} rpc_port={{shard.42.21.RPC_PORT}} ws_port={{shard.42.21.WS_PORT}} GrafanaURL="" 
+shard42-6 ansible_ssh_host={{shard.42.22.IP}} privatekey={{KEY.shard.42.6}} node_port={{shard.42.22.NODE_PORT}} rpc_port={{shard.42.22.RPC_PORT}} ws_port={{shard.42.22.WS_PORT}} GrafanaURL=""
+shard42-7 ansible_ssh_host={{shard.42.23.IP}} privatekey={{KEY.shard.42.7}} node_port={{shard.42.23.NODE_PORT}} rpc_port={{shard.42.23.RPC_PORT}} ws_port={{shard.42.23.WS_PORT}} GrafanaURL=""
+[shard43]
+shard43-0 ansible_ssh_host={{shard.43.16.IP}} privatekey={{KEY.shard.43.0}} node_port={{shard.43.16.NODE_PORT}} rpc_port={{shard.43.16.RPC_PORT}} ws_port={{shard.43.16.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard43-1 ansible_ssh_host={{shard.43.17.IP}} privatekey={{KEY.shard.43.1}} node_port={{shard.43.17.NODE_PORT}} rpc_port={{shard.43.17.RPC_PORT}} ws_port={{shard.43.17.WS_PORT}} GrafanaURL="" 
+shard43-2 ansible_ssh_host={{shard.43.18.IP}} privatekey={{KEY.shard.43.2}} node_port={{shard.43.18.NODE_PORT}} rpc_port={{shard.43.18.RPC_PORT}} ws_port={{shard.43.18.WS_PORT}} GrafanaURL=""
+shard43-3 ansible_ssh_host={{shard.43.19.IP}} privatekey={{KEY.shard.43.3}} node_port={{shard.43.19.NODE_PORT}} rpc_port={{shard.43.19.RPC_PORT}} ws_port={{shard.43.19.WS_PORT}} GrafanaURL=""
+shard43-4 ansible_ssh_host={{shard.43.20.IP}} privatekey={{KEY.shard.43.4}} node_port={{shard.43.20.NODE_PORT}} rpc_port={{shard.43.20.RPC_PORT}} ws_port={{shard.43.20.WS_PORT}} GrafanaURL=""
+shard43-5 ansible_ssh_host={{shard.43.21.IP}} privatekey={{KEY.shard.43.5}} node_port={{shard.43.21.NODE_PORT}} rpc_port={{shard.43.21.RPC_PORT}} ws_port={{shard.43.21.WS_PORT}} GrafanaURL="" 
+shard43-6 ansible_ssh_host={{shard.43.22.IP}} privatekey={{KEY.shard.43.6}} node_port={{shard.43.22.NODE_PORT}} rpc_port={{shard.43.22.RPC_PORT}} ws_port={{shard.43.22.WS_PORT}} GrafanaURL=""
+shard43-7 ansible_ssh_host={{shard.43.23.IP}} privatekey={{KEY.shard.43.7}} node_port={{shard.43.23.NODE_PORT}} rpc_port={{shard.43.23.RPC_PORT}} ws_port={{shard.43.23.WS_PORT}} GrafanaURL=""
+
+[shard44]
+shard44-0 ansible_ssh_host={{shard.44.24.IP}} privatekey={{KEY.shard.44.0}} node_port={{shard.44.24.NODE_PORT}} rpc_port={{shard.44.24.RPC_PORT}} ws_port={{shard.44.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard44-1 ansible_ssh_host={{shard.44.25.IP}} privatekey={{KEY.shard.44.1}} node_port={{shard.44.25.NODE_PORT}} rpc_port={{shard.44.25.RPC_PORT}} ws_port={{shard.44.25.WS_PORT}} GrafanaURL="" 
+shard44-2 ansible_ssh_host={{shard.44.26.IP}} privatekey={{KEY.shard.44.2}} node_port={{shard.44.26.NODE_PORT}} rpc_port={{shard.44.26.RPC_PORT}} ws_port={{shard.44.26.WS_PORT}} GrafanaURL=""
+shard44-3 ansible_ssh_host={{shard.44.27.IP}} privatekey={{KEY.shard.44.3}} node_port={{shard.44.27.NODE_PORT}} rpc_port={{shard.44.27.RPC_PORT}} ws_port={{shard.44.27.WS_PORT}} GrafanaURL=""
+shard44-4 ansible_ssh_host={{shard.44.28.IP}} privatekey={{KEY.shard.44.4}} node_port={{shard.44.28.NODE_PORT}} rpc_port={{shard.44.28.RPC_PORT}} ws_port={{shard.44.28.WS_PORT}} GrafanaURL=""
+shard44-5 ansible_ssh_host={{shard.44.29.IP}} privatekey={{KEY.shard.44.5}} node_port={{shard.44.29.NODE_PORT}} rpc_port={{shard.44.29.RPC_PORT}} ws_port={{shard.44.29.WS_PORT}} GrafanaURL="" 
+shard44-6 ansible_ssh_host={{shard.44.30.IP}} privatekey={{KEY.shard.44.6}} node_port={{shard.44.30.NODE_PORT}} rpc_port={{shard.44.30.RPC_PORT}} ws_port={{shard.44.30.WS_PORT}} GrafanaURL=""
+shard44-7 ansible_ssh_host={{shard.44.31.IP}} privatekey={{KEY.shard.44.7}} node_port={{shard.44.31.NODE_PORT}} rpc_port={{shard.44.31.RPC_PORT}} ws_port={{shard.44.31.WS_PORT}} GrafanaURL=""
+[shard45]
+shard45-0 ansible_ssh_host={{shard.45.24.IP}} privatekey={{KEY.shard.45.0}} node_port={{shard.45.24.NODE_PORT}} rpc_port={{shard.45.24.RPC_PORT}} ws_port={{shard.45.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard45-1 ansible_ssh_host={{shard.45.25.IP}} privatekey={{KEY.shard.45.1}} node_port={{shard.45.25.NODE_PORT}} rpc_port={{shard.45.25.RPC_PORT}} ws_port={{shard.45.25.WS_PORT}} GrafanaURL="" 
+shard45-2 ansible_ssh_host={{shard.45.26.IP}} privatekey={{KEY.shard.45.2}} node_port={{shard.45.26.NODE_PORT}} rpc_port={{shard.45.26.RPC_PORT}} ws_port={{shard.45.26.WS_PORT}} GrafanaURL=""
+shard45-3 ansible_ssh_host={{shard.45.27.IP}} privatekey={{KEY.shard.45.3}} node_port={{shard.45.27.NODE_PORT}} rpc_port={{shard.45.27.RPC_PORT}} ws_port={{shard.45.27.WS_PORT}} GrafanaURL=""
+shard45-4 ansible_ssh_host={{shard.45.28.IP}} privatekey={{KEY.shard.45.4}} node_port={{shard.45.28.NODE_PORT}} rpc_port={{shard.45.28.RPC_PORT}} ws_port={{shard.45.28.WS_PORT}} GrafanaURL=""
+shard45-5 ansible_ssh_host={{shard.45.29.IP}} privatekey={{KEY.shard.45.5}} node_port={{shard.45.29.NODE_PORT}} rpc_port={{shard.45.29.RPC_PORT}} ws_port={{shard.45.29.WS_PORT}} GrafanaURL="" 
+shard45-6 ansible_ssh_host={{shard.45.30.IP}} privatekey={{KEY.shard.45.6}} node_port={{shard.45.30.NODE_PORT}} rpc_port={{shard.45.30.RPC_PORT}} ws_port={{shard.45.30.WS_PORT}} GrafanaURL=""
+shard45-7 ansible_ssh_host={{shard.45.31.IP}} privatekey={{KEY.shard.45.7}} node_port={{shard.45.31.NODE_PORT}} rpc_port={{shard.45.31.RPC_PORT}} ws_port={{shard.45.31.WS_PORT}} GrafanaURL=""
+[shard46]
+shard46-0 ansible_ssh_host={{shard.46.24.IP}} privatekey={{KEY.shard.46.0}} node_port={{shard.46.24.NODE_PORT}} rpc_port={{shard.46.24.RPC_PORT}} ws_port={{shard.46.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard46-1 ansible_ssh_host={{shard.46.25.IP}} privatekey={{KEY.shard.46.1}} node_port={{shard.46.25.NODE_PORT}} rpc_port={{shard.46.25.RPC_PORT}} ws_port={{shard.46.25.WS_PORT}} GrafanaURL="" 
+shard46-2 ansible_ssh_host={{shard.46.26.IP}} privatekey={{KEY.shard.46.2}} node_port={{shard.46.26.NODE_PORT}} rpc_port={{shard.46.26.RPC_PORT}} ws_port={{shard.46.26.WS_PORT}} GrafanaURL=""
+shard46-3 ansible_ssh_host={{shard.46.27.IP}} privatekey={{KEY.shard.46.3}} node_port={{shard.46.27.NODE_PORT}} rpc_port={{shard.46.27.RPC_PORT}} ws_port={{shard.46.27.WS_PORT}} GrafanaURL=""
+shard46-4 ansible_ssh_host={{shard.46.28.IP}} privatekey={{KEY.shard.46.4}} node_port={{shard.46.28.NODE_PORT}} rpc_port={{shard.46.28.RPC_PORT}} ws_port={{shard.46.28.WS_PORT}} GrafanaURL=""
+shard46-5 ansible_ssh_host={{shard.46.29.IP}} privatekey={{KEY.shard.46.5}} node_port={{shard.46.29.NODE_PORT}} rpc_port={{shard.46.29.RPC_PORT}} ws_port={{shard.46.29.WS_PORT}} GrafanaURL="" 
+shard46-6 ansible_ssh_host={{shard.46.30.IP}} privatekey={{KEY.shard.46.6}} node_port={{shard.46.30.NODE_PORT}} rpc_port={{shard.46.30.RPC_PORT}} ws_port={{shard.46.30.WS_PORT}} GrafanaURL=""
+shard46-7 ansible_ssh_host={{shard.46.31.IP}} privatekey={{KEY.shard.46.7}} node_port={{shard.46.31.NODE_PORT}} rpc_port={{shard.46.31.RPC_PORT}} ws_port={{shard.46.31.WS_PORT}} GrafanaURL=""
+[shard47]
+shard47-0 ansible_ssh_host={{shard.47.24.IP}} privatekey={{KEY.shard.47.0}} node_port={{shard.47.24.NODE_PORT}} rpc_port={{shard.47.24.RPC_PORT}} ws_port={{shard.47.24.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard47-1 ansible_ssh_host={{shard.47.25.IP}} privatekey={{KEY.shard.47.1}} node_port={{shard.47.25.NODE_PORT}} rpc_port={{shard.47.25.RPC_PORT}} ws_port={{shard.47.25.WS_PORT}} GrafanaURL="" 
+shard47-2 ansible_ssh_host={{shard.47.26.IP}} privatekey={{KEY.shard.47.2}} node_port={{shard.47.26.NODE_PORT}} rpc_port={{shard.47.26.RPC_PORT}} ws_port={{shard.47.26.WS_PORT}} GrafanaURL=""
+shard47-3 ansible_ssh_host={{shard.47.27.IP}} privatekey={{KEY.shard.47.3}} node_port={{shard.47.27.NODE_PORT}} rpc_port={{shard.47.27.RPC_PORT}} ws_port={{shard.47.27.WS_PORT}} GrafanaURL=""
+shard47-4 ansible_ssh_host={{shard.47.28.IP}} privatekey={{KEY.shard.47.4}} node_port={{shard.47.28.NODE_PORT}} rpc_port={{shard.47.28.RPC_PORT}} ws_port={{shard.47.28.WS_PORT}} GrafanaURL=""
+shard47-5 ansible_ssh_host={{shard.47.29.IP}} privatekey={{KEY.shard.47.5}} node_port={{shard.47.29.NODE_PORT}} rpc_port={{shard.47.29.RPC_PORT}} ws_port={{shard.47.29.WS_PORT}} GrafanaURL="" 
+shard47-6 ansible_ssh_host={{shard.47.30.IP}} privatekey={{KEY.shard.47.6}} node_port={{shard.47.30.NODE_PORT}} rpc_port={{shard.47.30.RPC_PORT}} ws_port={{shard.47.30.WS_PORT}} GrafanaURL=""
+shard47-7 ansible_ssh_host={{shard.47.31.IP}} privatekey={{KEY.shard.47.7}} node_port={{shard.47.31.NODE_PORT}} rpc_port={{shard.47.31.RPC_PORT}} ws_port={{shard.47.31.WS_PORT}} GrafanaURL=""
+
+[shard48]
+shard48-0 ansible_ssh_host={{shard.48.32.IP}} privatekey={{KEY.shard.48.0}} node_port={{shard.48.32.NODE_PORT}} rpc_port={{shard.48.32.RPC_PORT}} ws_port={{shard.48.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard48-1 ansible_ssh_host={{shard.48.33.IP}} privatekey={{KEY.shard.48.1}} node_port={{shard.48.33.NODE_PORT}} rpc_port={{shard.48.33.RPC_PORT}} ws_port={{shard.48.33.WS_PORT}} GrafanaURL="" 
+shard48-2 ansible_ssh_host={{shard.48.34.IP}} privatekey={{KEY.shard.48.2}} node_port={{shard.48.34.NODE_PORT}} rpc_port={{shard.48.34.RPC_PORT}} ws_port={{shard.48.34.WS_PORT}} GrafanaURL=""
+shard48-3 ansible_ssh_host={{shard.48.35.IP}} privatekey={{KEY.shard.48.3}} node_port={{shard.48.35.NODE_PORT}} rpc_port={{shard.48.35.RPC_PORT}} ws_port={{shard.48.35.WS_PORT}} GrafanaURL=""
+shard48-4 ansible_ssh_host={{shard.48.36.IP}} privatekey={{KEY.shard.48.4}} node_port={{shard.48.36.NODE_PORT}} rpc_port={{shard.48.36.RPC_PORT}} ws_port={{shard.48.36.WS_PORT}} GrafanaURL=""
+shard48-5 ansible_ssh_host={{shard.48.37.IP}} privatekey={{KEY.shard.48.5}} node_port={{shard.48.37.NODE_PORT}} rpc_port={{shard.48.37.RPC_PORT}} ws_port={{shard.48.37.WS_PORT}} GrafanaURL="" 
+shard48-6 ansible_ssh_host={{shard.48.38.IP}} privatekey={{KEY.shard.48.6}} node_port={{shard.48.38.NODE_PORT}} rpc_port={{shard.48.38.RPC_PORT}} ws_port={{shard.48.38.WS_PORT}} GrafanaURL=""
+shard48-7 ansible_ssh_host={{shard.48.39.IP}} privatekey={{KEY.shard.48.7}} node_port={{shard.48.39.NODE_PORT}} rpc_port={{shard.48.39.RPC_PORT}} ws_port={{shard.48.39.WS_PORT}} GrafanaURL=""
+[shard49]
+shard49-0 ansible_ssh_host={{shard.49.32.IP}} privatekey={{KEY.shard.49.0}} node_port={{shard.49.32.NODE_PORT}} rpc_port={{shard.49.32.RPC_PORT}} ws_port={{shard.49.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard49-1 ansible_ssh_host={{shard.49.33.IP}} privatekey={{KEY.shard.49.1}} node_port={{shard.49.33.NODE_PORT}} rpc_port={{shard.49.33.RPC_PORT}} ws_port={{shard.49.33.WS_PORT}} GrafanaURL="" 
+shard49-2 ansible_ssh_host={{shard.49.34.IP}} privatekey={{KEY.shard.49.2}} node_port={{shard.49.34.NODE_PORT}} rpc_port={{shard.49.34.RPC_PORT}} ws_port={{shard.49.34.WS_PORT}} GrafanaURL=""
+shard49-3 ansible_ssh_host={{shard.49.35.IP}} privatekey={{KEY.shard.49.3}} node_port={{shard.49.35.NODE_PORT}} rpc_port={{shard.49.35.RPC_PORT}} ws_port={{shard.49.35.WS_PORT}} GrafanaURL=""
+shard49-4 ansible_ssh_host={{shard.49.36.IP}} privatekey={{KEY.shard.49.4}} node_port={{shard.49.36.NODE_PORT}} rpc_port={{shard.49.36.RPC_PORT}} ws_port={{shard.49.36.WS_PORT}} GrafanaURL=""
+shard49-5 ansible_ssh_host={{shard.49.37.IP}} privatekey={{KEY.shard.49.5}} node_port={{shard.49.37.NODE_PORT}} rpc_port={{shard.49.37.RPC_PORT}} ws_port={{shard.49.37.WS_PORT}} GrafanaURL="" 
+shard49-6 ansible_ssh_host={{shard.49.38.IP}} privatekey={{KEY.shard.49.6}} node_port={{shard.49.38.NODE_PORT}} rpc_port={{shard.49.38.RPC_PORT}} ws_port={{shard.49.38.WS_PORT}} GrafanaURL=""
+shard49-7 ansible_ssh_host={{shard.49.39.IP}} privatekey={{KEY.shard.49.7}} node_port={{shard.49.39.NODE_PORT}} rpc_port={{shard.49.39.RPC_PORT}} ws_port={{shard.49.39.WS_PORT}} GrafanaURL=""
+[shard50]
+shard50-0 ansible_ssh_host={{shard.50.32.IP}} privatekey={{KEY.shard.50.0}} node_port={{shard.50.32.NODE_PORT}} rpc_port={{shard.50.32.RPC_PORT}} ws_port={{shard.50.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard50-1 ansible_ssh_host={{shard.50.33.IP}} privatekey={{KEY.shard.50.1}} node_port={{shard.50.33.NODE_PORT}} rpc_port={{shard.50.33.RPC_PORT}} ws_port={{shard.50.33.WS_PORT}} GrafanaURL="" 
+shard50-2 ansible_ssh_host={{shard.50.34.IP}} privatekey={{KEY.shard.50.2}} node_port={{shard.50.34.NODE_PORT}} rpc_port={{shard.50.34.RPC_PORT}} ws_port={{shard.50.34.WS_PORT}} GrafanaURL=""
+shard50-3 ansible_ssh_host={{shard.50.35.IP}} privatekey={{KEY.shard.50.3}} node_port={{shard.50.35.NODE_PORT}} rpc_port={{shard.50.35.RPC_PORT}} ws_port={{shard.50.35.WS_PORT}} GrafanaURL=""
+shard50-4 ansible_ssh_host={{shard.50.36.IP}} privatekey={{KEY.shard.50.4}} node_port={{shard.50.36.NODE_PORT}} rpc_port={{shard.50.36.RPC_PORT}} ws_port={{shard.50.36.WS_PORT}} GrafanaURL=""
+shard50-5 ansible_ssh_host={{shard.50.37.IP}} privatekey={{KEY.shard.50.5}} node_port={{shard.50.37.NODE_PORT}} rpc_port={{shard.50.37.RPC_PORT}} ws_port={{shard.50.37.WS_PORT}} GrafanaURL="" 
+shard50-6 ansible_ssh_host={{shard.50.38.IP}} privatekey={{KEY.shard.50.6}} node_port={{shard.50.38.NODE_PORT}} rpc_port={{shard.50.38.RPC_PORT}} ws_port={{shard.50.38.WS_PORT}} GrafanaURL=""
+shard50-7 ansible_ssh_host={{shard.50.39.IP}} privatekey={{KEY.shard.50.7}} node_port={{shard.50.39.NODE_PORT}} rpc_port={{shard.50.39.RPC_PORT}} ws_port={{shard.50.39.WS_PORT}} GrafanaURL=""
+[shard51]
+shard51-0 ansible_ssh_host={{shard.51.32.IP}} privatekey={{KEY.shard.51.0}} node_port={{shard.51.32.NODE_PORT}} rpc_port={{shard.51.32.RPC_PORT}} ws_port={{shard.51.32.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard51-1 ansible_ssh_host={{shard.51.33.IP}} privatekey={{KEY.shard.51.1}} node_port={{shard.51.33.NODE_PORT}} rpc_port={{shard.51.33.RPC_PORT}} ws_port={{shard.51.33.WS_PORT}} GrafanaURL="" 
+shard51-2 ansible_ssh_host={{shard.51.34.IP}} privatekey={{KEY.shard.51.2}} node_port={{shard.51.34.NODE_PORT}} rpc_port={{shard.51.34.RPC_PORT}} ws_port={{shard.51.34.WS_PORT}} GrafanaURL=""
+shard51-3 ansible_ssh_host={{shard.51.35.IP}} privatekey={{KEY.shard.51.3}} node_port={{shard.51.35.NODE_PORT}} rpc_port={{shard.51.35.RPC_PORT}} ws_port={{shard.51.35.WS_PORT}} GrafanaURL=""
+shard51-4 ansible_ssh_host={{shard.51.36.IP}} privatekey={{KEY.shard.51.4}} node_port={{shard.51.36.NODE_PORT}} rpc_port={{shard.51.36.RPC_PORT}} ws_port={{shard.51.36.WS_PORT}} GrafanaURL=""
+shard51-5 ansible_ssh_host={{shard.51.37.IP}} privatekey={{KEY.shard.51.5}} node_port={{shard.51.37.NODE_PORT}} rpc_port={{shard.51.37.RPC_PORT}} ws_port={{shard.51.37.WS_PORT}} GrafanaURL="" 
+shard51-6 ansible_ssh_host={{shard.51.38.IP}} privatekey={{KEY.shard.51.6}} node_port={{shard.51.38.NODE_PORT}} rpc_port={{shard.51.38.RPC_PORT}} ws_port={{shard.51.38.WS_PORT}} GrafanaURL=""
+shard51-7 ansible_ssh_host={{shard.51.39.IP}} privatekey={{KEY.shard.51.7}} node_port={{shard.51.39.NODE_PORT}} rpc_port={{shard.51.39.RPC_PORT}} ws_port={{shard.51.39.WS_PORT}} GrafanaURL=""
+
+[shard52]
+shard52-0 ansible_ssh_host={{shard.52.40.IP}} privatekey={{KEY.shard.52.0}} node_port={{shard.52.40.NODE_PORT}} rpc_port={{shard.52.40.RPC_PORT}} ws_port={{shard.52.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard52-1 ansible_ssh_host={{shard.52.41.IP}} privatekey={{KEY.shard.52.1}} node_port={{shard.52.41.NODE_PORT}} rpc_port={{shard.52.41.RPC_PORT}} ws_port={{shard.52.41.WS_PORT}} GrafanaURL="" 
+shard52-2 ansible_ssh_host={{shard.52.42.IP}} privatekey={{KEY.shard.52.2}} node_port={{shard.52.42.NODE_PORT}} rpc_port={{shard.52.42.RPC_PORT}} ws_port={{shard.52.42.WS_PORT}} GrafanaURL=""
+shard52-3 ansible_ssh_host={{shard.52.43.IP}} privatekey={{KEY.shard.52.3}} node_port={{shard.52.43.NODE_PORT}} rpc_port={{shard.52.43.RPC_PORT}} ws_port={{shard.52.43.WS_PORT}} GrafanaURL=""
+shard52-4 ansible_ssh_host={{shard.52.44.IP}} privatekey={{KEY.shard.52.4}} node_port={{shard.52.44.NODE_PORT}} rpc_port={{shard.52.44.RPC_PORT}} ws_port={{shard.52.44.WS_PORT}} GrafanaURL=""
+shard52-5 ansible_ssh_host={{shard.52.45.IP}} privatekey={{KEY.shard.52.5}} node_port={{shard.52.45.NODE_PORT}} rpc_port={{shard.52.45.RPC_PORT}} ws_port={{shard.52.45.WS_PORT}} GrafanaURL="" 
+shard52-6 ansible_ssh_host={{shard.52.46.IP}} privatekey={{KEY.shard.52.6}} node_port={{shard.52.46.NODE_PORT}} rpc_port={{shard.52.46.RPC_PORT}} ws_port={{shard.52.46.WS_PORT}} GrafanaURL=""
+shard52-7 ansible_ssh_host={{shard.52.47.IP}} privatekey={{KEY.shard.52.7}} node_port={{shard.52.47.NODE_PORT}} rpc_port={{shard.52.47.RPC_PORT}} ws_port={{shard.52.47.WS_PORT}} GrafanaURL=""
+[shard53]
+shard53-0 ansible_ssh_host={{shard.53.40.IP}} privatekey={{KEY.shard.53.0}} node_port={{shard.53.40.NODE_PORT}} rpc_port={{shard.53.40.RPC_PORT}} ws_port={{shard.53.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard53-1 ansible_ssh_host={{shard.53.41.IP}} privatekey={{KEY.shard.53.1}} node_port={{shard.53.41.NODE_PORT}} rpc_port={{shard.53.41.RPC_PORT}} ws_port={{shard.53.41.WS_PORT}} GrafanaURL="" 
+shard53-2 ansible_ssh_host={{shard.53.42.IP}} privatekey={{KEY.shard.53.2}} node_port={{shard.53.42.NODE_PORT}} rpc_port={{shard.53.42.RPC_PORT}} ws_port={{shard.53.42.WS_PORT}} GrafanaURL=""
+shard53-3 ansible_ssh_host={{shard.53.43.IP}} privatekey={{KEY.shard.53.3}} node_port={{shard.53.43.NODE_PORT}} rpc_port={{shard.53.43.RPC_PORT}} ws_port={{shard.53.43.WS_PORT}} GrafanaURL=""
+shard53-4 ansible_ssh_host={{shard.53.44.IP}} privatekey={{KEY.shard.53.4}} node_port={{shard.53.44.NODE_PORT}} rpc_port={{shard.53.44.RPC_PORT}} ws_port={{shard.53.44.WS_PORT}} GrafanaURL=""
+shard53-5 ansible_ssh_host={{shard.53.45.IP}} privatekey={{KEY.shard.53.5}} node_port={{shard.53.45.NODE_PORT}} rpc_port={{shard.53.45.RPC_PORT}} ws_port={{shard.53.45.WS_PORT}} GrafanaURL="" 
+shard53-6 ansible_ssh_host={{shard.53.46.IP}} privatekey={{KEY.shard.53.6}} node_port={{shard.53.46.NODE_PORT}} rpc_port={{shard.53.46.RPC_PORT}} ws_port={{shard.53.46.WS_PORT}} GrafanaURL=""
+shard53-7 ansible_ssh_host={{shard.53.47.IP}} privatekey={{KEY.shard.53.7}} node_port={{shard.53.47.NODE_PORT}} rpc_port={{shard.53.47.RPC_PORT}} ws_port={{shard.53.47.WS_PORT}} GrafanaURL=""
+[shard54]
+shard54-0 ansible_ssh_host={{shard.54.40.IP}} privatekey={{KEY.shard.54.0}} node_port={{shard.54.40.NODE_PORT}} rpc_port={{shard.54.40.RPC_PORT}} ws_port={{shard.54.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard54-1 ansible_ssh_host={{shard.54.41.IP}} privatekey={{KEY.shard.54.1}} node_port={{shard.54.41.NODE_PORT}} rpc_port={{shard.54.41.RPC_PORT}} ws_port={{shard.54.41.WS_PORT}} GrafanaURL="" 
+shard54-2 ansible_ssh_host={{shard.54.42.IP}} privatekey={{KEY.shard.54.2}} node_port={{shard.54.42.NODE_PORT}} rpc_port={{shard.54.42.RPC_PORT}} ws_port={{shard.54.42.WS_PORT}} GrafanaURL=""
+shard54-3 ansible_ssh_host={{shard.54.43.IP}} privatekey={{KEY.shard.54.3}} node_port={{shard.54.43.NODE_PORT}} rpc_port={{shard.54.43.RPC_PORT}} ws_port={{shard.54.43.WS_PORT}} GrafanaURL=""
+shard54-4 ansible_ssh_host={{shard.54.44.IP}} privatekey={{KEY.shard.54.4}} node_port={{shard.54.44.NODE_PORT}} rpc_port={{shard.54.44.RPC_PORT}} ws_port={{shard.54.44.WS_PORT}} GrafanaURL=""
+shard54-5 ansible_ssh_host={{shard.54.45.IP}} privatekey={{KEY.shard.54.5}} node_port={{shard.54.45.NODE_PORT}} rpc_port={{shard.54.45.RPC_PORT}} ws_port={{shard.54.45.WS_PORT}} GrafanaURL="" 
+shard54-6 ansible_ssh_host={{shard.54.46.IP}} privatekey={{KEY.shard.54.6}} node_port={{shard.54.46.NODE_PORT}} rpc_port={{shard.54.46.RPC_PORT}} ws_port={{shard.54.46.WS_PORT}} GrafanaURL=""
+shard54-7 ansible_ssh_host={{shard.54.47.IP}} privatekey={{KEY.shard.54.7}} node_port={{shard.54.47.NODE_PORT}} rpc_port={{shard.54.47.RPC_PORT}} ws_port={{shard.54.47.WS_PORT}} GrafanaURL=""
+[shard55]
+shard55-0 ansible_ssh_host={{shard.55.40.IP}} privatekey={{KEY.shard.55.0}} node_port={{shard.55.40.NODE_PORT}} rpc_port={{shard.55.40.RPC_PORT}} ws_port={{shard.55.40.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard55-1 ansible_ssh_host={{shard.55.41.IP}} privatekey={{KEY.shard.55.1}} node_port={{shard.55.41.NODE_PORT}} rpc_port={{shard.55.41.RPC_PORT}} ws_port={{shard.55.41.WS_PORT}} GrafanaURL="" 
+shard55-2 ansible_ssh_host={{shard.55.42.IP}} privatekey={{KEY.shard.55.2}} node_port={{shard.55.42.NODE_PORT}} rpc_port={{shard.55.42.RPC_PORT}} ws_port={{shard.55.42.WS_PORT}} GrafanaURL=""
+shard55-3 ansible_ssh_host={{shard.55.43.IP}} privatekey={{KEY.shard.55.3}} node_port={{shard.55.43.NODE_PORT}} rpc_port={{shard.55.43.RPC_PORT}} ws_port={{shard.55.43.WS_PORT}} GrafanaURL=""
+shard55-4 ansible_ssh_host={{shard.55.44.IP}} privatekey={{KEY.shard.55.4}} node_port={{shard.55.44.NODE_PORT}} rpc_port={{shard.55.44.RPC_PORT}} ws_port={{shard.55.44.WS_PORT}} GrafanaURL=""
+shard55-5 ansible_ssh_host={{shard.55.45.IP}} privatekey={{KEY.shard.55.5}} node_port={{shard.55.45.NODE_PORT}} rpc_port={{shard.55.45.RPC_PORT}} ws_port={{shard.55.45.WS_PORT}} GrafanaURL="" 
+shard55-6 ansible_ssh_host={{shard.55.46.IP}} privatekey={{KEY.shard.55.6}} node_port={{shard.55.46.NODE_PORT}} rpc_port={{shard.55.46.RPC_PORT}} ws_port={{shard.55.46.WS_PORT}} GrafanaURL=""
+shard55-7 ansible_ssh_host={{shard.55.47.IP}} privatekey={{KEY.shard.55.7}} node_port={{shard.55.47.NODE_PORT}} rpc_port={{shard.55.47.RPC_PORT}} ws_port={{shard.55.47.WS_PORT}} GrafanaURL=""
+
+[shard56]
+shard56-0 ansible_ssh_host={{shard.56.48.IP}} privatekey={{KEY.shard.56.0}} node_port={{shard.56.48.NODE_PORT}} rpc_port={{shard.56.48.RPC_PORT}} ws_port={{shard.56.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard56-1 ansible_ssh_host={{shard.56.49.IP}} privatekey={{KEY.shard.56.1}} node_port={{shard.56.49.NODE_PORT}} rpc_port={{shard.56.49.RPC_PORT}} ws_port={{shard.56.49.WS_PORT}} GrafanaURL="" 
+shard56-2 ansible_ssh_host={{shard.56.50.IP}} privatekey={{KEY.shard.56.2}} node_port={{shard.56.50.NODE_PORT}} rpc_port={{shard.56.50.RPC_PORT}} ws_port={{shard.56.50.WS_PORT}} GrafanaURL=""
+shard56-3 ansible_ssh_host={{shard.56.51.IP}} privatekey={{KEY.shard.56.3}} node_port={{shard.56.51.NODE_PORT}} rpc_port={{shard.56.51.RPC_PORT}} ws_port={{shard.56.51.WS_PORT}} GrafanaURL=""
+shard56-4 ansible_ssh_host={{shard.56.52.IP}} privatekey={{KEY.shard.56.4}} node_port={{shard.56.52.NODE_PORT}} rpc_port={{shard.56.52.RPC_PORT}} ws_port={{shard.56.52.WS_PORT}} GrafanaURL=""
+shard56-5 ansible_ssh_host={{shard.56.53.IP}} privatekey={{KEY.shard.56.5}} node_port={{shard.56.53.NODE_PORT}} rpc_port={{shard.56.53.RPC_PORT}} ws_port={{shard.56.53.WS_PORT}} GrafanaURL="" 
+shard56-6 ansible_ssh_host={{shard.56.54.IP}} privatekey={{KEY.shard.56.6}} node_port={{shard.56.54.NODE_PORT}} rpc_port={{shard.56.54.RPC_PORT}} ws_port={{shard.56.54.WS_PORT}} GrafanaURL=""
+shard56-7 ansible_ssh_host={{shard.56.55.IP}} privatekey={{KEY.shard.56.7}} node_port={{shard.56.55.NODE_PORT}} rpc_port={{shard.56.55.RPC_PORT}} ws_port={{shard.56.55.WS_PORT}} GrafanaURL=""
+[shard57]
+shard57-0 ansible_ssh_host={{shard.57.48.IP}} privatekey={{KEY.shard.57.0}} node_port={{shard.57.48.NODE_PORT}} rpc_port={{shard.57.48.RPC_PORT}} ws_port={{shard.57.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard57-1 ansible_ssh_host={{shard.57.49.IP}} privatekey={{KEY.shard.57.1}} node_port={{shard.57.49.NODE_PORT}} rpc_port={{shard.57.49.RPC_PORT}} ws_port={{shard.57.49.WS_PORT}} GrafanaURL="" 
+shard57-2 ansible_ssh_host={{shard.57.50.IP}} privatekey={{KEY.shard.57.2}} node_port={{shard.57.50.NODE_PORT}} rpc_port={{shard.57.50.RPC_PORT}} ws_port={{shard.57.50.WS_PORT}} GrafanaURL=""
+shard57-3 ansible_ssh_host={{shard.57.51.IP}} privatekey={{KEY.shard.57.3}} node_port={{shard.57.51.NODE_PORT}} rpc_port={{shard.57.51.RPC_PORT}} ws_port={{shard.57.51.WS_PORT}} GrafanaURL=""
+shard57-4 ansible_ssh_host={{shard.57.52.IP}} privatekey={{KEY.shard.57.4}} node_port={{shard.57.52.NODE_PORT}} rpc_port={{shard.57.52.RPC_PORT}} ws_port={{shard.57.52.WS_PORT}} GrafanaURL=""
+shard57-5 ansible_ssh_host={{shard.57.53.IP}} privatekey={{KEY.shard.57.5}} node_port={{shard.57.53.NODE_PORT}} rpc_port={{shard.57.53.RPC_PORT}} ws_port={{shard.57.53.WS_PORT}} GrafanaURL="" 
+shard57-6 ansible_ssh_host={{shard.57.54.IP}} privatekey={{KEY.shard.57.6}} node_port={{shard.57.54.NODE_PORT}} rpc_port={{shard.57.54.RPC_PORT}} ws_port={{shard.57.54.WS_PORT}} GrafanaURL=""
+shard57-7 ansible_ssh_host={{shard.57.55.IP}} privatekey={{KEY.shard.57.7}} node_port={{shard.57.55.NODE_PORT}} rpc_port={{shard.57.55.RPC_PORT}} ws_port={{shard.57.55.WS_PORT}} GrafanaURL=""
+[shard58]
+shard58-0 ansible_ssh_host={{shard.58.48.IP}} privatekey={{KEY.shard.58.0}} node_port={{shard.58.48.NODE_PORT}} rpc_port={{shard.58.48.RPC_PORT}} ws_port={{shard.58.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard58-1 ansible_ssh_host={{shard.58.49.IP}} privatekey={{KEY.shard.58.1}} node_port={{shard.58.49.NODE_PORT}} rpc_port={{shard.58.49.RPC_PORT}} ws_port={{shard.58.49.WS_PORT}} GrafanaURL="" 
+shard58-2 ansible_ssh_host={{shard.58.50.IP}} privatekey={{KEY.shard.58.2}} node_port={{shard.58.50.NODE_PORT}} rpc_port={{shard.58.50.RPC_PORT}} ws_port={{shard.58.50.WS_PORT}} GrafanaURL=""
+shard58-3 ansible_ssh_host={{shard.58.51.IP}} privatekey={{KEY.shard.58.3}} node_port={{shard.58.51.NODE_PORT}} rpc_port={{shard.58.51.RPC_PORT}} ws_port={{shard.58.51.WS_PORT}} GrafanaURL=""
+shard58-4 ansible_ssh_host={{shard.58.52.IP}} privatekey={{KEY.shard.58.4}} node_port={{shard.58.52.NODE_PORT}} rpc_port={{shard.58.52.RPC_PORT}} ws_port={{shard.58.52.WS_PORT}} GrafanaURL=""
+shard58-5 ansible_ssh_host={{shard.58.53.IP}} privatekey={{KEY.shard.58.5}} node_port={{shard.58.53.NODE_PORT}} rpc_port={{shard.58.53.RPC_PORT}} ws_port={{shard.58.53.WS_PORT}} GrafanaURL="" 
+shard58-6 ansible_ssh_host={{shard.58.54.IP}} privatekey={{KEY.shard.58.6}} node_port={{shard.58.54.NODE_PORT}} rpc_port={{shard.58.54.RPC_PORT}} ws_port={{shard.58.54.WS_PORT}} GrafanaURL=""
+shard58-7 ansible_ssh_host={{shard.58.55.IP}} privatekey={{KEY.shard.58.7}} node_port={{shard.58.55.NODE_PORT}} rpc_port={{shard.58.55.RPC_PORT}} ws_port={{shard.58.55.WS_PORT}} GrafanaURL=""
+[shard59]
+shard59-0 ansible_ssh_host={{shard.59.48.IP}} privatekey={{KEY.shard.59.0}} node_port={{shard.59.48.NODE_PORT}} rpc_port={{shard.59.48.RPC_PORT}} ws_port={{shard.59.48.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard59-1 ansible_ssh_host={{shard.59.49.IP}} privatekey={{KEY.shard.59.1}} node_port={{shard.59.49.NODE_PORT}} rpc_port={{shard.59.49.RPC_PORT}} ws_port={{shard.59.49.WS_PORT}} GrafanaURL="" 
+shard59-2 ansible_ssh_host={{shard.59.50.IP}} privatekey={{KEY.shard.59.2}} node_port={{shard.59.50.NODE_PORT}} rpc_port={{shard.59.50.RPC_PORT}} ws_port={{shard.59.50.WS_PORT}} GrafanaURL=""
+shard59-3 ansible_ssh_host={{shard.59.51.IP}} privatekey={{KEY.shard.59.3}} node_port={{shard.59.51.NODE_PORT}} rpc_port={{shard.59.51.RPC_PORT}} ws_port={{shard.59.51.WS_PORT}} GrafanaURL=""
+shard59-4 ansible_ssh_host={{shard.59.52.IP}} privatekey={{KEY.shard.59.4}} node_port={{shard.59.52.NODE_PORT}} rpc_port={{shard.59.52.RPC_PORT}} ws_port={{shard.59.52.WS_PORT}} GrafanaURL=""
+shard59-5 ansible_ssh_host={{shard.59.53.IP}} privatekey={{KEY.shard.59.5}} node_port={{shard.59.53.NODE_PORT}} rpc_port={{shard.59.53.RPC_PORT}} ws_port={{shard.59.53.WS_PORT}} GrafanaURL="" 
+shard59-6 ansible_ssh_host={{shard.59.54.IP}} privatekey={{KEY.shard.59.6}} node_port={{shard.59.54.NODE_PORT}} rpc_port={{shard.59.54.RPC_PORT}} ws_port={{shard.59.54.WS_PORT}} GrafanaURL=""
+shard59-7 ansible_ssh_host={{shard.59.55.IP}} privatekey={{KEY.shard.59.7}} node_port={{shard.59.55.NODE_PORT}} rpc_port={{shard.59.55.RPC_PORT}} ws_port={{shard.59.55.WS_PORT}} GrafanaURL=""
+
+[shard60]
+shard60-0 ansible_ssh_host={{shard.60.56.IP}} privatekey={{KEY.shard.60.0}} node_port={{shard.60.56.NODE_PORT}} rpc_port={{shard.60.56.RPC_PORT}} ws_port={{shard.60.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard60-1 ansible_ssh_host={{shard.60.57.IP}} privatekey={{KEY.shard.60.1}} node_port={{shard.60.57.NODE_PORT}} rpc_port={{shard.60.57.RPC_PORT}} ws_port={{shard.60.57.WS_PORT}} GrafanaURL="" 
+shard60-2 ansible_ssh_host={{shard.60.58.IP}} privatekey={{KEY.shard.60.2}} node_port={{shard.60.58.NODE_PORT}} rpc_port={{shard.60.58.RPC_PORT}} ws_port={{shard.60.58.WS_PORT}} GrafanaURL=""
+shard60-3 ansible_ssh_host={{shard.60.59.IP}} privatekey={{KEY.shard.60.3}} node_port={{shard.60.59.NODE_PORT}} rpc_port={{shard.60.59.RPC_PORT}} ws_port={{shard.60.59.WS_PORT}} GrafanaURL=""
+shard60-4 ansible_ssh_host={{shard.60.60.IP}} privatekey={{KEY.shard.60.4}} node_port={{shard.60.60.NODE_PORT}} rpc_port={{shard.60.60.RPC_PORT}} ws_port={{shard.60.60.WS_PORT}} GrafanaURL=""
+shard60-5 ansible_ssh_host={{shard.60.61.IP}} privatekey={{KEY.shard.60.5}} node_port={{shard.60.61.NODE_PORT}} rpc_port={{shard.60.61.RPC_PORT}} ws_port={{shard.60.61.WS_PORT}} GrafanaURL="" 
+shard60-6 ansible_ssh_host={{shard.60.62.IP}} privatekey={{KEY.shard.60.6}} node_port={{shard.60.62.NODE_PORT}} rpc_port={{shard.60.62.RPC_PORT}} ws_port={{shard.60.62.WS_PORT}} GrafanaURL=""
+shard60-7 ansible_ssh_host={{shard.60.63.IP}} privatekey={{KEY.shard.60.7}} node_port={{shard.60.63.NODE_PORT}} rpc_port={{shard.60.63.RPC_PORT}} ws_port={{shard.60.63.WS_PORT}} GrafanaURL=""
+[shard61]
+shard61-0 ansible_ssh_host={{shard.61.56.IP}} privatekey={{KEY.shard.61.0}} node_port={{shard.61.56.NODE_PORT}} rpc_port={{shard.61.56.RPC_PORT}} ws_port={{shard.61.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard61-1 ansible_ssh_host={{shard.61.57.IP}} privatekey={{KEY.shard.61.1}} node_port={{shard.61.57.NODE_PORT}} rpc_port={{shard.61.57.RPC_PORT}} ws_port={{shard.61.57.WS_PORT}} GrafanaURL="" 
+shard61-2 ansible_ssh_host={{shard.61.58.IP}} privatekey={{KEY.shard.61.2}} node_port={{shard.61.58.NODE_PORT}} rpc_port={{shard.61.58.RPC_PORT}} ws_port={{shard.61.58.WS_PORT}} GrafanaURL=""
+shard61-3 ansible_ssh_host={{shard.61.59.IP}} privatekey={{KEY.shard.61.3}} node_port={{shard.61.59.NODE_PORT}} rpc_port={{shard.61.59.RPC_PORT}} ws_port={{shard.61.59.WS_PORT}} GrafanaURL=""
+shard61-4 ansible_ssh_host={{shard.61.60.IP}} privatekey={{KEY.shard.61.4}} node_port={{shard.61.60.NODE_PORT}} rpc_port={{shard.61.60.RPC_PORT}} ws_port={{shard.61.60.WS_PORT}} GrafanaURL=""
+shard61-5 ansible_ssh_host={{shard.61.61.IP}} privatekey={{KEY.shard.61.5}} node_port={{shard.61.61.NODE_PORT}} rpc_port={{shard.61.61.RPC_PORT}} ws_port={{shard.61.61.WS_PORT}} GrafanaURL="" 
+shard61-6 ansible_ssh_host={{shard.61.62.IP}} privatekey={{KEY.shard.61.6}} node_port={{shard.61.62.NODE_PORT}} rpc_port={{shard.61.62.RPC_PORT}} ws_port={{shard.61.62.WS_PORT}} GrafanaURL=""
+shard61-7 ansible_ssh_host={{shard.61.63.IP}} privatekey={{KEY.shard.61.7}} node_port={{shard.61.63.NODE_PORT}} rpc_port={{shard.61.63.RPC_PORT}} ws_port={{shard.61.63.WS_PORT}} GrafanaURL=""
+[shard62]
+shard62-0 ansible_ssh_host={{shard.62.56.IP}} privatekey={{KEY.shard.62.0}} node_port={{shard.62.56.NODE_PORT}} rpc_port={{shard.62.56.RPC_PORT}} ws_port={{shard.62.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard62-1 ansible_ssh_host={{shard.62.57.IP}} privatekey={{KEY.shard.62.1}} node_port={{shard.62.57.NODE_PORT}} rpc_port={{shard.62.57.RPC_PORT}} ws_port={{shard.62.57.WS_PORT}} GrafanaURL="" 
+shard62-2 ansible_ssh_host={{shard.62.58.IP}} privatekey={{KEY.shard.62.2}} node_port={{shard.62.58.NODE_PORT}} rpc_port={{shard.62.58.RPC_PORT}} ws_port={{shard.62.58.WS_PORT}} GrafanaURL=""
+shard62-3 ansible_ssh_host={{shard.62.59.IP}} privatekey={{KEY.shard.62.3}} node_port={{shard.62.59.NODE_PORT}} rpc_port={{shard.62.59.RPC_PORT}} ws_port={{shard.62.59.WS_PORT}} GrafanaURL=""
+shard62-4 ansible_ssh_host={{shard.62.60.IP}} privatekey={{KEY.shard.62.4}} node_port={{shard.62.60.NODE_PORT}} rpc_port={{shard.62.60.RPC_PORT}} ws_port={{shard.62.60.WS_PORT}} GrafanaURL=""
+shard62-5 ansible_ssh_host={{shard.62.61.IP}} privatekey={{KEY.shard.62.5}} node_port={{shard.62.61.NODE_PORT}} rpc_port={{shard.62.61.RPC_PORT}} ws_port={{shard.62.61.WS_PORT}} GrafanaURL="" 
+shard62-6 ansible_ssh_host={{shard.62.62.IP}} privatekey={{KEY.shard.62.6}} node_port={{shard.62.62.NODE_PORT}} rpc_port={{shard.62.62.RPC_PORT}} ws_port={{shard.62.62.WS_PORT}} GrafanaURL=""
+shard62-7 ansible_ssh_host={{shard.62.63.IP}} privatekey={{KEY.shard.62.7}} node_port={{shard.62.63.NODE_PORT}} rpc_port={{shard.62.63.RPC_PORT}} ws_port={{shard.62.63.WS_PORT}} GrafanaURL=""
+[shard63]
+shard63-0 ansible_ssh_host={{shard.63.56.IP}} privatekey={{KEY.shard.63.0}} node_port={{shard.63.56.NODE_PORT}} rpc_port={{shard.63.56.RPC_PORT}} ws_port={{shard.63.56.WS_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb
+shard63-1 ansible_ssh_host={{shard.63.57.IP}} privatekey={{KEY.shard.63.1}} node_port={{shard.63.57.NODE_PORT}} rpc_port={{shard.63.57.RPC_PORT}} ws_port={{shard.63.57.WS_PORT}} GrafanaURL="" 
+shard63-2 ansible_ssh_host={{shard.63.58.IP}} privatekey={{KEY.shard.63.2}} node_port={{shard.63.58.NODE_PORT}} rpc_port={{shard.63.58.RPC_PORT}} ws_port={{shard.63.58.WS_PORT}} GrafanaURL=""
+shard63-3 ansible_ssh_host={{shard.63.59.IP}} privatekey={{KEY.shard.63.3}} node_port={{shard.63.59.NODE_PORT}} rpc_port={{shard.63.59.RPC_PORT}} ws_port={{shard.63.59.WS_PORT}} GrafanaURL=""
+shard63-4 ansible_ssh_host={{shard.63.60.IP}} privatekey={{KEY.shard.63.4}} node_port={{shard.63.60.NODE_PORT}} rpc_port={{shard.63.60.RPC_PORT}} ws_port={{shard.63.60.WS_PORT}} GrafanaURL=""
+shard63-5 ansible_ssh_host={{shard.63.61.IP}} privatekey={{KEY.shard.63.5}} node_port={{shard.63.61.NODE_PORT}} rpc_port={{shard.63.61.RPC_PORT}} ws_port={{shard.63.61.WS_PORT}} GrafanaURL="" 
+shard63-6 ansible_ssh_host={{shard.63.62.IP}} privatekey={{KEY.shard.63.6}} node_port={{shard.63.62.NODE_PORT}} rpc_port={{shard.63.62.RPC_PORT}} ws_port={{shard.63.62.WS_PORT}} GrafanaURL=""
+shard63-7 ansible_ssh_host={{shard.63.63.IP}} privatekey={{KEY.shard.63.7}} node_port={{shard.63.63.NODE_PORT}} rpc_port={{shard.63.63.RPC_PORT}} ws_port={{shard.63.63.WS_PORT}} GrafanaURL=""
+# [fullnode]
+# fullnode0 ansible_ssh_host={{fullnode.0.IP}} node_port={{fullnode.0.NODE_PORT}} rpc_port={{fullnode.0.RPC_PORT}} GrafanaURL=http://128.199.96.206:8086/write?db=mydb

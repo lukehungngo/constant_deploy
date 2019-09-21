@@ -8,4 +8,4 @@
         docker rm -f {{inventory_hostname}}; echo 1
     - name: Remove Data
       shell: |
-        rm -rf /data
+        rm -rf /data/{{inventory_hostname}}

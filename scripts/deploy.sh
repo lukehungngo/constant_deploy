@@ -38,12 +38,24 @@ elif [ "$1" == "metric-32s-b" ]; then
     # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
     ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-32s-beacon --limit  metric
     ansible-playbook Ansible/deployServerSuperBeacon.yml -i Ansible/inventories/metric-32s-beacon --limit  metric
+elif [ "$1" == "metric-64s-b" ]; then
+    echo "Deploy Metric Server"
+    (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
+    # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
+    ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-1s-beacon --limit  metric
+    ansible-playbook Ansible/deployServerSuperBeacon.yml -i Ansible/inventories/metric-64s-beacon --limit  metric
 elif [ "$1" == "metric-2s-100-b" ]; then
     echo "Deploy Metric Server"
     (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
     # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
-    ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-2s-100-beacon --limit  metric
-    ansible-playbook Ansible/deployServerShared.yml -i Ansible/inventories/metric-2s-100-beacon --limit  metric
+    # ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-2s-100-beacon --limit  metric
+    ansible-playbook Ansible/deployServerSuperBeacon.yml -i Ansible/inventories/metric-2s-100-beacon --limit  metric
+elif [ "$1" == "metric-1s-256-b" ]; then
+    echo "Deploy Metric Server"
+    # (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
+    # ansible-playbook Ansible/init.yml -i Ansible/inventories/metric --limit  metric
+    # ansible-playbook Ansible/docker.yml -i Ansible/inventories/metric-1s-beacon --limit  metric
+    ansible-playbook Ansible/deployServerSuperBeacon.yml -i Ansible/inventories/metric-1s-256-beacon --limit  metric
 elif [ "$1" == "metric-fullnode" ]; then
     echo "Deploy Metric Server FullNode Only"
     (cd /Users/hungautonomous/go/src/github.com/incognitochain/incognito-chain/bin && sh build.sh)
